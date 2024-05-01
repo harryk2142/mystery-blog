@@ -1,0 +1,131 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.framework.id": "astro",
+  "frontMatter.preview.host": "http://localhost:4321",
+  "frontMatter.content.publicFolder": "src/assets",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "blog",
+      "path": "[[workspace]]/src/content/blog"
+    }
+  ],
+  "frontMatter.taxonomy.seoTitleLength": 70,
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "previewPath": "'blog'",
+      "filePrefix": null,
+      "clearEmpty": true,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "description": "Der Titel für SEO und SERP.",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "description": "Beschreibung vom Blogeintrag (Wichtig für SEO).",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "headline",
+          "name": "headline",
+          "description": "Der Titel vom Blogpost (Nicht SEO). Steht auf für die Überschrift.",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Main image",
+          "name": "heroImage",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Url",
+              "name": "url",
+              "type": "image",
+              "isPreviewImage": true
+            },
+            {
+              "title": "Alt Text",
+              "name": "alt",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "title": "Publishing date",
+          "name": "pubDate",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Update date",
+          "name": "updateDate",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isModifiedDate": true
+        },
+        {
+          "title": "Place",
+          "name": "place",
+          "type": "fields",
+          "required": false,
+          "fields": [
+            {
+              "title": "Planet",
+              "name": "planet",
+              "type": "string",
+              "required": false
+            },
+            {
+              "title": "Country",
+              "name": "country",
+              "type": "string",
+              "required": false
+            },
+            {
+              "title": "Federal State",
+              "name": "federalState",
+              "type": "string",
+              "required": false
+            },
+            {
+              "title": "City",
+              "name": "city",
+              "type": "string",
+              "required": false
+            },
+            {
+              "title": "Other",
+              "name": "other",
+              "type": "string",
+              "required": false
+            }
+          ]
+        },
+        {
+          "title": "Draft",
+          "name": "draft",
+          "type": "boolean"
+        },
+        {
+          "title": "tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Old Url",
+          "name": "oldUrl",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.startCommand": "pnpm dev"
+}
