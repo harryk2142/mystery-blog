@@ -1,0 +1,97 @@
+<section id="ticker" class="">
+  <h2 id="ticker-head">BREAKING NEWS</h2>
+  <div class="ticker-container">
+    <div id="ticker-item" class="ticker-item" style="z-index:0">+++</div>
+  </div>
+</section>
+<style>
+  #ticker {
+    border: 1px solid black;
+  }
+  .ticker-container {
+    overflow: hidden;
+    display: flex;
+  }
+  .ticker-item {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    white-space: nowrap;
+    transform: translateX(100%);
+    animation: ticker-animation 120s linear infinite;
+  }
+
+  @keyframes ticker-animation {
+    0% {
+      transform: translateX(5%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+</style>
+<script>
+  interface Headline {
+    headline: string;
+  }
+  const refreshTimeInSeconds = 60;
+  const numberNews = 99;
+  async function getRandomHeadline(): Promise<string> {
+    const index = Math.floor(Math.random() * numberNews);
+    const response = await fetch("./api/news/" + index + ".json");
+    const headline = (await response.json()) as Headline;
+    return headline.headline;
+  }
+  function isElementVisible(element: HTMLElement | null) {
+    if (element === null) {
+      return false;
+    }
+    const rect = element.getBoundingClientRect();
+    const windowHeight =
+      window.innerHeight | document.documentElement.clientHeight;
+    const windowWidth =
+      window.innerWidth || document.documentElement.clientWidth;
+
+    const isVisible =
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= windowHeight &&
+      rect.right <= windowWidth;
+
+    return isVisible;
+  }
+  function fillTicker(): HTMLElement {
+    let element = document.createElement("span");
+
+    getRandomHeadline().then((e) => (element.textContent = e));
+    return element;
+  }
+  function createStarsSpan() {
+    let element = document.createElement("span");
+    element.innerText = " +++ ";
+    return element;
+  }
+
+  function generateTicker() {
+    let ticker = document.querySelector("#ticker-item") as HTMLElement;
+    let tickerSpans: HTMLElement[] = [];
+    for (let i = 0; i < 7; i++) {
+      let tickerElement = fillTicker();
+      tickerSpans.push(tickerElement);
+      ticker.appendChild(tickerElement);
+      ticker.append(createStarsSpan());
+    }
+
+    setInterval(() => {
+      tickerSpans.forEach((element) => {
+        let isVisible = isElementVisible(element);
+        if (!isVisible) {
+          getRandomHeadline().then((e) => {
+            element.innerText = e;
+          });
+        }
+      });
+    }, refreshTimeInSeconds * 1000);
+  }
+  generateTicker();
+</script>

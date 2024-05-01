@@ -3,10 +3,12 @@
 		{
 			"path": "."
 		},
-		{
-			"name": "mystery-blog",
-			"path": "mystery-blog"
-		}
+		// {
+		// 	"name": "mystery-blog",
+		// 	"path": "mystery-blog"
+		// }
 	],
-	"settings": {}
+	"settings": {
+		"editor.formatOnSave": true
+	}
 }
