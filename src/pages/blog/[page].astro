@@ -1,0 +1,224 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import NavigationBar from "./../../components/navigation/NavigationBar.astro";
+
+import type { Props } from "astro";
+
+import Footer from "../../components/Footer.astro";
+import BaseHead from "../../components/BaseHead.astro";
+
+interface Page<T = any> {
+  /** result */
+  data: CollectionEntry<"blog">[];
+  /** metadata */
+  /** the count of the first item on the page, starting from 0 */
+  start: number;
+  /** the count of the last item on the page, starting from 0 */
+  end: number;
+  /** total number of results */
+  total: number;
+  /** the current page number, starting from 1 */
+  currentPage: number;
+  /** number of items per page (default: 25) */
+  size: number;
+  /** number of last page */
+  lastPage: number;
+  url: {
+    /** url of the current page */
+    current: string;
+    /** url of the previous page (if there is one) */
+    prev: string | undefined;
+    /** url of the next page (if there is one) */
+    next: string | undefined;
+  };
+}
+
+export async function getStaticPaths({ paginate }) {
+  const posts = (await getCollection("blog"))
+    .filter((e) => !e.data.draft)
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+  return paginate(posts, { pageSize: 6 });
+}
+
+const { page } = Astro.props;
+
+const { data, start, end, total, currentPage, size, lastPage, url } =
+  page as Page;
+const title = "Blogposts Seite " + currentPage;
+const description = "Blogposts Seite " + currentPage + " von " + lastPage;
+---
+
+<html lang="de">
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+  <body data-pagefind-ignore>
+    <NavigationBar isStartPage={false} />
+    <main class="wrapper">
+      <section class="container">
+        <div class="flex center-x">
+          <h1>
+            Blogposts Seite {currentPage} von {lastPage}
+          </h1>
+        </div>
+        <div
+          id="top-pagination-container"
+          class="flex center-x pagination-container"
+        >
+          <div class="pagination">
+            {
+              url.prev ? (
+                <a href={url.prev}>
+                  <span class="ascii">&#60;</span>
+                </a>
+              ) : null
+            }
+            {currentPage > size - 1 ? <div>...</div> : null}
+            {
+              currentPage - 1 > 0 ? (
+                <a href={url.prev}>{currentPage - 1}</a>
+              ) : null
+            }
+            <a href={url.current} class="primary">{currentPage}</a>
+            {
+              currentPage < lastPage ? (
+                <a href={url.next}>{currentPage + 1}</a>
+              ) : null
+            }
+            {currentPage + size - 2 < lastPage ? <div>...</div> : null}
+            {
+              url.next ? (
+                <a href={url.next}>
+                  <span class="ascii">&#62;</span>
+                </a>
+              ) : null
+            }
+          </div>
+        </div>
+
+        <div id="blogposts-group-container">
+          <div class="blogposts-group">
+            {
+              data.map((data) => {
+                return (
+                  <div class="blogposts-group-item">
+                    <div>{data.data.title}</div>
+                  </div>
+                );
+              })
+            }
+          </div>
+        </div>
+
+        <div
+          id="bottom-pagination-container"
+          class="flex center-x pagination-container"
+        >
+          <div class="pagination">
+            {
+              url.prev ? (
+                <a href={url.prev}>
+                  <span class="ascii">&#60;</span>
+                </a>
+              ) : null
+            }
+            {currentPage > size - 1 ? <div>...</div> : null}
+            {
+              currentPage - 1 > 0 ? (
+                <a href={url.prev}>{currentPage - 1}</a>
+              ) : null
+            }
+            <a href={url.current} class="primary">{currentPage}</a>
+            {
+              currentPage < lastPage ? (
+                <a href={url.next}>{currentPage + 1}</a>
+              ) : null
+            }
+            {currentPage + size - 2 < lastPage ? <div>...</div> : null}
+            {
+              url.next ? (
+                <a href={url.next}>
+                  <span class="ascii">&#62;</span>
+                </a>
+              ) : null
+            }
+          </div>
+        </div>
+      </section>
+    </main>
+    <style is:inline>
+      a {
+        text-decoration: none;
+      }
+      #blogposts-group-container {
+        container-name: blogposts-group-container;
+        container-type: inline-size;
+      }
+      .blogpost-card-container,
+      .card-container {
+        /* height: 100%; */
+      }
+      .blogposts-group {
+        margin-top: 2rem;
+      }
+      .blogposts-group-item {
+        margin: 0 1rem 3rem 1rem;
+      }
+
+      @container blogposts-group-container (width >= 650px) {
+        .blogposts-group {
+          display: grid;
+          grid-template-columns: repeat(3, 33%);
+          grid-auto-rows: 1fr;
+        }
+      }
+      @container blogposts-group-container (width < 650px) and (width >= 500px) {
+        .blogposts-group {
+          display: grid;
+          grid-template-columns: repeat(2, 50%);
+          grid-auto-rows: 1fr;
+        }
+      }
+      @container blogposts-group-container (width < 500px) {
+        .blogposts-group {
+        }
+      }
+      .pagination-container {
+        margin-bottom: 1rem;
+      }
+      .pagination {
+        display: flex;
+        flex-direction: row;
+        height: 64px;
+      }
+
+      .pagination a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 2rem;
+        /* color: black; */
+        float: left;
+        text-decoration: none;
+        border-radius: 5px;
+        border: 1px solid black;
+        aspect-ratio: 1;
+
+        .ascii {
+          font-size: 40px;
+        }
+      }
+
+      .pagination a:hover:not(.active) {
+        background-color: #d4d5d2;
+        color: black;
+      }
+      #bottom-pagination-container {
+        padding-bottom: 6rem;
+      }
+    </style>
+    <Footer />
+  </body>
+</html>
