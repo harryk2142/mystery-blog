@@ -1,16 +1,12 @@
 ---
 import type { JSX } from "astro/jsx-runtime";
-
 import type { CollectionEntry } from "astro:content";
 type NativeImgAttributes = JSX.IntrinsicElements["img"];
 type Props = {
   blogpost: CollectionEntry<"blog">;
 } & NativeImgAttributes;
 const { blogpost, ...imgAttrs } = Astro.props;
-const src = blogpost.data.heroImage.url.replace(
-  "/images/",
-  "/src/assets/images/"
-);
+const src = blogpost.data.heroImage.url;
 const alt = blogpost.data.heroImage.alt;
 ---
 
