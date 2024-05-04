@@ -1,0 +1,144 @@
+---
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
+type Props = {
+  blogpost: CollectionEntry<"blog">;
+  infotext?: string;
+  classlist?: string;
+};
+import SmallImage from "./SmallImage.astro";
+
+const { blogpost, infotext, classlist = "" } = Astro.props;
+const pathToBlogPost = "/" + blogpost.collection + "/" + blogpost.slug;
+---
+
+<a href={pathToBlogPost} data-pagefind-ignore>
+  <div class={"n-card-container " + classlist}>
+    <div class={"n-card " + classlist}>
+      <div class="n-card-image-box">
+        <div class="n-card-image">
+          <SmallImage
+            src={blogpost?.data.heroImage.url ?? ""}
+            alt={blogpost?.data.heroImage.alt ?? ""}
+          />
+        </div>
+      </div>
+      <div class="n-card-overlay"></div>
+      <div class="n-card-info">
+        {infotext ?? ""}
+      </div>
+      <div class="n-card-body">
+        <span class="n-card-date">
+          <FormattedDate date={blogpost?.data.pubDate} ? />
+        </span>
+        <div class="n-card-title">
+          {blogpost?.data.title}
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
+
+<style>
+  a {
+    text-decoration: none;
+  }
+  .n-card-container {
+    container-type: inline-size;
+    container-name: n-card-container;
+  }
+  .n-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px black;
+
+    .n-card-image > img {
+      height: auto;
+      width: 100%;
+      min-height: 276px;
+      object-fit: cover;
+      object-position: center center;
+    }
+    .n-card-info {
+      border-radius: 0 0 0 3rem;
+      font-size: clamp(3rem, 3.5rem, 4rem);
+      position: absolute;
+      border-color: var(--secondary-color);
+      right: 0;
+      padding: 0 2rem;
+      background-color: var(--accent);
+      color: var(--secondary-color);
+
+      text-shadow:
+        2px 0px 0px black,
+        -2px 0px 0px black,
+        0px 2px 0px black,
+        0px -2px 0px black;
+    }
+    .n-card-body {
+      color: var(--accent);
+      display: flex;
+      padding: 0 1rem 1rem 1rem;
+      flex-direction: column;
+
+      .n-card-date {
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+
+      .n-card-title {
+        font-size: 1rem;
+        text-wrap: pretty;
+      }
+    }
+  }
+  @container n-card-container (width > 400px) {
+    .n-card {
+      position: relative;
+      aspect-ratio: 16 / 11;
+    }
+    .n-card-image {
+      display: flex;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+    }
+    .n-card-body {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      bottom: 0;
+      left: 0;
+      border-radius: 0 0 1rem 1rem;
+      width: 100%;
+      color: var(--secondary-color);
+      .card-title {
+        font-size: clamp(1rem, 3vh, 2rem);
+      }
+    }
+    .n-card-date {
+      color: var(--secondary-color);
+    }
+    .n-card-title {
+      color: var(--secondary-color);
+    }
+    .n-card-overlay {
+      border-radius: 1rem;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0),
+        color-mix(in srgb, var(--primary-color) 10%, var(--primary-color)),
+        color-mix(in srgb, var(--primary-color) 100%, var(--primary-color))
+      );
+    }
+  }
+</style>
