@@ -1,0 +1,13 @@
+---
+import type { JSX } from "astro/jsx-runtime";
+type ImgAttributes = JSX.ImgHTMLAttributes;
+type Props = {
+  src: string;
+  alt: string;
+} & ImgAttributes;
+
+const { alt, src, ...imgAttrs } = Astro.props;
+const imagePath = src.replace("/images/blog/", "/images/blog/small/");
+---
+
+<img src={src} alt={alt} {...imgAttrs} loading="lazy" />

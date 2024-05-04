@@ -3,8 +3,10 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import NavigationBar from "./../../components/navigation/NavigationBar.astro";
 
 import Footer from "../../components/Footer.astro";
-import BaseHead from "../../components/BaseHead.astro";
-
+import Meta from "../../components/Meta.astro";
+import "./../../styles/root.css";
+import "./../../styles/global.css";
+import BlogPostCard from "../../components/BlogPostCard.astro";
 interface Page<T = CollectionEntry<"blog">> {
   /** result */
   data: T[];
@@ -45,13 +47,13 @@ export async function getStaticPaths({ paginate }) {
 
 const { data, currentPage, size, lastPage, url } = page;
 
-const title = "Blogposts Seite " + currentPage;
-const description = "Blogposts Seite " + currentPage + " von " + lastPage;
+const title = "Seite " + currentPage;
+const description = "Seite " + currentPage + " von " + lastPage;
 ---
 
 <html lang="de">
   <head>
-    <BaseHead title={title} description={description} />
+    <Meta title={title} description={description} />
   </head>
   <body data-pagefind-ignore>
     <NavigationBar isStartPage={false} />
@@ -59,7 +61,7 @@ const description = "Blogposts Seite " + currentPage + " von " + lastPage;
       <section class="container">
         <div class="flex center-x">
           <h1>
-            Blogposts Seite {currentPage} von {lastPage}
+            Seite {currentPage} von {lastPage}
           </h1>
         </div>
         <div
@@ -103,7 +105,7 @@ const description = "Blogposts Seite " + currentPage + " von " + lastPage;
               data.map((data) => {
                 return (
                   <div class="blogposts-group-item">
-                    <div>{data.data.title}</div>
+                    <BlogPostCard blogpost={data} classlist="h100" />
                   </div>
                 );
               })
@@ -150,14 +152,11 @@ const description = "Blogposts Seite " + currentPage + " von " + lastPage;
     <style is:inline>
       a {
         text-decoration: none;
+        color: var(--accent);
       }
       #blogposts-group-container {
         container-name: blogposts-group-container;
         container-type: inline-size;
-      }
-      .blogpost-card-container,
-      .card-container {
-        /* height: 100%; */
       }
       .blogposts-group {
         margin-top: 2rem;
@@ -199,7 +198,7 @@ const description = "Blogposts Seite " + currentPage + " von " + lastPage;
         justify-content: center;
         font-weight: bold;
         font-size: 2rem;
-        /* color: black; */
+        /* color: var(--accent); */
         float: left;
         text-decoration: none;
         border-radius: 5px;

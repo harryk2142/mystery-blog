@@ -1,0 +1,22 @@
+---
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION_SHORT } from "../consts";
+import NavigationBar from "../components/navigation/NavigationBar.astro";
+import Meta from "../components/Meta.astro";
+import "./../styles/root.css";
+import "./../styles/global.css";
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <Meta title={SITE_TITLE} description={SITE_DESCRIPTION_SHORT} />
+  </head>
+  <body>
+    <NavigationBar isStartPage={true} />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

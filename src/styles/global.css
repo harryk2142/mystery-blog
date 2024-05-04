@@ -83,7 +83,9 @@ body {
   word-wrap: break-word;
   overflow-wrap: break-word;
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 2;
+  /* letter-spacing: 4px; */
+
   min-height: 100vh;
   width: 100%;
   color: var(--accent);
@@ -99,11 +101,9 @@ body {
 a:hover {
   color: var(--accent);
 } */
-main,
-.wrapper {
+main {
   width: 1280px;
   max-width: calc(100% - 1rem);
-  /* padding: 0 1rem; */
   margin: 0 auto;
 }
 h1,
@@ -112,8 +112,8 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 1rem 0 0 0;
-  color: var(--primary-color);
+  margin: 0;
+  color: var(--accent);
   line-height: 1.2;
   margin-bottom: 0.25rem;
 }
@@ -145,8 +145,284 @@ h6 {
   height: 100%;
 }
 .primary {
-  background: var(--primary-color);
+  background: var(--accent);
   color: var(--secondary-color);
+}
+.wrapper {
+  width: 1280px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* FEATURES */
+.scale-on-hover:hover {
+  scale: 1.1;
+  z-index: 20;
+}
+.m-1 {
+  margin: 1rem;
+}
+.mt-1 {
+  margin-top: 1rem;
+}
+.mr-1 {
+  margin-right: 1rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.ml-1 {
+  margin-left: 1rem;
+}
+
+.m-2 {
+  margin: 2rem;
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+.mr-2 {
+  margin-right: 2rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
+.ml-2 {
+  margin-left: 2rem;
+}
+
+/* ... und so weiter für weitere Größen */
+
+/* Padding (Innenabstand) */
+.p-1 {
+  padding: 1rem;
+}
+.pt-1 {
+  padding-top: 1rem;
+}
+.pr-1 {
+  padding-right: 1rem;
+}
+.pb-1 {
+  padding-bottom: 1rem;
+}
+.pl-1 {
+  padding-left: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+.pt-2 {
+  padding-top: 2rem;
+}
+.pr-2 {
+  padding-right: 2rem;
+}
+.pb-2 {
+  padding-bottom: 2rem;
+}
+.pl-2 {
+  padding-left: 2rem;
+}
+/* ROUND */
+.round-small {
+  border-radius: 2px;
+}
+.round,
+.round-medium {
+  border-radius: 4px;
+}
+.round-large {
+  border-radius: 8px;
+}
+.round-xlarge {
+  border-radius: 16px;
+}
+.round-xxlarge {
+  border-radius: 32px;
+}
+/* Colors */
+.white,
+.hover-white:hover {
+  background-color: white;
+  color: black;
+}
+.border-white {
+  border-color: white;
+}
+.shadow-white,
+.shadow-white-hover:hover {
+  box-shadow: 0 4px 8px white;
+}
+
+.black,
+.hover-black:hover {
+  background-color: black;
+  color: white;
+}
+.border-black {
+  border-color: black;
+}
+.shadow-black,
+.shadow-black-hover:hover {
+  box-shadow: 0 4px 8px #000000;
+}
+
+.earth,
+.hover-earth:hover {
+  background-color: #00ff00;
+  color: black;
+}
+.air,
+.hover-air:hover {
+  background-color: #ffff00;
+  color: black;
+}
+.fire,
+.hover-fire:hover {
+  background-color: #f44336;
+  color: white;
+}
+.water,
+.hover-water:hover {
+  background-color: #00bfff;
+  color: black;
+}
+
+/* https://en.wikipedia.org/wiki/Web_colors */
+/* PINK */
+/* TODO */
+/* RED */
+.dark-red,
+.hover-dark-red:hover {
+  background-color: darkred;
+  color: white;
+}
+.red,
+.hover-red:hover {
+  background-color: #f44336;
+  color: white;
+}
+/* ORANGE */
+.coral,
+.hover-coral:hover {
+  background-color: coral;
+  color: white;
+}
+.orange,
+.hover-orange:hover {
+  background-color: orange;
+  color: white;
+}
+/* YELLOW */
+.gold,
+.hover-gold:hover {
+  background-color: gold;
+  color: black;
+}
+.yellow,
+.hover-yellow:hover {
+  background-color: yellow;
+  color: black;
+}
+/* BROWN */
+/* TODO */
+/* PURPLE */
+.indigo,
+.hover-indigo:hover {
+  background-color: indigo;
+  color: white;
+}
+.purple,
+.hover-purple:hover {
+  background-color: purple;
+  color: white;
+}
+/* BLUE */
+.midnight-blue,
+.hover-midnight-blue:hover {
+  background-color: midnightblue;
+  color: white;
+}
+.dark-blue,
+.hover-dark-blue:hover {
+  background-color: darkblue;
+  color: white;
+}
+/* CYAN */
+.teal,
+.hover-teal:hover {
+  background-color: teal;
+  color: white;
+}
+/* GREEN */
+.dark-green,
+.hover-dark-green:hover {
+  background-color: darkgreen;
+  color: white;
+}
+.green,
+.hover-green:hover {
+  background-color: green;
+  color: white;
+}
+/* WHITE */
+.ivory,
+.hover-ivory:hover {
+  background-color: ivory;
+  color: black;
+}
+/* FLEX */
+.flex {
+  display: flex;
+  padding: 0;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.flex.column {
+  flex-direction: column;
+}
+
+.flex.row {
+  flex-direction: row;
+}
+
+.flex.center-x {
+  justify-content: center;
+}
+
+.flex.left {
+  justify-content: flex-start;
+}
+
+.flex.right {
+  justify-content: flex-end;
+}
+
+.flex.space-around {
+  justify-content: space-around;
+}
+
+.flex.space-between {
+  justify-content: space-between;
+}
+
+.flex.center-y {
+  align-items: center;
+}
+
+.flex.top {
+  align-items: flex-start;
+}
+
+.flex.bottom {
+  align-items: flex-end;
+}
+
+.flex.align-stretch {
+  align-items: stretch;
 }
 
 /* from Astro */
@@ -174,7 +450,7 @@ table {
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  /* border-radius: 8px; */
 }
 code {
   padding: 2px 5px;

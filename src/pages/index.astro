@@ -1,40 +1,102 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION_SHORT } from "../consts";
+import { getCollection } from "astro:content";
 import BreakingNewsTicker from "../components/BreakingNewsTicker.astro";
-import NavigationBar from "../components/navigation/NavigationBar.astro";
+import Main from "../layouts/Main.astro";
+import BlogPostCard from "../components/BlogPostCard.astro";
+
+const posts = (await getCollection("blog"))
+  .filter((e) => !e.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const latestPost = posts[0];
+const latestPosts = [posts[1], posts[2], posts[3], posts[4]];
 ---
 
-<!doctype html>
-<html lang="de">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION_SHORT} />
-  </head>
-  <body>
-    <NavigationBar isStartPage={true} />
-    <main>
+<Main>
+  <div id="main">
+    <section
+      id="breaking-news-section"
+      class="container shadow-black p-1 mt-1 ml-1 mr-1 round-xlarge"
+    >
       <BreakingNewsTicker />
+    </section>
 
-      <h1>🧑‍🚀 Hello, Astronaut!</h1>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, quas totam
-      eos dolores alias, voluptatibus asperiores culpa ratione eum sunt, corrupti
-      fugiat inventore beatae expedita ex officiis perspiciatis nihil vitae. Lorem
-      ipsum dolor sit amet, consectetur adipisicing elit. Ducimus vitae esse quibusdam
-      nisi dignissimos, blanditiis itaque suscipit placeat cum laborum, nam ab voluptate
-      nobis unde corporis ipsa in sequi quisquam. Lorem ipsum dolor sit amet consectetur
-      adipisicing elit. Similique qui perspiciatis veritatis illum cum aliquam obcaecati
-      alias nam veniam hic. Sequi odio, reiciendis ratione vero ad molestias. Animi,
-      similique nam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed
-      rerum facilis hic exercitationem non dolor, possimus beatae quae consequuntur
-      a, perspiciatis ullam sequi sunt ex, ut minus alias corporis illo! Lorem ipsum
-      dolor sit amet consectetur adipisicing elit. Id earum modi optio nesciunt officia
-      labore itaque, veniam, amet aspernatur asperiores iure tempora sed porro enim
-      dolorum! Tempora facilis veritatis labore. Lorem ipsum dolor sit, amet consectetur
-      adipisicing elit. Hic asperiores ut quidem, optio dicta magnam quisquam dignissimos
-      sapiente suscipit officiis exercitationem corrupti, perspiciatis consectetur
-      quos recusandae temporibus aperiam soluta. Doloribus.
-    </main>
-    <Footer />
-  </body>
-</html>
+    <div id="blogposts-container" class="m-1">
+      <section id="special-blogposts-section">
+        <section id="latest-blogpost-section">
+          <BlogPostCard blogpost={latestPost} infotext="NEW" />
+        </section>
+      </section>
+      <section id="latest-blogposts-section">
+        <div class="">
+          <h2>Latest 4 Blogposts</h2>
+          <div id="latest-blogposts-block" class="">
+            {
+              latestPosts.map((a) => (
+                <div class="latest-blogpost-container mt-1">
+                  <BlogPostCard blogpost={a} />
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</Main>
+
+<style>
+  #main {
+    container-name: main-container;
+    container-type: inline-size;
+    height: 100%;
+    padding-bottom: 3rem;
+  }
+  h2 {
+    padding: 0 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  #blogposts-container {
+    container-type: inline-size;
+    container-name: blogposts-container;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #special-blogpost-section,
+  #latest-blogpost-section {
+    display: flex;
+    flex-direction: column;
+  }
+  @container blogposts-container (width >= 800px) {
+    #special-blogposts-section {
+      width: 50%;
+    }
+    #latest-blogposts-section {
+      width: 50%;
+      margin-top: 1rem;
+      #latest-blogposts-block {
+        margin-left: 1rem;
+      }
+    }
+  }
+  @container blogposts-container (width < 800px) and (width >= 600px) {
+    #special-blogposts-section {
+      width: 70%;
+    }
+    #latest-blogposts-section {
+      width: 30%;
+      #latest-blogposts-block {
+        margin-left: 1rem;
+      }
+    }
+  }
+  @container blogposts-container (width < 600px) {
+    #special-blogposts-section {
+      width: 100%;
+    }
+    #latest-blogposts-section {
+      margin-top: 3rem;
+      width: 100%;
+    }
+  }
+</style>
