@@ -2,14 +2,12 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import NavigationBar from "./../../components/navigation/NavigationBar.astro";
 
-import type { Props } from "astro";
-
 import Footer from "../../components/Footer.astro";
 import BaseHead from "../../components/BaseHead.astro";
 
-interface Page<T = any> {
+interface Page<T = CollectionEntry<"blog">> {
   /** result */
-  data: CollectionEntry<"blog">[];
+  data: T[];
   /** metadata */
   /** the count of the first item on the page, starting from 0 */
   start: number;
@@ -32,6 +30,10 @@ interface Page<T = any> {
     next: string | undefined;
   };
 }
+const { page } = Astro.props;
+type Props = {
+  page: Page;
+};
 
 export async function getStaticPaths({ paginate }) {
   const posts = (await getCollection("blog"))
@@ -41,10 +43,8 @@ export async function getStaticPaths({ paginate }) {
   return paginate(posts, { pageSize: 6 });
 }
 
-const { page } = Astro.props;
+const { data, currentPage, size, lastPage, url } = page;
 
-const { data, start, end, total, currentPage, size, lastPage, url } =
-  page as Page;
 const title = "Blogposts Seite " + currentPage;
 const description = "Blogposts Seite " + currentPage + " von " + lastPage;
 ---

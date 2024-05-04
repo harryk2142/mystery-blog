@@ -11,54 +11,56 @@ const { isStartPage } = Astro.props;
 ---
 
 <div id="navigation-bar" data-pagefind-ignore>
-  <div id="nav-container">
-    <div id="nav-bar">
-      <div id="brand">
-        <div id="logo">
-          <a href="/">
-            <Image src={icon} alt="Icon vom Blog" />
-          </a>
+  <div class="wrapper">
+    <div id="nav-container">
+      <div id="nav-bar">
+        <div id="brand">
+          <div id="logo">
+            <a href="/">
+              <Image src={icon} alt="Icon vom Blog" />
+            </a>
+          </div>
+          <div id="title">
+            {
+              isStartPage ? (
+                <>
+                  <h1>
+                    <a class="primary" href="/">
+                      {SITE_TITLE}
+                    </a>
+                  </h1>
+                  <div class="block" id="subtitle">
+                    {SUB_TITLE}
+                  </div>
+                </>
+              ) : (
+                <>
+                  <h2>
+                    <a class="primary" href="/">
+                      {SITE_TITLE}
+                    </a>
+                  </h2>
+                  <div class="block" id="subtitle">
+                    {SUB_TITLE}
+                  </div>
+                </>
+              )
+            }
+          </div>
+          <div id="placeholder"></div>
+          <div id="burger-menu">
+            <span id="menu-icon-open" class="menu-icon">&equiv;</span>
+            <span id="menu-icon-close" class="menu-icon">x</span>
+          </div>
         </div>
-        <div id="title">
-          {
-            isStartPage ? (
-              <>
-                <h1>
-                  <a class="primary" href="/">
-                    {SITE_TITLE}
-                  </a>
-                </h1>
-                <div class="block" id="subtitle">
-                  {SUB_TITLE}
-                </div>
-              </>
-            ) : (
-              <>
-                <h2>
-                  <a class="primary" href="/">
-                    {SITE_TITLE}
-                  </a>
-                </h2>
-                <div class="block" id="subtitle">
-                  {SUB_TITLE}
-                </div>
-              </>
-            )
-          }
-        </div>
-        <div id="placeholder"></div>
-        <div id="burger-menu">
-          <span id="menu-icon-open" class="menu-icon">&equiv;</span>
-          <span id="menu-icon-close" class="menu-icon">x</span>
-        </div>
-      </div>
 
-      <div id="nav-links">
-        <div class="nav-item"><HeaderLink href="/">Home</HeaderLink></div>
-        <div class="nav-item">
-          <HeaderLink href="/blog/1">Blog</HeaderLink>
+        <div id="nav-links">
+          <div class="nav-item"><HeaderLink href="/">Home</HeaderLink></div>
+          <div class="nav-item">
+            <HeaderLink href="/blog/1">Blog</HeaderLink>
+          </div>
+          <div class="nav-item"><HeaderLink href="/tags">Tags</HeaderLink></div>
         </div>
-        <div class="nav-item"><HeaderLink href="/tags">Tags</HeaderLink></div>
       </div>
     </div>
   </div>
@@ -107,6 +109,7 @@ const { isStartPage } = Astro.props;
           }
 
           h2 {
+            margin: 0;
             font-size: clamp(1.5rem, 4vw, 2.25rem);
             /* font-size: clamp(1.2rem, 3vw, 2rem); */
           }

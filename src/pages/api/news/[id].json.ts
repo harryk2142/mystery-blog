@@ -106,7 +106,7 @@ import { headlines } from "./headlines";
 interface Parameter {
   params: { id: number };
 }
-export const GET: APIRoute = ({ params, request }) => {
+export const GET: APIRoute = ({ params }) => {
   const id = params.id as string;
   return new Response(JSON.stringify({ headline: headlines[Number(id)] }), {
     status: 200,
