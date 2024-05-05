@@ -6,8 +6,7 @@ pubDate: 2023-02-17
 heroImage:
   alt: Ein großes steinernes rundes Sternentor mit zwei Archäologen
   url: /images/blog/sternentor-in-deutschland-entdeckt.png
-place:
-  country: Speyer - Rheinland-Pfalz - Deutschland
+place: Speyer - Rheinland-Pfalz - Deutschland
 tags:
   - anna-luese
   - anna-lüse

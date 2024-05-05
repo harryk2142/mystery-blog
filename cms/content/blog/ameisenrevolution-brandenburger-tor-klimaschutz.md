@@ -6,8 +6,7 @@ pubDate: 2023-06-16
 heroImage:
   alt: Viele große Ameisen protestieren in Berlin vor dem Brandenburger Tor
   url: /images/blog/ameisen-protestieren-in-berlin-vor-dem-brandenburger-tor.jpeg
-place:
-  country: Brandenburger Tor - Berlin - Deutschland
+place: Brandenburger Tor - Berlin - Deutschland
 tags:
   - ameisen
   - brandenburgertor

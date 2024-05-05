@@ -6,8 +6,7 @@ pubDate: 2023-07-09
 heroImage:
   alt: Ein grünes Rind spielt auf der Weide auf einer Gitarre
   url: /images/blog/gruenes-rind-mit-gitarre.jpeg
-place:
-  country: Kuhlingen - Bayern - Deutschland
+place: Kuhlingen - Bayern - Deutschland
 tags:
   - grünakord
   - rind

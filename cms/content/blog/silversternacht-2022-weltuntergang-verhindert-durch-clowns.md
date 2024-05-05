@@ -3,8 +3,7 @@ title: "Silvester 2022: Weltuntergang verhindert durch Clowns"
 headline: "Silvester 2022: Weltuntergang verhindert durch Clowns"
 description: In diesem Blogeintrag erfährst du die unglaubliche Geschichte, wie eine Gruppe von Clowns die Apokalypse verhindert hat. Lese jetzt weiter.
 pubDate: 2023-01-01
-place:
-  country: Planet Erde, Überall
+place: Planet Erde, Überall
 tags:
   - apokalypse
   - clowns

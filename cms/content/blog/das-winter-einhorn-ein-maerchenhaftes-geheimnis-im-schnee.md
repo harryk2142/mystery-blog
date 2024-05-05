@@ -7,8 +7,7 @@ headline: "Ein Wunder im Winterwald: Das Weiße Einhorn"
 heroImage:
   url: /images/blog/weisses-einhorn-mit-schnee.jpeg
   alt: Ein weißes Einhorn mit einer schönen Winterlandschaft. Sonniger Tag.
-place:
-  country: Frostfels - Baden-Württemberg - Deutschland
+place: Frostfels - Baden-Württemberg - Deutschland
 tags:
   - badenwuerttemberg
   - badenwürttemberg

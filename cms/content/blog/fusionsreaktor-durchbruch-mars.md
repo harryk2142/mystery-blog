@@ -6,8 +6,7 @@ pubDate: 2023-01-27
 heroImage:
   alt: Ein modernes Funsionskraftwerk auf dem Mars
   url: /images/blog/fusionskraftwerk-auf-dem-mars.png
-place:
-  country: "Mars, Elysium Planitia-Region, Koordinaten: 4.5°N, 135°E"
+place: "Mars, Elysium Planitia-Region, Koordinaten: 4.5°N, 135°E"
 tags:
   - fusion
   - jessica-taylor

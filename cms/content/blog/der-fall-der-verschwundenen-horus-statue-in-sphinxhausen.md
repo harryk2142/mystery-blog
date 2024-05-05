@@ -4,8 +4,7 @@ pubDate: 2023-12-17T16:21:58.514Z
 updateDate: 2023-12-17T16:21:58.514Z
 description: Entdecken Sie das rätselhafte Verschwinden der Horus-Statue in Sphinxhausen, Bayern, eine Woche vor dem legendären Geburtstag der ägyptischen Gottheit.
 headline: Der mysteriöse Fall der verschwundenen Horus-Statue in Sphinxhausen, Bayern
-place:
-  country: Sphinxhausen - Bayern - Deutschland
+place: Sphinxhausen - Bayern - Deutschland
 heroImage:
   alt: Eine Menschengruppe mit Winterklamotten steht auf dem Marktplatz in einem verschneiten bayerischen Dorf
   url: /images/blog/menschen-in-wintersachen-auf-dem-marktplatz-im-verschneiten-bayerischen-dorf.jpeg

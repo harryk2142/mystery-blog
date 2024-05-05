@@ -6,8 +6,7 @@ pubDate: 2023-07-13
 heroImage:
   alt: UFOs mit Kühen auf einem Feld
   url: /images/blog/ufos-mit-kuehen-auf-dem-feld-01.jpg
-place:
-  country: Kuhlingen - Bayern - Deutschland
+place: Kuhlingen - Bayern - Deutschland
 tags:
   - außerirdische
   - bayern

@@ -6,8 +6,7 @@ pubDate: 2023-02-11
 heroImage:
   alt: Zwei Fische spielen Gitarre
   url: /images/blog/fische-spielen-gitarre.jpeg
-place:
-  country: Lake Tahoe - Kalifornien, Nevada, USA
+place: Lake Tahoe - Kalifornien, Nevada, USA
 tags:
   - entdeckung
   - fische

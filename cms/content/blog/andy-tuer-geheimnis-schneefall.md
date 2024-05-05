@@ -7,8 +7,7 @@ description: In diesem Blogpost erkunden wir eine humorvolle und mysteriöse Erk
 heroImage:
   url: /images/blog/ein-mann-mit-einem-klemmbrett-steht-draussen-im-schnee.png
   alt: Meteorologe Andy Tür beobachtet Schneefall in deutscher Winterlandschaft, mit spielenden Kindern und verschneiten Straßen
-place:
-  country: Deutschland
+place: Deutschland
 tags:
   - andy-tuer
   - andy-tür

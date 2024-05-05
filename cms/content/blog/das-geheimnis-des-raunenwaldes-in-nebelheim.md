@@ -22,8 +22,7 @@ tags:
   - raunenwald
   - übernatürlich
   - übernatürlichephänomene
-place:
-  country: Nebelheim - Baden-Württemberg - Deutschland
+place: Nebelheim - Baden-Württemberg - Deutschland
 headline: "Geheimnisse im Mondlicht: Die unerzählte Legende des Raunenwaldes in Nebelheim"
 ---
 

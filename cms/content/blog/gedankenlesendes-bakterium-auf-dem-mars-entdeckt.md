@@ -6,8 +6,7 @@ pubDate: 2023-02-08
 heroImage:
   alt: Ein grünes Bakterium in einer blauen Flüssigkeit. Im Hintergrund ist eine Wissenschaftlerin zu sehen.
   url: /images/blog/gruenes-bakterium-blaue-fluessigkeit.png
-place:
-  country: "Mars, Elysium Planitia-Region, Koordinaten: 4.5°N, 135°E"
+place: "Mars, Elysium Planitia-Region, Koordinaten: 4.5°N, 135°E"
 tags:
   - bakterium
   - entdeckung

@@ -7,8 +7,7 @@ heroImage:
   alt: Schöne Landschaft. Rundes, metallisches Objekt auf dem Boden. Im Hintergrund ist ein Dorf zu sehen.
 headline: Mitten in Europa - Geheimnisvolles Artefakt in der Schweiz entdeckt
 description: Entdecken Sie das Geheimnis des Artefakts von Bizarresloch, ein mysteriöser Fund im Kanton Bern, der die wissenschaftliche Gemeinschaft in Aufruhr versetzt.
-place:
-  country: Bizzaresloch - Bern - Schweiz
+place: Bizzaresloch - Bern - Schweiz
 tags:
   - außerirdische
   - bern

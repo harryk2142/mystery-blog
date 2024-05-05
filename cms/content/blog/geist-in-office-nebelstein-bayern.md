@@ -6,8 +6,7 @@ pubDate: 2023-09-24
 heroImage:
   alt: Ein mysteriöses Ding, das wie eine Mischung aus einem Alien, einem Roboter und einem Kristall aussieht. Schwebend über dem Boden.
   url: /images/blog/ein-geist-in-einem-office.jpeg
-place:
-  country: Nebelstein, Schattenburg - Bayern - Deutschland
+place: Nebelstein, Schattenburg - Bayern - Deutschland
 tags:
   - deutschland
   - geist

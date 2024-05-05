@@ -4,8 +4,7 @@ pubDate: 2023-12-31T17:19:23.280Z
 updateDate: 2023-12-31T17:19:23.282Z
 description: Erleben Sie die magische Rückkehr der Horus-Statue in Sphinxhausen nach einer spektakulären Erscheinung am Weihnachtstag.
 headline: "Das weihnachtliche Wunder von Sphinxhausen: Die Rückkehr des Horus"
-place:
-  country: Sphinxhausen - Bayern - Deutschland
+place: Sphinxhausen - Bayern - Deutschland
 tags:
   - dezembermysterium
   - dr-helena-hieroglyph

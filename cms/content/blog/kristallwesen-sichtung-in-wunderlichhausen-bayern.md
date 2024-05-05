@@ -6,8 +6,7 @@ pubDate: 2023-08-09
 heroImage:
   alt: Ein mysteriöses Ding, das wie eine Mischung aus einem Alien, einem Roboter und einem Kristall aussieht. Schwebend über dem Boden.
   url: /images/blog/mysterioeses-ding-mischung-aus-alien-roboter-und-kristall.jpeg
-place:
-  country: Wunderlichhausen - Bayern - Deutschland
+place: Wunderlichhausen - Bayern - Deutschland
 tags:
   - augenzeugenbericht
   - deutschland

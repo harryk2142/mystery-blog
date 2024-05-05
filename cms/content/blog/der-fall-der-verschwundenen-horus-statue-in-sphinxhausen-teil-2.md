@@ -4,8 +4,7 @@ pubDate: 2023-12-24T23:21:58.514Z
 updateDate: 2023-12-24T23:21:58.514Z
 description: "Spannung in Sphinxhausen: Anzeichen deuten auf die baldige Rückkehr der lebendigen Horus-Statue am 26. Dezember hin. Entdecken Sie die Details der Prophezeiung."
 headline: "Das bevorstehende Wunder von Sphinxhausen - Die Rückkehr von Horus"
-place:
-  country: Sphinxhausen - Bayern - Deutschland
+place: Sphinxhausen - Bayern - Deutschland
 heroImage:
   alt: Fröhliche kleine Gruppe in traditioneller bayerischer und winterlicher Kleidung, die bei sanfter Beleuchtung in Sphinxhausen zusammensteht, lachend und warme Getränke haltend, in Erwartung der Rückkehr der Horus-Statue.
   url: /images/blog/fröhliche-menschen-sphinxhausen-vorfreude-horus.jpeg

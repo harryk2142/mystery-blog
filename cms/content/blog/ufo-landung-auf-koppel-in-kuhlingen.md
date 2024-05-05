@@ -3,8 +3,7 @@ title: Spektakuläre Entdeckung in Kuhlingen - UFO landet auf Koppel
 headline: Spektakuläre Entdeckung auf der Farm - UFO landet auf Koppel
 description: Geheimnisvolle UFO-Sichtung in Kuhlingen! Entdecke den unglaublichen Augenzeugenbericht.
 pubDate: 2022-11-19
-place:
-  country: Kuhlingen - Bayern - Deutschland
+place: Kuhlingen - Bayern - Deutschland
 tags:
   - außerirdische
   - komödie

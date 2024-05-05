@@ -6,8 +6,7 @@ pubDate: 2023-06-26
 heroImage:
   alt: Ein großes Gehirn auf dem Rücken einer Rakte im Weltall
   url: /images/blog/gehirn-auf-einer-rakete-im-weltall.jpeg
-place:
-  country: NASA Headquarters - Washington, D.C. (300 E Street SW)
+place: NASA Headquarters - Washington, D.C. (300 E Street SW)
 tags:
   - anna-luese
   - anna-lüse

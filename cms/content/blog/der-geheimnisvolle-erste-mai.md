@@ -5,8 +5,7 @@ updateDate: 2024-05-01T11:45:59.493Z
 type: default
 headline: "Der Geheimnisvolle Erste Mai: Traditionen, Mythen und Mysterien in Deutschland"
 description: Erfahren Sie mehr über die alten Bräuche, mysteriösen Legenden und die unerklärlichen Phänomene
-place:
-  country: Deutschland
+place: Deutschland
 tags:
   - deutschetraditionen
   - erstermai

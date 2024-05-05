@@ -6,8 +6,7 @@ pubDate: 2023-05-18
 heroImage:
   alt: Ein Reptiloide mit einem Strohut am Strand
   url: /images/blog/reptiloide-mit-strohhut.jpg
-place:
-  country: Kreta - Griechenland
+place: Kreta - Griechenland
 tags:
   - griechenland
   - kreta

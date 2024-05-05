@@ -7,8 +7,7 @@ description: Entdecken Sie das mysteriöse Phänomen der Geisterzüge, die jedes
 heroImage:
   alt: Ein altertümlicher, teilweise transparenter Geisterzug mit Dampf und unheimlichen Lichtern auf einem Eisenbahngleis in einer nebligen, sternenklaren Nacht in Deutschland, umgeben von einer dunklen, bewaldeten Landschaft.
   url: /images/blog/geisterzug-in-deutscher-nachtlandschaft.png
-place:
-  country: Deutschland
+place: Deutschland
 tags:
   - deutschland
   - eisenbahngeheimnisse

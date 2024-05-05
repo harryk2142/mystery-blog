@@ -6,8 +6,7 @@ pubDate: 2023-07-21
 heroImage:
   alt: Zwei Wissenschaftler untersuchen Teile eines Ufos. Schwarz Weiß Foto aus dem Jahr 1970
   url: /images/blog/zwei-wissenschaftler-untersuchen-teile-eines-ufos-auf-einem-schwarz-weiß-bild.jpeg
-place:
-  country: Kaiserslautern - Rheinland-Pfalz - Deutschland
+place: Kaiserslautern - Rheinland-Pfalz - Deutschland
 tags:
   - "1970"
   - friedrich-blitz

@@ -7,8 +7,7 @@ pubDate: 2023-05-05
 heroImage:
   alt: Gigantischer Gorilla auf einem Dach eines Hochhauses in Frankfurt
   url: /images/blog/gigantischer-gorilla-in-frankfurt.jpg
-place:
-  country: Innenstadt - Frankfurt am Main - Deutschland
+place: Innenstadt - Frankfurt am Main - Deutschland
 tags:
   - action
   - deutschland

@@ -7,8 +7,7 @@ headline: Ufo Hunters nächtliche Jagd auf Hessdalens geheimnisvolle Lichter
 heroImage:
   url: /images/blog/hessdalen-lichter-beobachtung-nacht.webp
   alt: Ein Beobachter in Winterkleidung steht bei Nacht in einem verschneiten norwegischen Tal und dokumentiert mit Nachtsichtkamera und EMF-Messer ein spektakuläres, unerklärliches Lichtphänomen am Himmel, unterlegt von den Nordlichtern.
-place:
-  country: Hessdalen - Norwegen
+place: Hessdalen - Norwegen
 tags:
   - abenteuer
   - außerirdische

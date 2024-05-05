@@ -6,8 +6,7 @@ pubDate: 2023-03-13
 heroImage:
   alt: Ein goldenes Einhorn mit blauem Haar
   url: /images/blog/goldenes-einhorn.jpg
-place:
-  country: Nationalpark Harz - Region Niedersachsen - Deutschland
+place: Nationalpark Harz - Region Niedersachsen - Deutschland
 tags:
   - einhorn
   - entdeckung
