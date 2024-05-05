@@ -13,25 +13,25 @@ const pathToBlogPost = "/" + blogpost.collection + "/" + blogpost.slug;
 ---
 
 <a href={pathToBlogPost} data-pagefind-ignore>
-  <div class={"n-card-container " + classlist}>
-    <div class={"n-card " + classlist}>
-      <div class="n-card-image-box">
-        <div class="n-card-image">
+  <div class={"card-container " + classlist}>
+    <div class={"card " + classlist}>
+      <div class="card-image-box">
+        <div class="card-image">
           <SmallImage
             src={blogpost?.data.heroImage.url ?? ""}
             alt={blogpost?.data.heroImage.alt ?? ""}
           />
         </div>
       </div>
-      <div class="n-card-overlay"></div>
-      <div class="n-card-info">
+      <div class="card-overlay"></div>
+      <div class="card-info">
         {infotext ?? ""}
       </div>
-      <div class="n-card-body">
-        <span class="n-card-date">
+      <div class="card-body">
+        <span class="card-date">
           <FormattedDate date={blogpost?.data.pubDate} ? />
         </span>
-        <div class="n-card-title">
+        <div class="card-title">
           {blogpost?.data.title}
         </div>
       </div>
@@ -39,29 +39,24 @@ const pathToBlogPost = "/" + blogpost.collection + "/" + blogpost.slug;
   </div>
 </a>
 
-<style>
+<style define:vars={{ pathToBlogPost }}>
   a {
     text-decoration: none;
   }
-  .n-card-container {
+  .card-container {
     container-type: inline-size;
-    container-name: n-card-container;
+    container-name: card-container;
   }
-  .n-card {
+  .card {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    border: 1px solid #ccc;
     border-radius: 1rem;
-    box-shadow: 0 4px 8px black;
+    /* box-shadow: 0 4px 8px black; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* leichter Schatten für 3D-Effekt */
 
-    .n-card-image > img {
-      height: auto;
-      width: 100%;
-      min-height: 276px;
-      object-fit: cover;
-      object-position: center center;
-    }
-    .n-card-info {
+    .card-info {
       border-radius: 0 0 0 3rem;
       font-size: clamp(3rem, 3.5rem, 4rem);
       position: absolute;
@@ -77,34 +72,58 @@ const pathToBlogPost = "/" + blogpost.collection + "/" + blogpost.slug;
         0px 2px 0px black,
         0px -2px 0px black;
     }
-    .n-card-body {
+    .card-body {
       color: var(--accent);
       display: flex;
-      padding: 0 1rem 1rem 1rem;
+      /* padding: 0 1rem 1rem 1rem; */
+      padding: 1rem; /* Innenabstand */
+      text-align: center; /* Text zentrieren */
       flex-direction: column;
 
-      .n-card-date {
+      .card-date {
         font-size: 1.25rem;
         font-weight: bold;
       }
 
-      .n-card-title {
+      .card-title {
         font-size: 1rem;
         text-wrap: pretty;
       }
     }
   }
-  @container n-card-container (width > 400px) {
-    .n-card {
+  @container card-container (width <= 400px) {
+    .card-image > img {
+      /* das Bild füllt die Breite der Card aus */
+      width: 100%;
+      /* deckt den verfügbaren Container ab, ohne das Seitenverhältnis zu verzerren */
+      object-fit: cover;
+      /* zentriert das Bild in seinem Container */
+      object-position: center center;
+      /* feste Höhe für das Bild */
+      height: 300px;
+      /* height: 276px; */
+      /* oder */
+      /* aspect-ratio: 4 / 3; */
+    }
+  }
+  @container card-container (width > 400px) {
+    .card {
       position: relative;
       aspect-ratio: 16 / 11;
     }
-    .n-card-image {
+    .card-image {
       display: flex;
       overflow: hidden;
       aspect-ratio: 16 / 9;
+
+      > img {
+        object-fit: cover;
+        object-position: center center;
+        width: 100%;
+        height: auto;
+      }
     }
-    .n-card-body {
+    .card-body {
       position: absolute;
       display: flex;
       flex-direction: column;
@@ -117,13 +136,13 @@ const pathToBlogPost = "/" + blogpost.collection + "/" + blogpost.slug;
         font-size: clamp(1rem, 3vh, 2rem);
       }
     }
-    .n-card-date {
+    .card-date {
       color: var(--secondary-color);
     }
-    .n-card-title {
+    .card-title {
       color: var(--secondary-color);
     }
-    .n-card-overlay {
+    .card-overlay {
       border-radius: 1rem;
       position: absolute;
       bottom: 0;
