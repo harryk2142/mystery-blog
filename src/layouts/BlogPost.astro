@@ -7,61 +7,54 @@ import NavigationBar from "../components/navigation/NavigationBar.astro";
 import Meta from "../components/Meta.astro";
 import "./../styles/root.css";
 // type Props = CollectionEntry<"blog">["data"];
-type Props = CollectionEntry<'blog'>;
+type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
-const { title, description, pubDate, updatedDate, heroImage } = post.data;
+const { title, tags, description, pubDate, updatedDate, heroImage, place } =
+  post.data;
+import "./../styles/root.css";
+import "./../styles/global.css";
 ---
 
 <html lang="de">
   <head>
     <Meta title={title} description={description} />
-    <style>
-      main {
-        width: calc(100% - 2em);
-        max-width: 100%;
-        margin: 0;
-      }
-      .hero-image {
-        width: 100%;
-      }
-      .hero-image img {
-        display: block;
-        margin: 0 auto;
-        border-radius: 12px;
-        box-shadow: var(--box-shadow);
-      }
-      .prose {
-        width: 720px;
-        max-width: calc(100% - 2em);
-        margin: auto;
-        padding: 1em;
-        color: rgb(var(--gray-dark));
-      }
-      .title {
-        margin-bottom: 1em;
-        padding: 1em 0;
-        text-align: center;
-        line-height: 1;
-      }
-      .title h1 {
-        margin: 0 0 0.5em 0;
-      }
-      .date {
-        margin-bottom: 0.5em;
-        color: rgb(var(--gray));
-      }
-      .last-updated-on {
-        font-style: italic;
-      }
-    </style>
   </head>
 
   <body>
     <NavigationBar isStartPage={false} />
     <main>
-      <article>
-        <div class="hero-image">
+      <article class="blog-post">
+        <div class="post-image">
+          <img src={heroImage.url} alt={heroImage.alt} />
+        </div>
+        <header class="post-header">
+          <h1>
+            {title}
+          </h1>
+          <div class="post-meta">
+            <FormattedDate date={pubDate} />
+            <span> - </span>
+            <span class="location">{place}</span>
+          </div>
+        </header>
+
+        {
+          tags && (
+            <section id="tags">
+              {tags.map((tag) => (
+                <a href={`/tags/${tag}`} class="link-tag">
+                  #{tag}
+                </a>
+              ))}
+            </section>
+          )
+        }
+        <hr />
+        <section class="post-content">
+          <slot />
+        </section>
+        <!-- <div class="hero-image">
           {
             heroImage && (
 				<FrontmatterImage blogpost={post}
@@ -73,8 +66,8 @@ const { title, description, pubDate, updatedDate, heroImage } = post.data;
               />
             )
           }
-        </div>
-        <div class="prose">
+        </div> -->
+        <!-- <div class="prose">
           <div class="title">
             <div class="date">
               <FormattedDate date={pubDate} />
@@ -89,10 +82,77 @@ const { title, description, pubDate, updatedDate, heroImage } = post.data;
             <h1>{title}</h1>
             <hr />
           </div>
-          <slot />
-        </div>
+          
+        </div> -->
       </article>
     </main>
+    <style>
+      /* img {
+        max-height: 30rem;
+        width: auto;
+        height: 100%;
+      } */
+      .blog-post {
+        /* margin: 20px auto;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 0.5rem;
+      }
+      .post-header {
+        text-align: center;
+        line-height: 1;
+        > h1 {
+          margin-bottom: 1rem;
+        }
+      }
+      .post-image {
+        overflow: hidden;
+        border-radius: 1rem;
+
+        border: 1px solid #ccc;
+        /* box-shadow: 0 4px 8px rgba(0,0,0,0.1);           */
+        margin: 2rem 0;
+        box-shadow: 0 4px 8px black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: calc(100% - 2rem);
+        img {
+          max-height: 30rem;
+          width: 100%;
+        }
+      }
+      #tags {
+        margin: 1rem;
+        /* margin-bottom: 0.5rem; */
+        text-align: center;
+        font-size: smaller;
+        word-spacing: 1rem;
+        & .link-tag {
+          color: var(--accent);
+          text-decoration: none;
+        }
+
+        & .link-tag:hover {
+          color: var(--element-water-dark);
+        }
+      }
+      hr {
+        border: 2px solid black;
+        width: 100%;
+        margin: 1rem 0;
+      }
+      .post-content {
+        padding: 0 2rem;
+        text-align: justify;
+      }
+    </style>
     <Footer />
   </body>
 </html>

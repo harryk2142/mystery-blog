@@ -12,45 +12,37 @@ const latestPosts = [posts[1], posts[2], posts[3], posts[4]];
 ---
 
 <Main>
-  <div id="main">
-    <section
-      id="breaking-news-section"
-      class="container shadow-black p-1 mt-1 ml-1 mr-1 round-xlarge"
-    >
-      <BreakingNewsTicker />
-    </section>
+  <section
+    id="breaking-news-section"
+    class="container shadow-black p-1 mt-1 ml-1 mr-1 round-xlarge"
+  >
+    <BreakingNewsTicker />
+  </section>
 
-    <div id="blogposts-container" class="m-1">
-      <section id="special-blogposts-section">
-        <section id="latest-blogpost-section">
-          <BlogPostCard blogpost={latestPost} infotext="NEW" />
-        </section>
+  <div id="blogposts-container" class="m-1">
+    <section id="special-blogposts-section">
+      <section id="latest-blogpost-section">
+        <BlogPostCard blogpost={latestPost} infotext="NEW" />
       </section>
-      <section id="latest-blogposts-section">
-        <div class="">
-          <h2>Latest 4 Blogposts</h2>
-          <div id="latest-blogposts-block" class="">
-            {
-              latestPosts.map((a) => (
-                <div class="latest-blogpost-container mt-1">
-                  <BlogPostCard blogpost={a} />
-                </div>
-              ))
-            }
-          </div>
+    </section>
+    <section id="latest-blogposts-section">
+      <div class="">
+        <h2>Latest 4 Blogposts</h2>
+        <div id="latest-blogposts-block" class="">
+          {
+            latestPosts.map((a) => (
+              <div class="latest-blogpost-container mt-1">
+                <BlogPostCard blogpost={a} />
+              </div>
+            ))
+          }
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </div>
 </Main>
 
 <style>
-  #main {
-    container-name: main-container;
-    container-type: inline-size;
-    height: 100%;
-    padding-bottom: 3rem;
-  }
   h2 {
     padding: 0 1rem;
     text-align: center;
