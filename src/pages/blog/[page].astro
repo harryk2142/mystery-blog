@@ -37,7 +37,7 @@ type Props = {
   page: Page;
 };
 
-export async function getStaticPaths({ paginate }) {
+export async function getStaticPaths({ paginate }: any) {
   const posts = (await getCollection("blog"))
     .filter((e) => !e.data.draft)
     .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
