@@ -1,7 +1,7 @@
 import {
   type FirebaseApp,
   initializeApp,
-} from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
 
 let firebaseApp: FirebaseApp;
 

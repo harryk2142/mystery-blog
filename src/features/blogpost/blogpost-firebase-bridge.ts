@@ -7,9 +7,7 @@ import {
   getDoc,
   getDocs,
   getFirestore,
-  orderBy,
   query,
-  setDoc,
   where,
 } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore-lite.js";
 import { type FirebaseApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";

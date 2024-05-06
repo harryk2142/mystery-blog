@@ -1,12 +1,12 @@
 ---
 enum Sizes {
-  S,
-  M,
-  L,
-  XL,
+  S="S",
+  M="M",
+  L="L",
+  XL="XL",
 }
 interface Props {
-  size: string;
+  size: Sizes;
 }
 const { size } = Astro.props;
 ---

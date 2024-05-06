@@ -1,12 +1,13 @@
-import { type FirebaseApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+import { type FirebaseApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
 import {
   addDoc,
   collection,
+  DocumentSnapshot,
   getDocs,
   getFirestore,
   orderBy,
   query,
-} from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-lite.js";
+} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore-lite.js";
 import { getApp } from "../firebase/firebase";
 
 const sammlungName = "posts";
@@ -28,7 +29,7 @@ const commentConverter = {
       text: comment.text ?? "",
     };
   },
-  fromFirestore(snapshot): Comment {
+  fromFirestore(snapshot: DocumentSnapshot): Comment {
     const data = snapshot.data()! as Comment;
     const postID = snapshot.ref.parent.parent?.id;
     const id = snapshot.id;
