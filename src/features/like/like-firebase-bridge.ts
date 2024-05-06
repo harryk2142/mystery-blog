@@ -1,9 +1,9 @@
-import { type FirebaseApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+import { type FirebaseApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
 import {
   doc,
   getFirestore,
   setDoc,
-} from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-lite.js";
+} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore-lite.js";
 import { getBlogpostById } from "../blogpost/blogpost-firebase-bridge";
 
 const like = async (app: FirebaseApp, postID: string) => {

@@ -3,6 +3,7 @@ import {
   collection,
   connectFirestoreEmulator,
   doc,
+  DocumentSnapshot,
   getDoc,
   getDocs,
   getFirestore,
@@ -10,8 +11,8 @@ import {
   query,
   setDoc,
   where,
-} from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-lite.js";
-// import { FirebaseApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore-lite.js";
+import { type FirebaseApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
 const sammlungName = "posts";
 interface Post {
   id: string;
@@ -22,7 +23,7 @@ const blogpostConverter = {
   toFirestore(post: Post) {
     return { title: post.blogPostIdentifier, likes: post.likes };
   },
-  fromFirestore(snapshot): Post {
+  fromFirestore(snapshot: DocumentSnapshot): Post {
     const data = snapshot.data()!;
     const id = snapshot.id;
     return {
@@ -33,7 +34,7 @@ const blogpostConverter = {
   },
 };
 const getBlogpostByIdentifier = async (
-  app,
+  app: FirebaseApp,
   blogPostIdentifier: string
 ): Promise<Post | undefined> => {
   const db = getFirestore(app);
@@ -56,7 +57,7 @@ const getBlogpostByIdentifier = async (
   }
   return undefined;
 };
-const getBlogpostById = async (app, id: string): Promise<Post | undefined> => {
+const getBlogpostById = async (app: FirebaseApp, id: string): Promise<Post | undefined> => {
   const db = getFirestore(app);
   const ref = doc(db, sammlungName, id).withConverter(blogpostConverter);
 
@@ -68,7 +69,7 @@ const getBlogpostById = async (app, id: string): Promise<Post | undefined> => {
   return undefined;
 };
 
-const savePost = async (app, blogPostIdentifier: string) => {
+const savePost = async (app: FirebaseApp, blogPostIdentifier: string) => {
   const db = getFirestore(app);
 
   const q = query(
