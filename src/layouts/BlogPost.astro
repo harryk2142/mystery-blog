@@ -17,6 +17,10 @@ import { Image } from "astro:assets";
 
 import shareIcon from "../assets/icons/share.png";
 import likeIcon from "../assets/icons/thumb_up.png";
+import commentIcon from "../assets/icons/comment.png";
+import Comments from "../components/Blogpost/Comments.astro";
+const pathSegments = Astro.request.url.split("/").filter((e) => e.length > 0);
+const blogPostIdentifier = pathSegments[pathSegments.length - 1] as string;
 ---
 
 <html lang="de">
@@ -27,6 +31,10 @@ import likeIcon from "../assets/icons/thumb_up.png";
   <body>
     <NavigationBar isStartPage={false} />
     <main>
+      <span hidden id="blog-post-identifier" data-pagefind-ignore
+        >{blogPostIdentifier}</span
+      >
+      <span hidden id="blog-post-id" data-pagefind-ignore></span>
       <article class="blog-post">
         <div class="post-image">
           <img src={heroImage.url} alt={heroImage.alt} />
@@ -88,13 +96,25 @@ import likeIcon from "../assets/icons/thumb_up.png";
           
         </div> -->
         <div class="post-actions">
-          <button class="icon-button">
-            <Image src={likeIcon} alt="Like Icon" />
-          </button>
-          <button class="icon-button">
-            <Image src={shareIcon} alt="Share Icon" />
-          </button>
+          <div class="post-action">
+            <button id="like-btn" class="icon-button">
+              <Image src={likeIcon} alt="Like Icon" />
+            </button>
+            <span id="like-counter" class="post-action-text">0</span>
+          </div>
+          <div class="post-action">
+            <button id="comment-btn" class="icon-button">
+              <Image src={commentIcon} alt="Kommentar Icon" />
+            </button>
+            <span id="comment-counter" class="post-action-text">0</span>
+          </div>
+          <div class="post-action">
+            <button id="share-btn" class="icon-button">
+              <Image src={shareIcon} alt="Share Icon" />
+            </button>
+          </div>
         </div>
+        <Comments />
       </article>
     </main>
     <style>
@@ -168,6 +188,13 @@ import likeIcon from "../assets/icons/thumb_up.png";
       }
 
       .post-actions {
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+
         /* max-width: 1280px; */
         position: sticky;
         bottom: 2rem;
@@ -197,22 +224,34 @@ import likeIcon from "../assets/icons/thumb_up.png";
           /* color: white; */
           cursor: pointer;
           /* margin-left: 1rem; */
+          img {
+            width: 1.75rem;
+          }
         }
       }
 
-      .like-button,
-      .share-button {
-        /* margin: 0 10px; */
+      .post-action {
+        display: flex;
+        flex-direction: row;
+      }
+      .post-action-text {
+        font-size: clamp(1.25rem, 6vw, 1.5rem);
       }
 
       /* Media Query für größere Bildschirme */
-      @media (min-width: 768px) {
+      @media (min-width: 800px) {
         .post-actions {
           flex-direction: column;
           position: fixed; /* Fixiert die Buttons auf der Seite */
           left: 0.25rem;
           top: 0px; /* Abstand vom oberen Rand */
-          height: auto;
+          height: min-content;
+          /* height: auto; */
+          /* bottom: 0rem; */
+        }
+        .post-action {
+          display: flex;
+          flex-direction: column;
         }
       }
       .like-button,
@@ -244,6 +283,51 @@ import likeIcon from "../assets/icons/thumb_up.png";
 
  */
     </style>
+    <script>
+      import {
+        loadBlogpost,
+        createBlogpost,
+      } from "../features/blogpost/blogpost-service";
+
+      import { createCommentForm } from "../features/comments/commentForm";
+      import { createCommentsBox } from "../features/comments/commentsBlock";
+
+      import { loadLikes, submitLike } from "../features/like/like-service";
+
+      setTimeout(async () => {
+        console.log("HERE");
+        const blogPostIdentifier = (
+          document.querySelector("#blog-post-identifier") as HTMLElement
+        ).innerText;
+        loadBlogpost(blogPostIdentifier).then(async (blogPost) => {
+          if (blogPost) {
+            (document.querySelector("#blog-post-id") as HTMLElement).innerText =
+              blogPost.id;
+          } else {
+            const newId = await createBlogpost(blogPostIdentifier);
+            (document.querySelector("#blog-post-id") as HTMLElement).innerText =
+              newId;
+          }
+          let blogPostId = (
+            document.querySelector("#blog-post-id") as HTMLElement
+          ).innerText;
+          loadLikes(blogPostId);
+          (
+            document.querySelector("#like-btn") as HTMLButtonElement
+          ).addEventListener("click", async () => {
+            const newLikeCount = await submitLike(blogPostId);
+            (document.querySelector("#like-counter") as HTMLElement).innerText =
+              newLikeCount.toString();
+          });
+
+          const parent = document.querySelector("#comment-form-container");
+
+          parent && createCommentForm(parent, blogPostId);
+
+          createCommentsBox(blogPostId);
+        });
+      }, 500);
+    </script>
     <Footer />
   </body>
 </html>
