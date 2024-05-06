@@ -26,8 +26,9 @@ heroImage:
   url: /images/blog/mystische-erscheinung-horus-sphinxhausen.png
 ---
 
-[Link zu Teil 1](../der-fall-der-verschwundenen-horus-statue-in-sphinxhausen)
-[Link zu Teil 2](../der-fall-der-verschwundenen-horus-statue-in-sphinxhausen-teil-2)
+[Link zu Teil 1](der-fall-der-verschwundenen-horus-statue-in-sphinxhausen)
+
+[Link zu Teil 2](der-fall-der-verschwundenen-horus-statue-in-sphinxhausen-teil-2)
 
 Nach einer Reihe rätselhafter Ereignisse in Sphinxhausen, Bayern, erlebte die Stadt am Weihnachtstag ein wahres Wunder. Horus, der ägyptische Falkengott, offenbarte sich den Einwohnern in einer spektakulären Erscheinung und kehrte dann zu seiner ursprünglichen Form als Statue zurück.
 

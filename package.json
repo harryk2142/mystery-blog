@@ -16,17 +16,21 @@
     "@astrojs/check": "0.5.10",
     "@astrojs/mdx": "2.3.1",
     "@astrojs/rss": "4.0.5",
-    "astro": "4.6.0",
+    "astro": "4.7.1",
     "typescript": "5.4.5"
   },
   "devDependencies": {
     "@astrojs/markdown-remark": "^5.1.0",
     "@astrojs/sitemap": "3.1.4",
-    "astro-rehype-relative-markdown-links": "^0.13.1",
+    "astro-rehype-relative-markdown-links": "^0.14.1",
+    "canvas-confetti": "^1.9.3",
+    "firebase": "^10.11.1",
     "fs": "0.0.1-security",
     "path": "^0.12.7",
+    "redom": "^4.0.0",
     "rehype": "^13.0.1",
     "sharp": "^0.33.3",
+    "umbrellajs": "^3.3.3",
     "unist-util-visit": "^5.0.0"
   }
 }

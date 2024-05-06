@@ -25,7 +25,8 @@ tags:
   - unerklärlichephänomene
 ---
 
-[Zu Teil 1 der Geschichte](gedankenlesendes-bakterium-auf-dem-mars-entdeckt)
+
+[Zu Teil 1 der Geschichte](der-fall-der-verschwundenen-horus-statue-in-sphinxhausen)
 
 Am Heiligabend in Sphinxhausen, Bayern, war die Atmosphäre geprägt von einer Mischung aus Spannung und Vorfreude. Die seit einer Woche verschwundene Horus-Statue war noch immer nicht zurückgekehrt, aber neue Hinweise ließen die Einwohner hoffnungsvoll in die Zukunft blicken.
 
