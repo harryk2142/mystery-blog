@@ -10,10 +10,13 @@ import "./../styles/root.css";
 type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
-const { title, tags, description, pubDate, heroImage, place } =
-  post.data;
+const { title, tags, description, pubDate, heroImage, place } = post.data;
 import "./../styles/root.css";
 import "./../styles/global.css";
+import { Image } from "astro:assets";
+
+import shareIcon from "../assets/icons/share.png";
+import likeIcon from "../assets/icons/thumb_up.png";
 ---
 
 <html lang="de">
@@ -84,6 +87,14 @@ import "./../styles/global.css";
           </div>
           
         </div> -->
+        <div class="post-actions">
+          <button class="icon-button">
+            <Image src={likeIcon} alt="Like Icon" />
+          </button>
+          <button class="icon-button">
+            <Image src={shareIcon} alt="Share Icon" />
+          </button>
+        </div>
       </article>
     </main>
     <style>
@@ -102,7 +113,7 @@ import "./../styles/global.css";
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        row-gap: 0.5rem;
+        /* row-gap: 0.5rem; */
       }
       .post-header {
         text-align: center;
@@ -115,17 +126,20 @@ import "./../styles/global.css";
         overflow: hidden;
         border-radius: 1rem;
 
-        border: 1px solid #ccc;
-        /* box-shadow: 0 4px 8px rgba(0,0,0,0.1);           */
+        border: 10px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin: 2rem 0;
-        box-shadow: 0 4px 8px black;
+        /* box-shadow: 0 4px 8px black; */
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: calc(100% - 2rem);
+        /* max-width: calc(100% - 2rem); */
         img {
+          display: block;
           max-height: 30rem;
-          width: 100%;
+          height: 26rem;
+          width: auto;
+          object-fit: cover;
         }
       }
       #tags {
@@ -152,6 +166,83 @@ import "./../styles/global.css";
         padding: 0 2rem;
         text-align: justify;
       }
+
+      .post-actions {
+        /* max-width: 1280px; */
+        position: sticky;
+        bottom: 2rem;
+        /* background-color: #f8f8f8; */
+        /* padding: 10px; */
+        margin-top: 10rem;
+        text-align: center;
+        display: flex;
+        justify-content: start;
+        /* justify-content: center; */
+        /* Zentriert die Buttons */
+        flex-direction: row;
+        row-gap: 1rem;
+
+        .icon-button {
+          aspect-ratio: 1;
+          width: 4rem;
+          /* margin-top: 1rem;
+          margin-left: 1rem; */
+          border: 1px solid black;
+          /* font-size: 1.5rem; */
+          /* font-size: clamp(1.25rem, 6vw, 1.5rem); */
+          /* padding: 1rem 2rem; */
+          border-radius: 4px;
+          /* background-color: #007bff; */
+          border-color: var(--accent);
+          /* color: white; */
+          cursor: pointer;
+          /* margin-left: 1rem; */
+        }
+      }
+
+      .like-button,
+      .share-button {
+        /* margin: 0 10px; */
+      }
+
+      /* Media Query für größere Bildschirme */
+      @media (min-width: 768px) {
+        .post-actions {
+          flex-direction: column;
+          position: fixed; /* Fixiert die Buttons auf der Seite */
+          left: 0.25rem;
+          top: 0px; /* Abstand vom oberen Rand */
+          height: auto;
+        }
+      }
+      .like-button,
+      .share-button {
+        margin: 1rem 0;
+        font-size: 1.5rem;
+        font-size: clamp(1.25rem, 6vw, 1.5rem);
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 4px;
+        /* background-color: #007bff; */
+        background-color: var(--accent);
+        color: white;
+        cursor: pointer;
+        margin-left: 1rem;
+      }
+
+      .like-button:hover,
+      .share-button:hover {
+        background-color: #0056b3;
+      }
+
+      /* .post-actions {
+        padding: 10px 20px;
+        text-align: right;
+        background-color: #f8f8f8;
+        position: fixed;
+      }
+
+ */
     </style>
     <Footer />
   </body>
