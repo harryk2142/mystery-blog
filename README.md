@@ -6,3 +6,5 @@
 
 https://fonts.googleapis.com/css?family=Open+Sans
 https://fonts.google.com/
+
+https://fonts.google.com/icons
