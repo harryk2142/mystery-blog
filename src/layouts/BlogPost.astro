@@ -114,7 +114,9 @@ const blogPostIdentifier = pathSegments[pathSegments.length - 1] as string;
             </button>
           </div>
         </div>
-        <Comments />
+        <section id="comments-section">
+          <Comments />
+        </section>
       </article>
     </main>
     <style>
@@ -183,7 +185,6 @@ const blogPostIdentifier = pathSegments[pathSegments.length - 1] as string;
         margin: 1rem 0;
       }
       .post-content {
-        padding: 0 2rem;
         text-align: justify;
       }
 
@@ -197,7 +198,7 @@ const blogPostIdentifier = pathSegments[pathSegments.length - 1] as string;
 
         /* max-width: 1280px; */
         position: sticky;
-        bottom: 2rem;
+        bottom: 3rem;
         /* background-color: #f8f8f8; */
         /* padding: 10px; */
         margin-top: 10rem;
@@ -211,7 +212,7 @@ const blogPostIdentifier = pathSegments[pathSegments.length - 1] as string;
 
         .icon-button {
           aspect-ratio: 1;
-          width: 4rem;
+          width: 3rem;
           /* margin-top: 1rem;
           margin-left: 1rem; */
           border: 1px solid black;
@@ -232,7 +233,7 @@ const blogPostIdentifier = pathSegments[pathSegments.length - 1] as string;
 
       .post-action {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
       }
       .post-action-text {
         font-size: clamp(1.25rem, 6vw, 1.5rem);
@@ -240,7 +241,11 @@ const blogPostIdentifier = pathSegments[pathSegments.length - 1] as string;
 
       /* Media Query für größere Bildschirme */
       @media (min-width: 800px) {
+        .post-content {
+          padding: 0 5.5rem;
+        }
         .post-actions {
+          padding: 1rem;
           flex-direction: column;
           position: fixed; /* Fixiert die Buttons auf der Seite */
           left: 0.25rem;
@@ -254,12 +259,23 @@ const blogPostIdentifier = pathSegments[pathSegments.length - 1] as string;
           flex-direction: column;
         }
       }
+      @media (max-width: 799px) {
+        .post-content {
+          padding: 0 1.5rem;
+        }
+        .post-actions {
+          justify-content: space-around;
+          width: 100%;
+          padding: 1rem 0 0 0;
+          max-width: 300px;
+        }
+      }
       .like-button,
       .share-button {
-        margin: 1rem 0;
+        /* margin: 1rem 0; */
         font-size: 1.5rem;
         font-size: clamp(1.25rem, 6vw, 1.5rem);
-        padding: 1rem 2rem;
+        /* padding: 1rem 2rem; */
         border: none;
         border-radius: 4px;
         /* background-color: #007bff; */
@@ -273,7 +289,18 @@ const blogPostIdentifier = pathSegments[pathSegments.length - 1] as string;
       .share-button:hover {
         background-color: #0056b3;
       }
+      #comments-section {
+        margin-top: 2rem;
+        padding: 4rem;
+        width: 100%;
 
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        /* backdrop-filter: blur(4px); */
+        /* -webkit-backdrop-filter: blur(4px); */
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+      }
       /* .post-actions {
         padding: 10px 20px;
         text-align: right;
@@ -294,8 +321,12 @@ const blogPostIdentifier = pathSegments[pathSegments.length - 1] as string;
 
       import { loadLikes, submitLike } from "../features/like/like-service";
 
+      document.querySelector("#comment-btn")?.addEventListener("click", () => {
+        const element = document.querySelector("#comments-section");
+        element?.scrollIntoView();
+      });
+
       setTimeout(async () => {
-        console.log("HERE");
         const blogPostIdentifier = (
           document.querySelector("#blog-post-identifier") as HTMLElement
         ).innerText;

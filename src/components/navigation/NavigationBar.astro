@@ -69,6 +69,9 @@ const { isStartPage } = Astro.props;
   </div>
 </div>
 <style>
+  a {
+    text-decoration: none;
+  }
   #navigation-bar {
     background: var(--accent);
     color: var(--secondary-color);
@@ -145,7 +148,7 @@ const { isStartPage } = Astro.props;
           a {
             display: inline-block;
             border: 6px solid transparent;
-            text-decoration: none;
+            /* text-decoration: none; */
             color: var(--secondary-color);
           }
           a:hover {
@@ -224,7 +227,7 @@ const { isStartPage } = Astro.props;
 <script>
   function openMenu() {
     const navigationLinksSmall = document.querySelector(
-      "#nav-links"
+      "#nav-links",
     ) as HTMLElement;
     navigationLinksSmall.classList.add("opened");
     const iconOpen = document.querySelector("#menu-icon-open") as HTMLElement;
@@ -234,7 +237,7 @@ const { isStartPage } = Astro.props;
   }
   function closeMenu() {
     const navigationLinksSmall = document.querySelector(
-      "#nav-links"
+      "#nav-links",
     ) as HTMLElement;
     navigationLinksSmall.classList.remove("opened");
     const iconClose = document.querySelector("#menu-icon-close") as HTMLElement;
