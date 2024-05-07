@@ -1,5 +1,196 @@
----
-import BlogPostCard from "./BlogPostCard.astro";
----
+<div id="random-blogpost-container" data-pagefind-ignore>
+  <div class="random-blogpost-loader">LADE Random Blogpost</div>
+  <div class="loaded-random-blogpost hidden">
+    <a data-pagefind-ignore>
+      <div class={"card-container"}>
+        <div class={"card"}>
+          <div class="card-image-box">
+            <div class="card-image">
+              <img src="" alt="" />
+            </div>
+          </div>
+          <div class="card-overlay"></div>
+          <div class="card-info"></div>
+          <div class="card-body">
+            <span class="card-date"> </span>
+            <div class="card-title"></div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+<style>
+  #random-blogpost-container {
+    margin-top: 1rem;
+  }
+  .random-blogpost-loader {
+    margin: 2rem;
+    text-align: center;
+  }
+  .hidden {
+    display: none;
+  }
+</style>
+<style>
+  a {
+    text-decoration: none;
+  }
+  .card-container {
+    container-type: inline-size;
+    container-name: card-container;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    /* box-shadow: 0 4px 8px black; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* leichter Schatten für 3D-Effekt */
 
-<BlogPostCard />
+    .card-info {
+      border-radius: 0 0 0 3rem;
+      font-size: clamp(3rem, 3.5rem, 4rem);
+      position: absolute;
+      border-color: var(--secondary-color);
+      right: 0;
+      padding: 0 2rem;
+      background-color: var(--accent);
+      color: var(--secondary-color);
+
+      text-shadow:
+        2px 0px 0px black,
+        -2px 0px 0px black,
+        0px 2px 0px black,
+        0px -2px 0px black;
+    }
+    .card-body {
+      color: var(--accent);
+      display: flex;
+      /* padding: 0 1rem 1rem 1rem; */
+      padding: 1rem; /* Innenabstand */
+      text-align: center; /* Text zentrieren */
+      flex-direction: column;
+
+      .card-date {
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+
+      .card-title {
+        font-size: 1rem;
+        text-wrap: pretty;
+      }
+    }
+  }
+  @container card-container (width <= 400px) {
+    .card-image > img {
+      /* das Bild füllt die Breite der Card aus */
+      width: 100%;
+      /* deckt den verfügbaren Container ab, ohne das Seitenverhältnis zu verzerren */
+      object-fit: cover;
+      /* zentriert das Bild in seinem Container */
+      object-position: center center;
+      /* feste Höhe für das Bild */
+      height: 300px;
+      /* height: 276px; */
+      /* oder */
+      /* aspect-ratio: 4 / 3; */
+    }
+  }
+  @container card-container (width > 400px) {
+    .card {
+      position: relative;
+      aspect-ratio: 16 / 11;
+    }
+    .card-image {
+      display: flex;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+
+      > img {
+        object-fit: cover;
+        object-position: center center;
+        width: 100%;
+        height: auto;
+      }
+    }
+    .card-body {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      bottom: 0;
+      left: 0;
+      border-radius: 0 0 1rem 1rem;
+      width: 100%;
+      color: var(--secondary-color);
+      .card-title {
+        font-size: clamp(1rem, 3vh, 2rem);
+      }
+    }
+    .card-date {
+      color: var(--secondary-color);
+    }
+    .card-title {
+      color: var(--secondary-color);
+    }
+    .card-overlay {
+      border-radius: 1rem;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0),
+        color-mix(in srgb, var(--primary-color) 10%, var(--primary-color)),
+        color-mix(in srgb, var(--primary-color) 100%, var(--primary-color))
+      );
+    }
+  }
+</style>
+<script>
+  import u from "https://esm.sh/umbrellajs";
+  const randomBlogPostContainer = u("#random-blogpost-container");
+
+  import { getRandomBlogPosts } from "../features/blogpost/random-blogpost";
+  const blogPosts = await getRandomBlogPosts(1);
+  if (blogPosts.length > 0) {
+    randomBlogPostContainer.find(".random-blogpost-loader").remove();
+    randomBlogPostContainer
+      .find(".loaded-random-blogpost")
+      .removeClass("hidden");
+  }
+
+  const blogPost = blogPosts[0];
+  const pubDate = new Date(blogPost.pubDate);
+  const pubDateIso = pubDate.toISOString();
+  const pubDateHtml = pubDate.toLocaleDateString("de-de", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+  const anchor = randomBlogPostContainer.find("a");
+  anchor.attr("href", "blog/" + blogPost.url);
+  const image = randomBlogPostContainer.find(".card-image > img");
+  const imagePath = blogPost.img.replace(
+    "/images/blog/",
+    "/images/blog/small/"
+  );
+  image.attr("src", imagePath);
+  image.attr("alt", blogPost.alt);
+  const date = randomBlogPostContainer.find("time");
+  date.attr("datetime", pubDateIso);
+  date.text(pubDateHtml);
+  // const title = randomBlogPostContainer.find(".blogpost-card-title");
+  const title = randomBlogPostContainer.find(".card-title");
+  title.text(blogPost.title);
+  const info = randomBlogPostContainer.find(".card-info");
+  info.text("RANDOM");
+</script>

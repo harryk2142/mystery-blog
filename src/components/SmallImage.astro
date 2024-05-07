@@ -7,7 +7,7 @@ type Props = {
 } & ImgAttributes;
 
 const { alt, src, ...imgAttrs } = Astro.props;
-// const imagePath = src.replace("/images/blog/", "/images/blog/small/");
+const imagePath = src.replace("/images/blog/", "/images/blog/small/");
 ---
 
-<img src={src} alt={alt} {...imgAttrs} loading="lazy" />
+<img src={imagePath} alt={alt} {...imgAttrs} loading="lazy" />

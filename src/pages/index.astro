@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import BreakingNewsTicker from "../components/BreakingNewsTicker.astro";
 import Main from "../layouts/Main.astro";
 import BlogPostCard from "../components/BlogPostCard.astro";
+import RandomBlogPost from "../components/RandomBlogPost.astro";
 
 const posts = (await getCollection("blog"))
   .filter((e) => !e.data.draft)
@@ -23,6 +24,9 @@ const latestPosts = [posts[1], posts[2], posts[3], posts[4]];
     <section id="special-blogposts-section">
       <section id="latest-blogpost-section">
         <BlogPostCard blogpost={latestPost} infotext="NEW" />
+      </section>
+      <section id="random-blogpost-section">
+        <RandomBlogPost />
       </section>
     </section>
     <section id="latest-blogposts-section">
@@ -92,10 +96,3 @@ const latestPosts = [posts[1], posts[2], posts[3], posts[4]];
     }
   }
 </style>
-<script>
-  import { getRandomBlogPosts } from "../features/blogpost/random-blogpost";
-
-  getRandomBlogPosts(1).then((e) => {
-    console.log(e);
-  });
-</script>
