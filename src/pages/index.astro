@@ -92,3 +92,10 @@ const latestPosts = [posts[1], posts[2], posts[3], posts[4]];
     }
   }
 </style>
+<script>
+  import { getRandomBlogPosts } from "../features/blogpost/random-blogpost";
+
+  getRandomBlogPosts(1).then((e) => {
+    console.log(e);
+  });
+</script>
