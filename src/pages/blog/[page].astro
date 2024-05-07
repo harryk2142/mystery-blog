@@ -1,7 +1,7 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
 import NavigationBar from "./../../components/navigation/NavigationBar.astro";
-
+import { SITE_TITLE } from "./../../consts";
 import Footer from "../../components/Footer.astro";
 import Meta from "../../components/Meta.astro";
 import "./../../styles/root.css";
@@ -45,10 +45,22 @@ export async function getStaticPaths({ paginate }: any) {
   return paginate(posts, { pageSize: 6 });
 }
 
-const { data, currentPage, size, lastPage, url } = page;
+const { data, currentPage, lastPage, url } = page;
+const prefix =
+  "/" +
+  url.current
+    .split("/")
+    .filter((e) => e.length > 0)
+    .slice(0, -1)
+    .join("/") +
+  "/";
+const urlToFirst = prefix + 1;
+const urlToLast = prefix + lastPage;
 
-const title = "Seite " + currentPage;
+const title = SITE_TITLE + " - Seite " + currentPage;
 const description = "Seite " + currentPage + " von " + lastPage;
+const showFirst = currentPage > 2;
+const showLast = currentPage + 2 <= lastPage;
 ---
 
 <html lang="de">
@@ -70,29 +82,43 @@ const description = "Seite " + currentPage + " von " + lastPage;
         >
           <div class="pagination">
             {
+              showFirst ? (
+                <a href={urlToFirst}>
+                  <span class="ascii">&#60;&#60;</span>
+                </a>
+              ) : null
+            }
+            {showFirst ? <div class="dots">...</div> : null}
+            {
               url.prev ? (
                 <a href={url.prev}>
                   <span class="ascii">&#60;</span>
                 </a>
               ) : null
             }
-            {currentPage > size - 1 ? <div>...</div> : null}
             {
               currentPage - 1 > 0 ? (
                 <a href={url.prev}>{currentPage - 1}</a>
               ) : null
             }
-            <a href={url.current} class="primary">{currentPage}</a>
+            <a href={url.current} class="active">{currentPage}</a>
             {
               currentPage < lastPage ? (
                 <a href={url.next}>{currentPage + 1}</a>
               ) : null
             }
-            {currentPage + size - 2 < lastPage ? <div>...</div> : null}
             {
               url.next ? (
                 <a href={url.next}>
                   <span class="ascii">&#62;</span>
+                </a>
+              ) : null
+            }
+            {showLast ? <div class="dots">...</div> : null}
+            {
+              showLast ? (
+                <a href={urlToLast}>
+                  <span class="ascii">&#62;&#62;</span>
                 </a>
               ) : null
             }
@@ -119,25 +145,31 @@ const description = "Seite " + currentPage + " von " + lastPage;
         >
           <div class="pagination">
             {
+              showFirst ? (
+                <a href={urlToFirst}>
+                  <span class="ascii">&#60;&#60;</span>
+                </a>
+              ) : null
+            }
+            {showFirst ? <div class="dots">...</div> : null}
+            {
               url.prev ? (
                 <a href={url.prev}>
                   <span class="ascii">&#60;</span>
                 </a>
               ) : null
             }
-            {currentPage > size - 1 ? <div>...</div> : null}
             {
               currentPage - 1 > 0 ? (
                 <a href={url.prev}>{currentPage - 1}</a>
               ) : null
             }
-            <a href={url.current} class="primary">{currentPage}</a>
+            <a href={url.current} class="active">{currentPage}</a>
             {
               currentPage < lastPage ? (
                 <a href={url.next}>{currentPage + 1}</a>
               ) : null
             }
-            {currentPage + size - 2 < lastPage ? <div>...</div> : null}
             {
               url.next ? (
                 <a href={url.next}>
@@ -145,15 +177,19 @@ const description = "Seite " + currentPage + " von " + lastPage;
                 </a>
               ) : null
             }
+            {showLast ? <div class="dots">...</div> : null}
+            {
+              showLast ? (
+                <a href={urlToLast}>
+                  <span class="ascii">&#62;&#62;</span>
+                </a>
+              ) : null
+            }
           </div>
         </div>
       </section>
     </main>
-    <style is:inline>
-      a {
-        text-decoration: none;
-        color: var(--accent);
-      }
+    <style>
       #blogposts-group-container {
         container-name: blogposts-group-container;
         container-type: inline-size;
@@ -187,32 +223,45 @@ const description = "Seite " + currentPage + " von " + lastPage;
         margin-bottom: 1rem;
       }
       .pagination {
+        margin-top: 1rem;
         display: flex;
         flex-direction: row;
         height: 64px;
       }
+      .dots {
+        font-size: 1.5rem;
+      }
+      .dots::before,
+      .dots::after {
+        content: "   ";
+        white-space: pre;
+      }
 
       .pagination a {
+        font-size: 2rem;
+
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: bold;
-        font-size: 2rem;
-        /* color: var(--accent); */
+        color: var(--accent);
         float: left;
         text-decoration: none;
         border-radius: 5px;
         border: 1px solid black;
         aspect-ratio: 1;
-
         .ascii {
-          font-size: 40px;
+          /* font-size: 40px; */
         }
       }
-
-      .pagination a:hover:not(.active) {
+      .pagination a:hover {
         background-color: #d4d5d2;
-        color: black;
+        color: var(--accent);
+      }
+
+      .pagination a.active {
+        color: var(--secondary-color);
+        background-color: var(--accent);
       }
       #bottom-pagination-container {
         padding-bottom: 6rem;
