@@ -5,12 +5,12 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "pnpm update-cms && astro check && astro build",
+    "build": "pnpm update-cms && astro check && astro build && pnpm postbuild",
     "preview": "astro preview",
     "astro": "astro",
     "copy-content": "node npm-scripts/copy-content.js",
     "create-images": "node npm-scripts/create-images.js",
-    "update-cms": "yarn create-images && yarn copy-content",
+    "update-cms": "pnpm create-images && pnpm copy-content",
     "postbuild": "pagefind --site dist/ --output-subdir _pagefind"
   },
   "dependencies": {
