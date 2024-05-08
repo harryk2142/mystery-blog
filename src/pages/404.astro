@@ -1,0 +1,36 @@
+---
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE } from "../consts";
+import Meta, { OgTypes } from "../components/Meta.astro";
+import NavigationBar from "../components/navigation/NavigationBar.astro";
+import "./../styles/root.css";
+import "./../styles/global.css";
+---
+
+<!doctype html>
+<html lang="de">
+    <head>
+        <Meta
+            title={SITE_TITLE + " - Seite nicht gefunden"}
+            description={"Leider ist unter der URL nichts zu finden."}
+            ogType={OgTypes.website}
+        />
+        <meta name="robots" content="noindex" />
+    </head>
+    <body data-pagefind-ignore>
+        <NavigationBar />
+        <div class="wrapper" id="main">
+            <article>
+                <h1>Seite nicht gefunden</h1>
+            </article>
+        </div>
+        <Footer />
+        <style>
+            #main {
+                padding-top: 10rem;
+                height: calc(100vh - 10rem);
+                text-align: center;
+            }
+        </style>
+    </body>
+</html>

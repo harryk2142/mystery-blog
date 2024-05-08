@@ -1,0 +1,29 @@
+---
+import Footer from "../../components/Footer.astro";
+import TagCloud from "../../components/TagCloud.astro";
+import Meta, { OgTypes } from "../../components/Meta.astro";
+import NavigationBar from "../../components/navigation/NavigationBar.astro";
+import "./../../styles/root.css";
+import "./../../styles/global.css";
+import CenteredTitle from "../../components/CenteredTitle.astro";
+---
+
+<!doctype html>
+<html lang="de">
+    <head>
+        <Meta
+            title="Seite mit allen Tags"
+            description="Hier siehst du alle Tags"
+            ogType={OgTypes.website}
+        />
+        <meta name="robots" content="noindex" />
+    </head>
+    <body data-pagefind-ignore>
+        <NavigationBar />
+        <main>
+            <CenteredTitle title="Tags" />
+            <TagCloud />
+            <Footer />
+        </main>
+    </body>
+</html>

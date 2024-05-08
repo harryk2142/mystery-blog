@@ -7,7 +7,7 @@ interface Props {
   isStartPage?: boolean;
 }
 
-const { isStartPage } = Astro.props;
+const { isStartPage = false } = Astro.props;
 ---
 
 <div id="navigation-bar" data-pagefind-ignore>
