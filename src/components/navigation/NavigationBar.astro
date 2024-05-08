@@ -60,9 +60,6 @@ const { isStartPage = false } = Astro.props;
             <HeaderLink href="/blog/1">Blog</HeaderLink>
           </div>
           <div class="nav-item"><HeaderLink href="/tags">Tags</HeaderLink></div>
-          <div class="nav-item">
-            <HeaderLink href="/personen">Personen</HeaderLink>
-          </div>
         </div>
       </div>
     </div>
@@ -227,7 +224,7 @@ const { isStartPage = false } = Astro.props;
 <script>
   function openMenu() {
     const navigationLinksSmall = document.querySelector(
-      "#nav-links",
+      "#nav-links"
     ) as HTMLElement;
     navigationLinksSmall.classList.add("opened");
     const iconOpen = document.querySelector("#menu-icon-open") as HTMLElement;
@@ -237,7 +234,7 @@ const { isStartPage = false } = Astro.props;
   }
   function closeMenu() {
     const navigationLinksSmall = document.querySelector(
-      "#nav-links",
+      "#nav-links"
     ) as HTMLElement;
     navigationLinksSmall.classList.remove("opened");
     const iconClose = document.querySelector("#menu-icon-close") as HTMLElement;

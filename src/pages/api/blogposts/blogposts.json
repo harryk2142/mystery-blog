@@ -254,35 +254,5 @@
     "alt": "Eine Kuh schaut lustig in die Kamera. Im Hintergrund sind UFOs zu sehen.",
     "pubDate": "2022-11-19T00:00:00.000Z",
     "url": "ufo-landung-auf-koppel-in-kuhlingen"
-  },
-  {
-    "title": "Third post",
-    "img": "./../../images/blog/blog-placeholder-2.webp",
-    "pubDate": "2022-07-21T22:00:00.000Z",
-    "url": "third-post"
-  },
-  {
-    "title": "Second post",
-    "img": "./../../images/blog/blog-placeholder-4.webp",
-    "pubDate": "2022-07-14T22:00:00.000Z",
-    "url": "second-post"
-  },
-  {
-    "title": "First post",
-    "img": "./../../images/blog/blog-placeholder-3.webp",
-    "pubDate": "2022-07-07T22:00:00.000Z",
-    "url": "first-post"
-  },
-  {
-    "title": "Using MDX",
-    "img": "./../../images/blog/blog-placeholder-5.webp",
-    "pubDate": "2022-07-01T22:00:00.000Z",
-    "url": "using-mdx"
-  },
-  {
-    "title": "Markdown Style Guide",
-    "img": "./../../images/blog/blog-placeholder-1.webp",
-    "pubDate": "2022-06-30T22:00:00.000Z",
-    "url": "markdown-style-guide"
   }
 ]
