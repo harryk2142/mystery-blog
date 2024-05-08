@@ -25,5 +25,5 @@ const posts = (await getCollection("blog"))
       description={"json of all blogposts"}
     />
   </head>
-  <body> {JSON.stringify(posts)} </body>
+  <body data-pagefind-ignore> {JSON.stringify(posts)} </body>
 </html>

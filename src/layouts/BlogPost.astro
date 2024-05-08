@@ -40,6 +40,13 @@ const blogPostIdentifier = pathSegments[pathSegments.length - 1] as string;
       <article class="blog-post">
         <div class="post-image">
           <img src={heroImage.url} alt={heroImage.alt} />
+          <img
+            hidden
+            data-pagefind-index-attrs="alt"
+            data-pagefind-meta="image[src], image_alt[alt]"
+            src={heroImage.url.replace("/blog/", "/blog/small/")}
+            alt={heroImage.alt}
+          />
         </div>
         <header class="post-header">
           {

@@ -27,3 +27,8 @@ declare module "https://esm.sh/umbrellajs" {
 declare module "https://esm.sh/redom" {
   export { el, mount } from "redom";
 }
+declare module "@pagefind/default-ui" {
+  declare class PagefindUI {
+    constructor(arg: any);
+  }
+}

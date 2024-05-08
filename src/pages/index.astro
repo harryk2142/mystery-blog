@@ -4,6 +4,7 @@ import BreakingNewsTicker from "../components/BreakingNewsTicker.astro";
 import Main from "../layouts/Main.astro";
 import BlogPostCard from "../components/BlogPostCard.astro";
 import RandomBlogPost from "../components/RandomBlogPost.astro";
+import Pagefind from "../components/Pagefind.astro";
 
 const posts = (await getCollection("blog"))
   .filter((e) => !e.data.draft)
@@ -18,6 +19,9 @@ const latestPosts = [posts[1], posts[2], posts[3], posts[4]];
     class="container shadow-black p-1 mt-1 ml-1 mr-1 round-xlarge"
   >
     <BreakingNewsTicker />
+  </section>
+  <section class="container shadow-black p-1 mt-1 ml-1 mr-1 round-xlarge">
+    <Pagefind />
   </section>
 
   <div id="blogposts-container" class="m-1">
