@@ -9,7 +9,8 @@ dotenv.config(); // load env vars from .env
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://the-ai-files.de",
+  site: 'https://harryk2142.github.io',
+  base: 'mystery-blog',
   markdown: {
     remarkPlugins: [],
     rehypePlugins: [rehypeAstroRelativeMarkdownLinks],
