@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /api/
+Disallow: /tags/
+Sitemap: https://the-ai-files.de/sitemap-index.xml
