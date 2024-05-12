@@ -126,7 +126,7 @@ const blogPostIdentifier = pathSegments[pathSegments.length - 1] as string;
             <button id="comment-btn" class="icon-button">
               <Image src={commentIcon} alt="Kommentar Icon" />
             </button>
-            <span id="comment-counter" class="post-action-text">0</span>
+            <span id="comments-counter" class="post-action-text">0</span>
           </div>
           <div class="post-action">
             <button id="share-btn" class="icon-button">
@@ -314,7 +314,7 @@ const blogPostIdentifier = pathSegments[pathSegments.length - 1] as string;
       }
       #comments-section {
         margin-top: 2rem;
-        padding: 4rem;
+        /* padding: 4rem; */
         width: 100%;
 
         background: rgba(255, 255, 255, 0.25);
