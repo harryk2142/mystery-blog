@@ -42,7 +42,7 @@ const copyFiles = (src, dest) => {
       let content = fs.readFileSync(srcFile, "utf8");
       // Ersetze die Bildendungen
       content = replaceImageExtensions(content);
-      content = replaceFilePath(content);
+      // content = replaceFilePath(content);
 
       // Schreibe den geänderten Inhalt in die Zieldatei
       fs.writeFileSync(destFile, content);
