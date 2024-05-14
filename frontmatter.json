@@ -1,12 +1,12 @@
 {
   "$schema": "https://frontmatter.codes/frontmatter.schema.json",
   "frontMatter.framework.id": "astro",
-  "frontMatter.preview.host": "http://localhost:4321",
-  "frontMatter.content.publicFolder": "cms/",
+  "frontMatter.preview.host": "http://localhost:3000",
+  "frontMatter.content.publicFolder": "[[workspace]]/public",
   "frontMatter.content.pageFolders": [
     {
       "title": "content",
-      "path": "[[workspace]]/cms/content"
+      "path": "[[workspace]]/src/content"
     }
   ],
   "frontMatter.taxonomy.seoTitleLength": 70,
