@@ -3,6 +3,8 @@
   "compilerOptions": {
     "noUnusedParameters": false,
     "strictNullChecks": true,
-    "allowJs": true
+    "allowJs": true,
+    "noImplicitAny": false,
+    "target": "ESNext"
   }
 }
