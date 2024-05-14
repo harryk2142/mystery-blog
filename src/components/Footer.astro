@@ -17,9 +17,7 @@ const version = yyyymmdd(today);
 <footer>
   <div>
     <span>
-      &copy; {today.getFullYear()} Kramer. All rights reserved. Version {
-        version
-      }
+      &copy; {today.getFullYear()} Kramer. V {version}
     </span>
   </div>
 </footer>
@@ -32,14 +30,15 @@ const version = yyyymmdd(today);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 3rem;
     position: fixed;
+    position: sticky;
     bottom: 0;
     width: 100%;
+    font-size: 1rem;
   }
 </style>
 <style is:inline>
   *:has(+ footer) {
-    padding-bottom: 3rem;
+    margin-bottom: 1rem;
   }
 </style>

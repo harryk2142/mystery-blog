@@ -14,6 +14,7 @@ const { title, headline, tags, description, pubDate, heroImage, place } =
   post.data;
 import "./../styles/root.css";
 import "./../styles/global.css";
+import "./../styles/mystyle.css";
 import { Image } from "astro:assets";
 
 import shareIcon from "../assets/icons/share.png";
@@ -134,17 +135,12 @@ const blogPostIdentifier = pathSegments[pathSegments.length - 1] as string;
             </button>
           </div>
         </div>
-        <section id="comments-section">
+        <section id="comments-section" class="mycard">
           <Comments />
         </section>
       </article>
     </main>
     <style>
-      /* img {
-        max-height: 30rem;
-        width: auto;
-        height: 100%;
-      } */
       .blog-post {
         /* margin: 20px auto;
         border: 1px solid #ccc;
@@ -168,10 +164,9 @@ const blogPostIdentifier = pathSegments[pathSegments.length - 1] as string;
         overflow: hidden;
         border-radius: 1rem;
 
-        border: 10px solid #ccc;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ccc;
         margin: 2rem 0 0 0;
-        /* box-shadow: 0 4px 8px black; */
+        box-shadow: 0 4px 8px black;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -314,21 +309,16 @@ const blogPostIdentifier = pathSegments[pathSegments.length - 1] as string;
       }
       #comments-section {
         margin-top: 2rem;
-        /* padding: 4rem; */
+        padding: 1rem;
         width: 100%;
 
-        background: rgba(255, 255, 255, 0.25);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        /* backdrop-filter: blur(4px); */
-        /* -webkit-backdrop-filter: blur(4px); */
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.18);
-      }
-      /* .post-actions {
-        padding: 10px 20px;
-        text-align: right;
-        background-color: #f8f8f8;
-        position: fixed;
+        h3 {
+          margin-top: 0;
+        }
+
+        #comments-container{
+          margin-top:2rem;
+        }
       }
 
  */
