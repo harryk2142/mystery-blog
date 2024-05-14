@@ -9,17 +9,17 @@
     "astro": "astro",
     "copy-content": "node npm-scripts/copy-content.js",
     "create-images": "node npm-scripts/create-images.js",
-    "update-cms": "pnpm create-images && pnpm copy-content",
-    "postbuild": "pagefind --site dist/ --output-subdir _pagefind"
+    "update-cms": "npm run create-images && npm run copy-content"
   },
   "dependencies": {
     "@astrojs/check": "0.6.0",
-    "@astrojs/mdx": "2.3.1",
+    "@astrojs/mdx": "3.0.0",
     "@astrojs/rss": "4.0.5",
-    "astro": "4.7.1",
+    "astro": "4.8.3",
     "typescript": "5.4.5"
   },
   "devDependencies": {
+    "@astrojs/markdown-remark": "5.1.0",
     "@astrojs/markdown-remark": "5.1.0",
     "@astrojs/sitemap": "3.1.4",
     "@frontmatter/extensibility": "0.0.15",
