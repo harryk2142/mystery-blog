@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "concurrently \"astro dev\" \"firebase emulators:start\"",
     "build": "astro check && astro build && npm run postbuild",
+    "postbuild": "pagefind --site dist/ --output-subdir _pagefind",
     "preview": "concurrently \"astro preview\" \"firebase emulators:start\"",
     "astro": "astro",
     "copy-content": "node npm-scripts/copy-content.js",
@@ -26,8 +27,8 @@
     "canvas-confetti": "1.9.3",
     "concurrently": "8.2.2",
     "dotenv": "16.4.5",
-    "firebase": "10.11.1",
-    "firebase-tools": "13.8.3",
+    "firebase": "10.12.0",
+    "firebase-tools": "13.9.0",
     "fs": "0.0.1-security",
     "pagefind": "1.1.0",
     "path": "0.12.7",
