@@ -12,12 +12,14 @@ const yyyymmdd = function (date: Date) {
 };
 const today = new Date();
 const version = yyyymmdd(today);
+const isDev = import.meta.env.DEV;
 ---
 
 <footer>
   <div>
     <span>
       &copy; {today.getFullYear()} Kramer. V {version}
+      {isDev && <span>DEV</span>}
     </span>
   </div>
 </footer>

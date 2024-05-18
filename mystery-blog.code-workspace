@@ -1,14 +1,49 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		// {
-		// 	"name": "mystery-blog",
-		// 	"path": "mystery-blog"
-		// }
-	],
-	"settings": {
-		"editor.formatOnSave": true
-	}
+  "folders": [
+    {
+      "path": "."
+    }
+    // {
+    // 	"name": "mystery-blog",
+    // 	"path": "mystery-blog"
+    // }
+  ],
+  "settings": {
+    "markdown.suggest.paths.enabled": true,
+    "editor.formatOnSave": true,
+    "[markdown]": {
+      "editor.fontSize": 14,
+      "editor.lineHeight": 26,
+      "editor.wordWrap": "wordWrapColumn",
+      "editor.wordWrapColumn": 64,
+      "editor.lineNumbers": "on",
+      "editor.quickSuggestions": {
+        "comments": "on",
+        "strings": "on",
+        "other": "on"
+      },
+      "editor.minimap.enabled": false
+    },
+    "workbench.colorTheme": "Absent Contrast (rainglow)",
+    "workbench.colorCustomizations": {
+      "activityBar.activeBackground": "#0574d9",
+      "activityBar.background": "#0574d9",
+      "activityBar.foreground": "#e7e7e7",
+      "activityBar.inactiveForeground": "#e7e7e799",
+      "activityBarBadge.background": "#fc82c2",
+      "activityBarBadge.foreground": "#15202b",
+      "commandCenter.border": "#e7e7e799",
+      "sash.hoverBorder": "#0574d9",
+      "statusBar.background": "#0459a7",
+      "statusBar.foreground": "#e7e7e7",
+      "statusBarItem.hoverBackground": "#0574d9",
+      "statusBarItem.remoteBackground": "#0459a7",
+      "statusBarItem.remoteForeground": "#e7e7e7",
+      "titleBar.activeBackground": "#0459a7",
+      "titleBar.activeForeground": "#e7e7e7",
+      "titleBar.inactiveBackground": "#0459a799",
+      "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#0459a7"
+  }
 }

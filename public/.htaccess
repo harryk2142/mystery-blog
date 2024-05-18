@@ -1,0 +1,93 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+RewriteCond %{THE_REQUEST} /index\.php [NC,OR]
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^(.*?)index\.(php|html)$ /$1 [R=301,L]
+
+# RewriteEngine On
+# RewriteCond %{HTTPS} off [OR]
+# RewriteCond %{HTTPS} off
+# RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+# RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+</IfModule>
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE image/x-icon
+AddOutputFilterByType DEFLATE image/svg+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/x-font
+AddOutputFilterByType DEFLATE application/x-font-truetype
+AddOutputFilterByType DEFLATE application/x-font-ttf
+AddOutputFilterByType DEFLATE application/x-font-otf
+AddOutputFilterByType DEFLATE application/x-font-opentype
+AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+AddOutputFilterByType DEFLATE font/ttf
+AddOutputFilterByType DEFLATE font/otf
+AddOutputFilterByType DEFLATE font/opentype
+# For Olders Browsers Which Can't Handle Compression
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+</IfModule>
+
+# BROWSER CACHING USING CACHE-CONTROL HEADERS
+<ifModule mod_headers.c> 
+# One year for image and video files
+<filesMatch ".(flv|gif|ico|jpg|jpeg|mp4|mpeg|png|svg|swf|webp)$">
+Header set Cache-Control "max-age=31536000, public"
+</filesMatch>
+
+# One month for JavaScript and PDF files
+<filesMatch ".(js|pdf)$">
+Header set Cache-Control "max-age=2592000, public"
+</filesMatch>
+
+# One week for CSS files
+<filesMatch ".(css)$">
+Header set Cache-Control "max-age=604800, public"
+</filesMatch>
+</ifModule>
+
+ErrorDocument 404 /404.html
+
+Redirect 301 /blog/2022-12-31-ufos-auf-dem-feld /blog/ufo-landung-auf-koppel-in-kuhlingen
+Redirect 301 /blog/2023-01-01-weltuntergang-verhindert-durch-clowns /blog/silversternacht-2022-weltuntergang-verhindert-durch-clowns
+Redirect 301 /blog/2023-01-27-fusionsreaktor /blog/fusionsreaktor-durchbruch-mars
+Redirect 301 /blog/2023-02-08-gedankenlesendes-bakterium-entdeckt /blog/gedankenlesendes-bakterium-auf-dem-mars-entdeckt
+Redirect 301 /blog/2023-02-11-fische-spielen-gitarre /blog/gitarre-spielende-fische-lake-tahoe
+Redirect 301 /blog/2023-02-17-sternentor-in-deutschland-entdeckt /blog/antikes-sternentor-entdeckung-speyer
+Redirect 301 /blog/2023-04-20-sternentor-in-deutschland-entdeckt /blog/antikes-sternentor-entdeckung-speyer
+Redirect 301 /blog/2023-03-13-einhorn-im-harz-entdeckt /blog/maennliches-einhorn-im-harz-entdeckt
+Redirect 301 /blog/2023-05-05-gorilla-in-frankfurt-am-rhein /blog/gigantischer-gorilla-in-frankfurt-am-rhein-gesichtet
+Redirect 301 /blog/2023-05-18-reptiolide-valdar-auf-kreta /blog/interview-reptiloid-valdar-auf-kreta
+Redirect 301 /blog/2023-05-18-reptiloide-valdar-auf-kreta /blog/interview-reptiloid-valdar-auf-kreta
+Redirect 301 /blog/2023-06-05-elektroautos-beliebt-bei-aliens /blog/elektroautos-beliebt-bei-ufo-entfuehrungen
+Redirect 301 /blog/2023-06-12-fliegende-zombies /blog/fliegende-zombies-phaenomen
+Redirect 301 /blog/2023-06-16-ameisen-protestieren-in-berlin-vor-dem-brandenburger-tor /blog/ameisenrevolution-brandenburger-tor-klimaschutz
+Redirect 301 /blog/2023-06-26-gehirn-auf-einer-rakete-im-weltall /blog/nasa-schickt-riesiges-gehirn-ins-weltall
+Redirect 301 /blog/2023-07-02-mysterioese-blaupause-einer-maschine /blog/mysterioese-maschine-blaupause-mit-mensch
+Redirect 301 /blog/2023-07-09-gruenes-rind-spielt-auf-gitarre /blog/gruenes-rind-spielt-auf-gitarre
+Redirect 301 /blog/2023-07-13-ufos-und-kuehe /blog/ufo-alarm-in-kuhlingen-in-bayern
+Redirect 301 /blog/2023-07-21-foto-eines-ufos-in-einem-lagerhaus-1970 /blog/foto-eines-ufos-in-einem-lagerhaus-1970
+Redirect 301 /blog/2023-08-01-gedankenlesendes-bakterium-entdeckt-teil-2 /blog/gedankenlesendes-bakterium-auf-dem-mars-entdeckt-teil-2
+Redirect 301 /blog/2023-08-09-kristallwesen-in-bayern-gesichtet /blog/kristallwesen-sichtung-in-wunderlichhausen-bayern
+Redirect 301 /blog/2023-09-24-geist-in-einem-office /blog/geist-in-office-nebelstein-bayern
+Redirect 301 /blog/2023-09-25-mysterioeser-angriff-in-der-naehe-von-tuebingen /blog/fliegendes-monster-angriff-jugendliche-tuebingen
