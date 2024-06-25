@@ -22,3 +22,7 @@ https://developers.facebook.com/docs/sharing/best-practices#images
 https://sharp.pixelplumbing.com/api-resize
 
 https://jensschuett.de/blog/anleitung-fur-perfekte-bilder-srcset-und-sizes-in-der-webentwicklung
+
+https://www.it-recht-kanzlei.de/matomo-richtig-verwenden-dsgvo.html
+
+https://matomo.org/guide/videos/videos/

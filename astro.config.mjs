@@ -11,7 +11,8 @@ dotenv.config(); // load env vars from .env
 export default defineConfig({
   // site: "https://harryk2142.github.io",
   site: "https://the-ai-files.de",
-  // base: 'mystery-blog',
+  base: "/",
+  root: ".",
   markdown: {
     remarkPlugins: [],
     rehypePlugins: [rehypeAstroRelativeMarkdownLinks],

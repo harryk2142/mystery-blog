@@ -24,6 +24,7 @@ pnpm-debug.log*
 .idea/
 
 # generated images + content
-public/images/blog
+public/images/blog/sharing
+public/images/blog/small
 
 src/content/blog/**

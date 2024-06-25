@@ -74,40 +74,8 @@
         {
           "title": "Place",
           "name": "place",
-          "type": "fields",
-          "required": false,
-          "fields": [
-            {
-              "title": "Planet",
-              "name": "planet",
-              "type": "string",
-              "required": false
-            },
-            {
-              "title": "Country",
-              "name": "country",
-              "type": "string",
-              "required": false
-            },
-            {
-              "title": "Federal State",
-              "name": "federalState",
-              "type": "string",
-              "required": false
-            },
-            {
-              "title": "City",
-              "name": "city",
-              "type": "string",
-              "required": false
-            },
-            {
-              "title": "Other",
-              "name": "other",
-              "type": "string",
-              "required": false
-            }
-          ]
+          "type": "string",
+          "required": false
         },
         {
           "title": "Draft",

@@ -2,7 +2,8 @@ import fs from "fs";
 import path from "path";
 import sharp from "sharp";
 
-const pathToImages = "./cms/images/blog";
+const pathToImages = "./public/images/blog";
+// const pathToImages = "./cms/images/blog";
 
 const outputDirs = {
   blog: "./public/images/blog",
@@ -29,12 +30,13 @@ fs.readdir(pathToImages, (err, files) => {
     const fileExtension = path.extname(file);
 
     if (/\.(jpg|jpeg|png|webp)$/i.test(file)) {
+
       if (fileExtension === ".webp") {
-        fs.copyFile(inputFilePath, `${outputDirs.blog}/${file}`, (err) => {
-          if (err) {
-            console.error("Fehler beim Kopieren des Bildes:", err);
-          }
-        });
+        // fs.copyFile(inputFilePath, `${outputDirs.blog}/${file}`, (err) => {
+        //   if (err) {
+        //     console.error("Fehler beim Kopieren des Bildes:", err);
+        //   }
+        // });
       } else {
         sharp(inputFilePath)
           .resize(1024)
