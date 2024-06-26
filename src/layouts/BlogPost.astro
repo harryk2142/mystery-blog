@@ -323,7 +323,22 @@ const blogPostIdentifier = pathSegments[pathSegments.length - 1] as string;
 
  */
     </style>
-    <script>
+    <script is:inline define:vars={{title, headline, heroImage}}>
+    
+    document.querySelector("#share-btn")?.addEventListener("click", async ()=>{  
+      if(navigator){
+          await navigator
+            .share({
+                title: title,
+                text: headline,
+                url: window.location.href
+            })
+            .then(() => console.log('Successful share! 🎉'))
+            .catch(err => console.error(err));
+        }
+      });
+    </script>
+    <script >
       import {
         loadBlogpost,
         createBlogpost,
