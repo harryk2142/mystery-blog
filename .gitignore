@@ -29,6 +29,3 @@ firestore-debug.log*
 public/images/blog/sharing
 public/images/blog/small
 
-src/content/blog/**
-
-
