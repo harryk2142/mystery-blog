@@ -1,5 +1,5 @@
 ---
-title: "Das Geheimnis von Altweidlingen: Die mysteriös verschwundene Zeit"
+title: "Das Geheimnis von Altweidlingen: Die mysteriöse verschwundene Zeit"
 pubDate: 2024-11-10T11:46:33.732Z
 updateDate: 2024-11-10T11:46:33.733Z
 headline: "Das Novembergeheimnis der verschwundenen Zeit: Wer oder was steckt dahinter?"
