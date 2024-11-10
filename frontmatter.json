@@ -9,7 +9,8 @@
       "path": "[[workspace]]/src/content"
     }
   ],
-  "frontMatter.taxonomy.seoTitleLength": 70,
+  "frontMatter.taxonomy.seoTitleLength": 80,
+  "frontMatter.taxonomy.seoDescriptionLength": 190,
   "frontMatter.taxonomy.contentTypes": [
     {
       "name": "default",
