@@ -102,12 +102,12 @@ const createCommentForm = (
       value: blogPostId,
     }),
     parentCommentId &&
-      el("input", {
-        type: "hidden",
-        id: idParentComment,
-        name: "parent-comment",
-        value: parentCommentId,
-      }),
+    el("input", {
+      type: "hidden",
+      id: idParentComment,
+      name: "parent-comment",
+      value: parentCommentId,
+    }),
     el(
       "label",
       {
@@ -136,24 +136,24 @@ const createCommentForm = (
     }),
     el("div", { class: "comment-form-btn-block" }, [
       parentCommentId &&
-        el(
-          "button",
-          {
-            id: idAbbrechenButton,
-            name: idAbbrechenButton,
-            type: "button",
-            class: "abbrechen-btn",
-            onclick: clickAbbrechen,
-          },
-          "Abbrechen"
-        ),
+      el(
+        "button",
+        {
+          id: idAbbrechenButton,
+          name: idAbbrechenButton,
+          type: "button",
+          class: "abbrechen-btn",
+          onclick: clickAbbrechen,
+        },
+        "Abbrechen"
+      ),
       el(
         "button",
         {
           id: idAbsendenButton,
           name: idAbsendenButton,
           type: "button",
-          class: "primary absenden-btn",
+          class: "absenden-btn",
           onclick: clickAbsenden,
         },
         "Absenden"
