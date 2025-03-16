@@ -5,12 +5,13 @@ import Main from "../layouts/Main.astro";
 import BlogPostCard from "../components/BlogPostCard.astro";
 import RandomBlogPost from "../components/RandomBlogPost.astro";
 import Pagefind from "../components/Pagefind.astro";
+import Ufo, { Sizes } from "../components/Ufo.astro";
 
 const posts = (await getCollection("blog"))
   .filter((e) => !e.data.draft)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const latestPost = posts[0];
-const latestPosts = [posts[1], posts[2], posts[3], posts[4]];
+const latestPosts = posts.slice(1, 5);
 ---
 
 <Main>
@@ -40,10 +41,15 @@ const latestPosts = [posts[1], posts[2], posts[3], posts[4]];
           {
             latestPosts.map((a) => (
               <div class="latest-blogpost-container mt-1">
-                <BlogPostCard blogpost={a} />
+                <BlogPostCard blogpost={a} client:visible />
               </div>
             ))
           }
+        </div>
+        <div class="flex column mt-1 ml-1">
+          <a class="a-button" href="/blog/1">
+            <span style="font-size: 1.5rem;">Mehr</span><Ufo size={Sizes.M} />
+          </a>
         </div>
       </div>
     </section>
