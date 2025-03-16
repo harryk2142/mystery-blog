@@ -7,6 +7,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 /* latin */
 @font-face {
   font-family: "Roboto";
@@ -17,6 +18,7 @@
     U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
     U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 /* latin */
 @font-face {
   font-family: "Atkinson Hyperlegible";
@@ -27,6 +29,7 @@
     U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
     U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 /* latin */
 @font-face {
   font-family: "Lato";
@@ -37,6 +40,7 @@
     U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
     U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 /* latin */
 @font-face {
   font-family: "Open Sans";
@@ -48,6 +52,7 @@
     U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
     U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 /* RESET */
 * {
   /* margin: 0;
@@ -90,11 +95,13 @@ body {
   width: 100%;
   color: var(--accent);
 }
+
 @media (max-width: 720px) {
   body {
     font-size: 18px;
   }
 }
+
 /* a {
   color: var(--accent);
 }
@@ -106,48 +113,58 @@ main {
   max-width: calc(100% - 1rem);
   margin: 0 auto;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin-top: 2rem;
+  margin-top: 1rem;
   color: var(--accent);
   line-height: 1.2;
   margin-bottom: 0.25rem;
 }
+
 h1 {
   font-size: clamp(2.5rem, 14vw, 3rem);
   /* 3.052em; */
 }
+
 h2 {
   font-size: clamp(2rem, 12vw, 2.5rem);
   /* 2.441em; */
 }
+
 h3 {
   font-size: clamp(1.75rem, 10vw, 2rem);
   /* 1.953em; */
 }
+
 h4 {
   font-size: clamp(1.5rem, 8vw, 1.75rem);
   /* 1.563em; */
 }
+
 h5 {
   font-size: clamp(1.25rem, 6vw, 1.5rem);
   /* 1.25em; */
 }
+
 h6 {
   font-size: clamp(1.2rem, 4vw, 1.25rem);
 }
+
 /* helper */
 .h100 {
   height: 100%;
 }
+
 .primary {
   background: var(--accent);
   color: var(--secondary-color);
 }
+
 .wrapper {
   width: 1280px;
   max-width: 100%;
@@ -159,18 +176,23 @@ h6 {
   scale: 1.1;
   z-index: 20;
 }
+
 .m-1 {
   margin: 1rem;
 }
+
 .mt-1 {
   margin-top: 1rem;
 }
+
 .mr-1 {
   margin-right: 1rem;
 }
+
 .mb-1 {
   margin-bottom: 1rem;
 }
+
 .ml-1 {
   margin-left: 1rem;
 }
@@ -178,15 +200,19 @@ h6 {
 .m-2 {
   margin: 2rem;
 }
+
 .mt-2 {
   margin-top: 2rem;
 }
+
 .mr-2 {
   margin-right: 2rem;
 }
+
 .mb-2 {
   margin-bottom: 2rem;
 }
+
 .ml-2 {
   margin-left: 2rem;
 }
@@ -197,15 +223,19 @@ h6 {
 .p-1 {
   padding: 1rem;
 }
+
 .pt-1 {
   padding-top: 1rem;
 }
+
 .pr-1 {
   padding-right: 1rem;
 }
+
 .pb-1 {
   padding-bottom: 1rem;
 }
+
 .pl-1 {
   padding-left: 1rem;
 }
@@ -213,44 +243,56 @@ h6 {
 .p-2 {
   padding: 2rem;
 }
+
 .pt-2 {
   padding-top: 2rem;
 }
+
 .pr-2 {
   padding-right: 2rem;
 }
+
 .pb-2 {
   padding-bottom: 2rem;
 }
+
 .pl-2 {
   padding-left: 2rem;
 }
+
 /* ROUND */
 .round-small {
   border-radius: 2px;
 }
+
 .round,
 .round-medium {
   border-radius: 4px;
 }
+
 .round-large {
   border-radius: 8px;
 }
+
 .round-xlarge {
   border-radius: 16px;
 }
+
 .round-xxlarge {
   border-radius: 32px;
 }
+
 /* Colors */
 .white,
 .hover-white:hover {
   background-color: white;
   color: black;
 }
+
 .border-white {
   border-color: white;
 }
+
 .shadow-white,
 .shadow-white-hover:hover {
   box-shadow: 0 4px 8px white;
@@ -261,9 +303,11 @@ h6 {
   background-color: black;
   color: white;
 }
+
 .border-black {
   border-color: black;
 }
+
 .shadow-black,
 .shadow-black-hover:hover {
   box-shadow: 0 4px 8px #000000;
@@ -274,16 +318,19 @@ h6 {
   background-color: #00ff00;
   color: black;
 }
+
 .air,
 .hover-air:hover {
   background-color: #ffff00;
   color: black;
 }
+
 .fire,
 .hover-fire:hover {
   background-color: #f44336;
   color: white;
 }
+
 .water,
 .hover-water:hover {
   background-color: #00bfff;
@@ -299,33 +346,39 @@ h6 {
   background-color: darkred;
   color: white;
 }
+
 .red,
 .hover-red:hover {
   background-color: #f44336;
   color: white;
 }
+
 /* ORANGE */
 .coral,
 .hover-coral:hover {
   background-color: coral;
   color: white;
 }
+
 .orange,
 .hover-orange:hover {
   background-color: orange;
   color: white;
 }
+
 /* YELLOW */
 .gold,
 .hover-gold:hover {
   background-color: gold;
   color: black;
 }
+
 .yellow,
 .hover-yellow:hover {
   background-color: yellow;
   color: black;
 }
+
 /* BROWN */
 /* TODO */
 /* PURPLE */
@@ -334,45 +387,53 @@ h6 {
   background-color: indigo;
   color: white;
 }
+
 .purple,
 .hover-purple:hover {
   background-color: purple;
   color: white;
 }
+
 /* BLUE */
 .midnight-blue,
 .hover-midnight-blue:hover {
   background-color: midnightblue;
   color: white;
 }
+
 .dark-blue,
 .hover-dark-blue:hover {
   background-color: darkblue;
   color: white;
 }
+
 /* CYAN */
 .teal,
 .hover-teal:hover {
   background-color: teal;
   color: white;
 }
+
 /* GREEN */
 .dark-green,
 .hover-dark-green:hover {
   background-color: darkgreen;
   color: white;
 }
+
 .green,
 .hover-green:hover {
   background-color: green;
   color: white;
 }
+
 /* WHITE */
 .ivory,
 .hover-ivory:hover {
   background-color: ivory;
   color: black;
 }
+
 /* FLEX */
 .flex {
   display: flex;
@@ -409,6 +470,10 @@ h6 {
   justify-content: space-between;
 }
 
+.flex.space-evenly {
+  justify-content: space-evenly;
+}
+
 .flex.center-y {
   align-items: center;
 }
@@ -434,42 +499,52 @@ b {
 p {
   margin-bottom: 1em;
 }
+
 .prose p {
   margin-bottom: 2em;
 }
+
 textarea {
   width: 100%;
   font-size: 16px;
 }
+
 input {
   font-size: 16px;
 }
+
 table {
   width: 100%;
 }
+
 img {
   max-width: 100%;
   height: auto;
   /* border-radius: 8px; */
 }
+
 code {
   padding: 2px 5px;
   background-color: rgb(var(--gray-light));
   border-radius: 2px;
 }
+
 pre {
   padding: 1.5em;
   border-radius: 8px;
 }
-pre > code {
+
+pre>code {
   all: unset;
 }
+
 blockquote {
   border-left: 4px solid var(--accent);
   padding: 0 0 0 20px;
   margin: 0px;
   font-size: 1.333em;
 }
+
 hr {
   border: none;
   border-top: 1px solid rgb(var(--gray-light));
@@ -491,4 +566,17 @@ hr {
   clip-path: inset(50%);
   /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
   white-space: nowrap;
+}
+
+.a-button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-decoration: none;
+  font-size: clamp(1.25rem, 6vw, 1.5rem);
+  border-radius: 1.5rem;
+  background-color: var(--accent);
+  color: white;
+  cursor: pointer;
+
 }
