@@ -77,6 +77,17 @@ const showLast = currentPage + 2 <= lastPage;
             Seite {currentPage} von {lastPage}
           </h1>
         </div>
+        <!-- <div class="pagination">
+          <ul>
+            <li><a href="#" class="preprev">&lt;&lt;</a></li>
+            <li><a href="#" class="prev">&lt;</a></li>
+            <li><a href="#" class="active">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#" class="next">&gt;</a></li>
+            <li><a href="#" class="nenext">&gt;&gt;</a></li>
+          </ul>
+        </div> -->
         <div
           id="top-pagination-container"
           class="flex center-x pagination-container"
@@ -89,10 +100,10 @@ const showLast = currentPage + 2 <= lastPage;
                 </a>
               ) : null
             }
-            {showFirst ? <div class="dots">...</div> : null}
+            {showFirst ? <div class="dots">&bull;&bull;&bull;</div> : null}
             {
               url.prev ? (
-                <a href={url.prev}>
+                <a href={url.prev} class="previous">
                   <span class="ascii">&#60;</span>
                 </a>
               ) : null
@@ -115,7 +126,7 @@ const showLast = currentPage + 2 <= lastPage;
                 </a>
               ) : null
             }
-            {showLast ? <div class="dots">...</div> : null}
+            {showLast ? <div class="dots">&bull;&bull;&bull;</div> : null}
             {
               showLast ? (
                 <a href={urlToLast}>
@@ -139,7 +150,6 @@ const showLast = currentPage + 2 <= lastPage;
             }
           </div>
         </div>
-
         <div
           id="bottom-pagination-container"
           class="flex center-x pagination-container"
@@ -152,14 +162,14 @@ const showLast = currentPage + 2 <= lastPage;
                 </a>
               ) : null
             }
-            {showFirst ? <div class="dots">...</div> : null}
-            {
+            {showFirst ? <div class="dots">&bull;&bull;</div> : null}
+            <!-- {
               url.prev ? (
-                <a href={url.prev}>
+                <a href={url.prev} class="prev-or-next">
                   <span class="ascii">&#60;</span>
                 </a>
               ) : null
-            }
+            } -->
             {
               currentPage - 1 > 0 ? (
                 <a href={url.prev}>{currentPage - 1}</a>
@@ -171,14 +181,14 @@ const showLast = currentPage + 2 <= lastPage;
                 <a href={url.next}>{currentPage + 1}</a>
               ) : null
             }
-            {
+            <!-- {
               url.next ? (
-                <a href={url.next}>
+                <a href={url.next} class="prev-or-next">
                   <span class="ascii">&#62;</span>
                 </a>
               ) : null
-            }
-            {showLast ? <div class="dots">...</div> : null}
+            } -->
+            {showLast ? <div class="dots">&bull;&bull;&bull;</div> : null}
             {
               showLast ? (
                 <a href={urlToLast}>
@@ -191,6 +201,36 @@ const showLast = currentPage + 2 <= lastPage;
       </section>
     </main>
     <style>
+      .pagination ul {
+        list-style: none; /* Entfernt die Standard-Listenpunkte */
+        padding: 0;
+        margin: 20px 0;
+        display: flex; /* Richtet die Elemente horizontal aus */
+        justify-content: center; /* Zentriert die Elemente */
+      }
+
+      .pagination li {
+        margin: 0 5px; /* Abstand zwischen den Seitenzahlen */
+      }
+
+      .pagination a {
+        display: block;
+        padding: 8px 12px;
+        background-color: #f2f2f2; /* Hintergrundfarbe */
+        color: #333; /* Textfarbe */
+        border: 1px solid #ddd; /* Rahmen */
+        text-decoration: none; /* Entfernt die Unterstreichung */
+      }
+
+      .pagination a:hover {
+        background-color: #ddd; /* Hintergrundfarbe beim Hover */
+      }
+
+      .pagination .active {
+        background-color: #333; /* Hintergrundfarbe der aktiven Seite */
+        color: #fff; /* Textfarbe der aktiven Seite */
+      }
+
       #blogposts-group-container {
         container-name: blogposts-group-container;
         container-type: inline-size;
@@ -220,6 +260,10 @@ const showLast = currentPage + 2 <= lastPage;
         .blogposts-group {
         }
       }
+      /* .prev-or-next {
+        display: none !important;
+        background-color: cadetblue;
+      } */
       .pagination-container {
         margin-bottom: 1rem;
       }
@@ -227,20 +271,23 @@ const showLast = currentPage + 2 <= lastPage;
         margin-top: 1rem;
         display: flex;
         flex-direction: row;
-        height: 64px;
+        /* height: 64px; */
       }
       .dots {
-        font-size: 1.5rem;
+        font-size: 2rem;
+        font-weight: bold;
       }
       .dots::before,
       .dots::after {
-        content: "   ";
+        content: " ";
         white-space: pre;
       }
 
       .pagination a {
+        /* aspect-ratio: 2 3; */
+        /* margin: 10px 0.75rem; */
+        height: 4rem;
         font-size: 2rem;
-
         display: flex;
         align-items: center;
         justify-content: center;
