@@ -41,7 +41,7 @@ const latestPosts = posts.slice(1, 5);
           {
             latestPosts.map((a) => (
               <div class="latest-blogpost-container mt-1">
-                <BlogPostCard blogpost={a} client:visible />
+                <BlogPostCard blogpost={a} />
               </div>
             ))
           }
