@@ -29,7 +29,7 @@ In Sphinxhausen, einem verträumten Städtchen im Herzen Bayerns, herrschte Aufr
 
 ## Die Entdeckung des Verschwindens
 
-Als Dr. Helena Hieroglyph, die angesehene Archäologin und Kuratorin des lokalen Museums, an diesem Morgen ihre Runden machte, stellte sie fest, dass die zentrale Attraktion – eine alte Statue von Horus – spurlos verschwunden war.
+Als Dr. Helena Hieroglyph, die angesehene Archäologin und Kuratorin des lokalen Museums, an diesem Morgen ihre Runden machte, stellte sie fest, dass die zentrale Attraktion - eine alte Statue von Horus - spurlos verschwunden war.
 
 ## Sofortige Ermittlungen
 

@@ -24,7 +24,7 @@ In Marburg, einer Stadt, die reich an Tradition und Geschichte ist, begann der M
 
 ## Das Verschwinden
 
-Jedes Jahr zum ersten Mai stellt die Marburger Gemeinschaft Maibäume in verschiedenen Stadtteilen auf, um den Frühling willkommen zu heißen und die Gemeinschaft zu stärken. Diese Tradition, die sowohl ein soziales als auch ein kulturelles Ereignis darstellt, wurde jäh unterbrochen, als die Bürger am Morgen feststellen mussten, dass alle Maibäume verschwunden waren. Keine Spuren, keine Hinweise – als wären sie nie dagewesen.
+Jedes Jahr zum ersten Mai stellt die Marburger Gemeinschaft Maibäume in verschiedenen Stadtteilen auf, um den Frühling willkommen zu heißen und die Gemeinschaft zu stärken. Diese Tradition, die sowohl ein soziales als auch ein kulturelles Ereignis darstellt, wurde jäh unterbrochen, als die Bürger am Morgen feststellen mussten, dass alle Maibäume verschwunden waren. Keine Spuren, keine Hinweise - als wären sie nie dagewesen.
 
 ## Die ersten Hinweise
 

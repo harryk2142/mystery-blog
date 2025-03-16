@@ -46,4 +46,4 @@ Je mehr die Tage vergingen, desto mehr Forscher und Medienvertreter strömten na
 
 Eines Nachts, während eines besonders heftigen Gewitters, verschwanden die Buchstaben so plötzlich, wie sie erschienen waren. Der Mais wuchs wieder in seine ursprüngliche Form zurück, ohne jegliche Spur der Botschaft.
 
-Auch wenn das Rätsel der Kornfeldbotschaft ungelöst bleibt, hat es Gruselhain einen Platz in den Geschichtsbüchern der Mysterien verschafft. Ob außerirdische Besucher, ein aufwändiger Scherz oder ein Naturphänomen – die Wahrheit bleibt verborgen. Doch eines ist sicher: In Gruselhain wird man noch lange von dieser Sommernacht erzählen.
+Auch wenn das Rätsel der Kornfeldbotschaft ungelöst bleibt, hat es Gruselhain einen Platz in den Geschichtsbüchern der Mysterien verschafft. Ob außerirdische Besucher, ein aufwändiger Scherz oder ein Naturphänomen - die Wahrheit bleibt verborgen. Doch eines ist sicher: In Gruselhain wird man noch lange von dieser Sommernacht erzählen.

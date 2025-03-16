@@ -68,4 +68,4 @@ Gemeinsam planten Myra und Dr. Hieroglyph, eine Ausstellung im Museum zu organis
 
 ---
 
-Die Ereignisse in Sphinxhausen in dieser Weihnachtszeit werden sicherlich noch lange in Erinnerung bleiben. Sie erinnern uns daran, dass das Unerwartete und Wunderbare oft ganz nah ist – man muss nur bereit sein, es zu sehen und zu erleben.
+Die Ereignisse in Sphinxhausen in dieser Weihnachtszeit werden sicherlich noch lange in Erinnerung bleiben. Sie erinnern uns daran, dass das Unerwartete und Wunderbare oft ganz nah ist - man muss nur bereit sein, es zu sehen und zu erleben.

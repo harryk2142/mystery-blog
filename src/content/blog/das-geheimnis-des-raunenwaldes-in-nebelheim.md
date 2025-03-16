@@ -36,6 +36,6 @@ Plötzlich hörte Max ein sanftes Flüstern. Er drehte sich um und sah eine Gest
 
 Max, zunächst skeptisch, fühlte sich bald von Annas Geschichten gefangen. Sie führte ihn zu einem versteckten See, in dessen spiegelglatter Oberfläche sich das Mondlicht brach. Dort, so sagte sie, könne man die Wahrheit über den Raunenwald erfahren.
 
-Als sie am See ankamen, sah Max etwas Unerklärliches. Das Wasser begann zu leuchten und enthüllte Bilder vergangener Ereignisse – Szenen von Freude, Trauer und unaussprechlichen Geheimnissen.
+Als sie am See ankamen, sah Max etwas Unerklärliches. Das Wasser begann zu leuchten und enthüllte Bilder vergangener Ereignisse - Szenen von Freude, Trauer und unaussprechlichen Geheimnissen.
 
 Überwältigt von dem, was er gesehen hatte, kehrte Max zurück nach Nebelheim. Er wusste, dass seine Geschichte über den Raunenwald mehr als nur eine Legende war. Es war ein Ort, an dem die Grenze zwischen unserer Welt und der übernatürlichen Welt verschwimmt.

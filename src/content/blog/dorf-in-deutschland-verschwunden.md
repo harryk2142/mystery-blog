@@ -36,7 +36,7 @@ Laut alten Überlieferungen soll der Wald von einem Geist namens Frida Flüsterh
 
 Wir hatten das Glück, ein Interview mit einem der wenigen Zeugen zu führen, die behaupten, Frida gesehen zu haben. Herr Hugo Hörndich, ein älterer Herr aus dem Nachbardorf, erzählt uns seine Geschichte:
 
-„Ich war spätabends im Wald unterwegs, um meine verlorene Katze zu suchen. Plötzlich hörte ich ein Flüstern, das meinen Namen rief. Als ich mich umdrehte, sah ich eine Gestalt in einem alten, zerrissenen Kleid, die durch die Bäume schwebte. Ihr Gesicht war halb verborgen, aber ihre Augen – sie funkelten rot wie Glut. Ich bin so schnell gerannt, wie ich konnte.“
+„Ich war spätabends im Wald unterwegs, um meine verlorene Katze zu suchen. Plötzlich hörte ich ein Flüstern, das meinen Namen rief. Als ich mich umdrehte, sah ich eine Gestalt in einem alten, zerrissenen Kleid, die durch die Bäume schwebte. Ihr Gesicht war halb verborgen, aber ihre Augen - sie funkelten rot wie Glut. Ich bin so schnell gerannt, wie ich konnte.“
 
 ## Die Suche nach Antworten
 

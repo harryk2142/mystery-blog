@@ -1,7 +1,7 @@
 ---
 title: Mysteriöser Angriff in der Nähe von Tübingen
 description: "Schockierender Vorfall nahe Tübingen: Ein mysteriöses fliegendes Monster attackiert Jugendliche. Zwei Verletzte, viele Fragen. Die erschreckenden Details."
-headline: "Unerklärlicher Angriff in Tübingen: Mysteriöse Flugmonster attackieren junge Leute – Was steckt dahinter?"
+headline: "Unerklärlicher Angriff in Tübingen: Mysteriöse Flugmonster attackieren junge Leute - Was steckt dahinter?"
 heroImage:
   alt: "Eine künstlerische Darstellung der Kreatur, basierend auf den Beschreibungen der Gruppe. Hintergrund: Eine nächtliche Szenerie mit einem Vollmond und Wolken, die den Himmel bedecken. Sterne funkeln durch die Wolkenlücken, und die Silhouette eines Waldes ist am Horizont zu sehen"
   url: /images/blog/mysterioese-fliegende-kreatur.webp

@@ -28,4 +28,4 @@ Nach einiger Zeit verabschiedeten sich die Außerirdischen freundlich von der Fa
 
 Die Familie war von diesem ungewöhnlichen Vorfall noch immer völlig verwirrt, als sie die Nachricht von der Landung des UFOs an die Öffentlichkeit brachte. Schon bald machten sich Schaulustige auf den Weg zur Farm, um sich das UFO selbst anzusehen, doch leider war von dem außerirdischen Besuch keine Spur mehr zu finden.
 
-Es bleibt abzuwarten, ob sich die Außerirdischen in Zukunft noch einmal auf der Farm blicken lassen – oder ob dieses Ereignis einmalig bleiben wird. Eines ist jedoch sicher: Die Familie wird diesen ungewöhnlichen Besuch niemals vergessen.
+Es bleibt abzuwarten, ob sich die Außerirdischen in Zukunft noch einmal auf der Farm blicken lassen - oder ob dieses Ereignis einmalig bleiben wird. Eines ist jedoch sicher: Die Familie wird diesen ungewöhnlichen Besuch niemals vergessen.

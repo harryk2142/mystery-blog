@@ -34,4 +34,4 @@ Nachdem der Fund an die Öffentlichkeit gelangt war, zog er schnell die Aufmerks
 
 Die Entdeckung wirft grundlegende Fragen auf: Woher kommt das Artefakt? Was ist sein Zweck? Und was bedeutet sein Fund für unsere Sicht auf die Geschichte der Menschheit und möglicherweise auf außerirdische Zivilisationen? Während die Forschungen weitergehen, steht die Gemeinschaft von Bizarreloch im Zentrum eines Rätsels, das die Grenzen der Wissenschaft und der menschlichen Neugier auf die Probe stellt.
 
-Diese Geschichte aus dem Herzen der Schweiz ist eine Erinnerung daran, dass das Universum voller Geheimnisse ist, von denen einige vielleicht näher sind, als wir denken. Das Artefakt von Bizarreloch könnte der Schlüssel zu einem der größten Rätsel unserer Zeit sein – eine Botschaft, die über Zeit und Raum hinweg zu uns findet.
+Diese Geschichte aus dem Herzen der Schweiz ist eine Erinnerung daran, dass das Universum voller Geheimnisse ist, von denen einige vielleicht näher sind, als wir denken. Das Artefakt von Bizarreloch könnte der Schlüssel zu einem der größten Rätsel unserer Zeit sein - eine Botschaft, die über Zeit und Raum hinweg zu uns findet.

@@ -26,7 +26,7 @@ Die Spargelsaison in Beelitz ist eine Zeit der Freude und des Genusses, berühmt
 
 Es begann in der ersten Maiwoche, als die ersten Spargelstangen sorgfältig aus der Erde gehoben wurden. Mehrere Arbeiter berichteten unabhängig voneinander von seltsamen Gestalten, die in den frühen Morgenstunden zwischen den Spargelreihen umherwanderten. Diese Erscheinungen, beschrieben als schattenhafte Figuren in veralteter Kleidung, schienen sich im Nebel zu verlieren, sobald jemand versuchte, sich ihnen zu nähern.
 
-Hinzu kamen Berichte über unerklärliche Lichter – blaue und grüne Schimmer, die kurz über dem Boden tanzten und dann abrupt verschwanden. Die lokale Legende spricht von den "Spargelgeistern", ruhelosen Seelen aus der Zeit, als das Land noch von bitterer Armut geprägt war.
+Hinzu kamen Berichte über unerklärliche Lichter - blaue und grüne Schimmer, die kurz über dem Boden tanzten und dann abrupt verschwanden. Die lokale Legende spricht von den "Spargelgeistern", ruhelosen Seelen aus der Zeit, als das Land noch von bitterer Armut geprägt war.
 
 ## Claras Ermittlungen
 
