@@ -1,5 +1,5 @@
 declare module "https://*";
-declare module "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore-lite.js" {
+declare module "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore-lite.js" {
   export {
     addDoc,
     collection,
@@ -15,7 +15,7 @@ declare module "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore-li
     where,
   } from "firebase/firestore/lite";
 }
-declare module "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js" {
+declare module "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js" {
   export { FirebaseApp, initializeApp } from "firebase/app";
 }
 declare module "https://esm.sh/canvas-confetti" {
