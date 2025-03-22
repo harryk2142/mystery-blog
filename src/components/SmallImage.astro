@@ -8,18 +8,11 @@ type Props = {
 
 const { alt, src, ...imgAttrs } = Astro.props;
 const smallImage = src.replace("/images/blog/", "/images/blog/small/");
-const mediumImage = src.replace("/images/blog/", "/images/blog/small/");
 const largeImage = src;
-// const srcSet = largeImage + " 1000w";
-const srcSet = smallImage + " 1000w, " + largeImage + " 2000w";
-// const sizes =
-//   "(max-width: 500px) calc(100vw - 2rem), (max-width: 700px) calc(100vw - 6rem), calc(100vw - 9rem - 200px)";
-// const sizes = "(max-width: 700px) calc(100vw - 1rem), calc(100vw - 2rem)";
+const srcSet = smallImage + " 1200w, " + largeImage + " 2000w";
 const sizes = "auto";
-const imagePath = src.replace("/images/blog/", "/images/blog/small/");
 ---
 
-<!-- <img src={imagePath} alt={alt} {...imgAttrs} loading="lazy" /> -->
 <img
   srcset={srcSet}
   src={smallImage}
