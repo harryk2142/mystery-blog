@@ -45,11 +45,12 @@ const latestPosts = posts.slice(1, 5);
               </div>
             ))
           }
-        </div>
-        <div class="flex column mt-1 ml-1">
-          <a class="a-button" href="/blog/1">
-            <span style="font-size: 1.5rem;">Mehr</span><Ufo size={Sizes.M} />
-          </a>
+          <div class="flex column mt-1">
+            <a class="a-button" href="/blog/1">
+              <span style="font-size: 1.5rem;">Mehr</span>
+              <Ufo size={Sizes.M} />
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -62,44 +63,54 @@ const latestPosts = posts.slice(1, 5);
     text-align: center;
     margin-bottom: 1rem;
   }
+
   #blogposts-container {
     container-type: inline-size;
     container-name: blogposts-container;
     display: flex;
     flex-wrap: wrap;
   }
+
   #special-blogpost-section,
   #latest-blogpost-section {
     display: flex;
     flex-direction: column;
   }
+
   @container blogposts-container (width >= 800px) {
     #special-blogposts-section {
       width: 50%;
     }
+
     #latest-blogposts-section {
       width: 50%;
       margin-top: 1rem;
+
       #latest-blogposts-block {
         margin-left: 1rem;
       }
     }
   }
+
   @container blogposts-container (width < 800px) and (width >= 600px) {
     #special-blogposts-section {
       width: 70%;
     }
+
     #latest-blogposts-section {
       width: 30%;
+
       #latest-blogposts-block {
         margin-left: 1rem;
       }
     }
   }
+
   @container blogposts-container (width < 600px) {
     #special-blogposts-section {
       width: 100%;
     }
+
     #latest-blogposts-section {
       margin-top: 3rem;
       width: 100%;
