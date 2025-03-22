@@ -18,5 +18,19 @@ import "./../styles/global.css";
       <slot />
     </main>
     <Footer />
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then((reg) =>
+              console.log("Service Worker registriert:", reg.scope)
+            )
+            .catch((err) =>
+              console.error("SW Registrierung fehlgeschlagen:", err)
+            );
+        });
+      }
+    </script>
   </body>
 </html>

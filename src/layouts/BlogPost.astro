@@ -145,6 +145,20 @@ const blogPostIdentifier = pathSegments[pathSegments.length - 1] as string;
         </section>
       </article>
     </main>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then((reg) =>
+              console.log("Service Worker registriert:", reg.scope)
+            )
+            .catch((err) =>
+              console.error("SW Registrierung fehlgeschlagen:", err)
+            );
+        });
+      }
+    </script>
     <style>
       .blog-post {
         /* margin: 20px auto;
