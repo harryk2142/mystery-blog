@@ -6,32 +6,33 @@ type: default
 headline: Das Geheimnis der rätselhaften Botschaft im Kornfeld von Gruselhain
 description: Gruselhain hat sich zu einem Hotspot für unheimliche Phänomene verwandelt. Denn eine mysteriöse Botschaft ist in einem nahegelegenen Kornfeld erschienen.
 heroImage:
-    url: /images/blog/kornfeld-mit-der-nachricht-das-ende-ist-nah.webp
-    alt: Ein geheimnisvolles Kornfeld bei Sonnenaufgang mit der Botschaft "Das Ende ist nah!" im Nebel, ungewöhnliche Lichter am Himmel und ein Dorf im Hintergrund.
+  url: /images/blog/kornfeld-mit-der-nachricht-das-ende-ist-nah.webp
+  alt: Ein geheimnisvolles Kornfeld bei Sonnenaufgang mit der Botschaft "Das Ende ist nah!" im Nebel, ungewöhnliche Lichter am Himmel und ein Dorf im Hintergrund.
 place: Gruselhain - Baden Württemberg - Deutschland
 tags:
-    - altelegenden
-    - august
-    - badenwuerttemberg
-    - badenwürttemberg
-    - barbara-duese
-    - barbara-düse
-    - bauer-erwin-stauner
-    - botschaft
-    - deutschland
-    - dr-iva-nix
-    - erwin-stauner
-    - gruselhain
-    - iva-nix
-    - kornfeld
-    - kryptologie
-    - mysterium
-    - raetsel
-    - rainer-zufall
-    - rätsel
-    - unerklaerlich
-    - unerklärlich
+  - altelegenden
+  - august
+  - badenwuerttemberg
+  - badenwürttemberg
+  - barbara-duese
+  - barbara-düse
+  - bauer-erwin-stauner
+  - botschaft
+  - deutschland
+  - dr-iva-nix
+  - erwin-stauner
+  - gruselhain
+  - iva-nix
+  - kornfeld
+  - kryptologie
+  - mysterium
+  - raetsel
+  - rainer-zufall
+  - rätsel
+  - unerklaerlich
+  - unerklärlich
 ---
+
 In den frühen Morgenstunden des 3. August entdeckte Bauer Erwin Stauner, der seit über dreißig Jahren die Felder bewirtschaftet, ein seltsames Muster in seinem Maisfeld. Es war nicht einfach ein Kreis oder eine geometrische Form, wie man sie vielleicht von früheren Kornkreis-Phänomenen kennt, sondern eine klar erkennbare Schrift. Die Buchstaben waren so groß, dass man sie nur aus der Luft vollständig sehen konnte.
 
 Die Nachricht, die sich in dem goldenen Mais abzeichnete, lautete: "Das Ende ist nah!" Für die Dorfbewohner war dies ein Schock. Einige glaubten, es sei ein Scherz von Jugendlichen, andere vermuteten außerirdische Einflüsse. Die Dorfältesten erinnerten sich an alte Legenden, in denen Gruselhain immer wieder als Schauplatz unerklärlicher Ereignisse erwähnt wurde.

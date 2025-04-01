@@ -1,15 +1,17 @@
 ---
 type Props = {
-    title: string;
+	id: string;
+	title: string;
 };
 
-const { title } = Astro.props;
+const { title, id } = Astro.props;
 ---
 
-<h1 data-pagefind-meta="title">{title}</h1>
+<h1 id={id} data-pagefind-meta="title">{title}</h1>
 <style>
-    h1 {
-        text-align: center;
-        font-weight: bolder;
-    }
+	h1 {
+		margin-bottom: 1rem;
+		text-align: center;
+		font-weight: bolder;
+	}
 </style>

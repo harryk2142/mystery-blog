@@ -1,0 +1,29 @@
+---
+import Footer from "@components/Footer.astro";
+import Meta from "@components/Meta.astro";
+import NavigationBar from "@components/navigation/NavigationBar.astro";
+// import "@styles/global.css";
+import "@styles/root.css";
+import "@styles/style.css";
+import { SITE_DESCRIPTION_SHORT, SITE_TITLE } from "../consts";
+
+interface Props {
+	description?: string;
+	title?: string;
+}
+const { description = SITE_DESCRIPTION_SHORT, title = SITE_TITLE } = Astro.props;
+---
+
+<!doctype html>
+<html lang="de">
+	<head>
+		<Meta title={title} description={description} />
+	</head>
+	<body data-pagefind-ignore>
+		<NavigationBar />
+		<main>
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>

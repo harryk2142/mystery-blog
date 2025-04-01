@@ -1,164 +1,161 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import FormattedDate from "../components/FormattedDate.astro";
-type Props = {
-  blogpost: CollectionEntry<"blog">;
-  infotext?: string;
-  classlist?: string;
-};
+import FormattedDate from "./FormattedDate.astro";
 import SmallImage from "./SmallImage.astro";
+type Props = {
+	blogpost: CollectionEntry<"blog">;
+	infotext?: string;
+	classlist?: string;
+};
 
 const { blogpost, infotext, classlist = "" } = Astro.props;
 const pathToBlogPost = "/" + blogpost.collection + "/" + blogpost.slug;
 ---
 
 <a href={pathToBlogPost} data-pagefind-ignore>
-  <div class={"card-container " + classlist}>
-    <div class={"card " + classlist}>
-      <div class="card-image-box">
-        <div class="card-image">
-          <SmallImage
-            src={blogpost?.data.heroImage.url ?? ""}
-            alt={blogpost?.data.heroImage.alt ?? ""}
-          />
-        </div>
-      </div>
-      <div class="card-overlay"></div>
-      <div class="card-info">
-        {infotext ?? ""}
-      </div>
-      <div class="card-body">
-        <span class="card-date">
-          <FormattedDate date={blogpost?.data.pubDate} ? />
-        </span>
-        <div class="card-title">
-          {blogpost?.data.title}
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class={"card-container " + classlist} style="height: 100%;">
+		<div class={"card " + classlist} style="height: 100%;">
+			<div class="card-image-box">
+				<div class="card-image">
+					<SmallImage src={blogpost?.data.heroImage.url ?? ""} alt={blogpost?.data.heroImage.alt ?? ""} />
+				</div>
+			</div>
+			<div class="card-overlay"></div>
+			<div class="card-info">
+				{infotext ?? ""}
+			</div>
+			<div class="card-body">
+				<span class="card-date">
+					<FormattedDate date={blogpost?.data.pubDate} ? />
+				</span>
+				<div class="card-title">
+					{blogpost?.data.title}
+				</div>
+			</div>
+		</div>
+	</div>
 </a>
 
 <style>
-  a {
-    text-decoration: none;
-  }
-  .card-container {
-    container-type: inline-size;
-    container-name: card-container;
-  }
-  .card {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border: 1px solid #ccc;
-    border-radius: 1rem;
-    /* box-shadow: 0 4px 8px black; */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* leichter Schatten für 3D-Effekt */
+	a {
+		text-decoration: none;
+	}
+	.card-container {
+		container-type: inline-size;
+		container-name: card-container;
+	}
+	.card {
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		border: 1px solid #ccc;
+		border-radius: 1rem;
+		/* box-shadow: 0 4px 8px black; */
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		/* leichter Schatten für 3D-Effekt */
 
-    .card-info {
-      border-radius: 0 0 0 3rem;
-      font-size: clamp(3rem, 3.5rem, 4rem);
-      position: absolute;
-      border-color: var(--secondary-color);
-      right: 0;
-      padding: 0 2rem;
-      background-color: var(--accent);
-      color: var(--secondary-color);
+		.card-info {
+			border-radius: 0 0 0 3rem;
+			font-size: clamp(3rem, 3.5rem, 4rem);
+			position: absolute;
+			border-color: var(--secondary-color);
+			right: 0;
+			padding: 0 2rem;
+			background-color: var(--accent);
+			color: var(--secondary-color);
 
-      text-shadow:
-        2px 0px 0px black,
-        -2px 0px 0px black,
-        0px 2px 0px black,
-        0px -2px 0px black;
-    }
-    .card-body {
-      color: var(--accent);
-      display: flex;
-      /* padding: 0 1rem 1rem 1rem; */
-      padding: 1rem; /* Innenabstand */
-      text-align: center; /* Text zentrieren */
-      flex-direction: column;
+			text-shadow:
+				2px 0px 0px black,
+				-2px 0px 0px black,
+				0px 2px 0px black,
+				0px -2px 0px black;
+		}
+		.card-body {
+			color: var(--accent);
+			display: flex;
+			/* padding: 0 1rem 1rem 1rem; */
+			padding: 1rem; /* Innenabstand */
+			text-align: center; /* Text zentrieren */
+			flex-direction: column;
 
-      .card-date {
-        font-size: 1.25rem;
-        font-weight: bold;
-      }
+			.card-date {
+				font-size: 1.25rem;
+				font-weight: bold;
+			}
 
-      .card-title {
-        font-size: 1rem;
-        text-wrap: pretty;
-      }
-    }
-  }
-  @container card-container (width <= 400px) {
-    .card-image > img {
-      /* das Bild füllt die Breite der Card aus */
-      width: 100%;
-      /* deckt den verfügbaren Container ab, ohne das Seitenverhältnis zu verzerren */
-      object-fit: cover;
-      /* zentriert das Bild in seinem Container */
-      object-position: center center;
-      /* feste Höhe für das Bild */
-      height: 300px;
-      /* height: 276px; */
-      /* oder */
-      /* aspect-ratio: 4 / 3; */
-    }
-  }
-  @container card-container (width > 400px) {
-    .card {
-      position: relative;
-      aspect-ratio: 16 / 11;
-    }
-    .card-image {
-      display: flex;
-      overflow: hidden;
-      aspect-ratio: 16 / 9;
+			.card-title {
+				font-size: 1rem;
+				text-wrap: pretty;
+			}
+		}
+	}
+	@container card-container (width <= 400px) {
+		.card-image > img {
+			/* das Bild füllt die Breite der Card aus */
+			width: 100%;
+			/* deckt den verfügbaren Container ab, ohne das Seitenverhältnis zu verzerren */
+			object-fit: cover;
+			/* zentriert das Bild in seinem Container */
+			object-position: center center;
+			/* feste Höhe für das Bild */
+			height: 300px;
+			/* height: 276px; */
+			/* oder */
+			/* aspect-ratio: 4 / 3; */
+		}
+	}
+	@container card-container (width > 400px) {
+		.card {
+			position: relative;
+			aspect-ratio: 16 / 11;
+		}
+		.card-image {
+			display: flex;
+			overflow: hidden;
+			aspect-ratio: 16 / 9;
 
-      > img {
-        object-fit: cover;
-        object-position: center center;
-        width: 100%;
-        height: auto;
-      }
-    }
-    .card-body {
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      bottom: 0;
-      left: 0;
-      border-radius: 0 0 1rem 1rem;
-      width: 100%;
-      color: var(--secondary-color);
-      .card-title {
-        font-size: clamp(1rem, 3vh, 2rem);
-      }
-    }
-    .card-date {
-      color: var(--secondary-color);
-    }
-    .card-title {
-      color: var(--secondary-color);
-    }
-    .card-overlay {
-      border-radius: 1rem;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      top: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 0),
-        color-mix(in srgb, var(--primary-color) 10%, var(--primary-color)),
-        color-mix(in srgb, var(--primary-color) 100%, var(--primary-color))
-      );
-    }
-  }
+			> img {
+				object-fit: cover;
+				object-position: center center;
+				width: 100%;
+				height: auto;
+			}
+		}
+		.card-body {
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			bottom: 0;
+			left: 0;
+			border-radius: 0 0 1rem 1rem;
+			width: 100%;
+			color: var(--secondary-color);
+			.card-title {
+				font-size: clamp(1rem, 3vh, 2rem);
+			}
+		}
+		.card-date {
+			color: var(--secondary-color);
+		}
+		.card-title {
+			color: var(--secondary-color);
+		}
+		.card-overlay {
+			border-radius: 1rem;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			top: 0;
+			background: linear-gradient(
+				to bottom,
+				rgba(255, 255, 255, 0),
+				rgba(255, 255, 255, 0),
+				rgba(255, 255, 255, 0),
+				rgba(255, 255, 255, 0),
+				color-mix(in srgb, var(--primary-color) 10%, var(--primary-color)),
+				color-mix(in srgb, var(--primary-color) 100%, var(--primary-color))
+			);
+		}
+	}
 </style>

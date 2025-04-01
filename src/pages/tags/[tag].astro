@@ -7,30 +7,30 @@ import Meta, { OgTypes } from "../../components/Meta.astro";
 import NavigationBar from "../../components/navigation/NavigationBar.astro";
 import CenteredTitle from "../../components/CenteredTitle.astro";
 const isNotUndefined = (items: string[] | undefined): items is string[] => {
-    return !!items;
+  return !!items;
 };
 export async function getStaticPaths() {
-    const allPosts = (await getCollection("blog"))
-        .filter((e) => !e.data.draft)
-        .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  const allPosts = (await getCollection("blog"))
+    .filter((e) => !e.data.draft)
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-    const tags = allPosts
-        .map((post) => post.data.tags)
-        .filter((tags): tags is string[] => !!tags)
-        .flat();
+  const tags = allPosts
+    .map((post) => post.data.tags)
+    .filter((tags): tags is string[] => !!tags)
+    .flat();
 
-    const uniqueTags: string[] = [...new Set<string>(tags)];
+  const uniqueTags: string[] = [...new Set<string>(tags)];
 
-    return uniqueTags.map((tag) => {
-        const filteredPosts = allPosts.filter((post) =>
-            post.data.tags?.includes(tag),
-        );
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) =>
+      post.data.tags?.includes(tag),
+    );
 
-        return {
-            params: { tag },
-            props: { posts: filteredPosts },
-        };
-    });
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
 }
 
 const { tag } = Astro.params;
@@ -40,97 +40,90 @@ import "./../../styles/global.css";
 ---
 
 <html lang="de">
-    <head>
-        <Meta
-            title={"Tag " + tag}
-            description={"Hier stehen die Blogeinträge zum Tag " + tag}
-            ogType={OgTypes.website}
-        />
-        <meta name="robots" content="noindex" />
-    </head>
-    <body data-pagefind-ignore>
-        <NavigationBar />
-        <style></style>
-        <div>
-            <div id="tag-container">
-                <CenteredTitle title={"#" + tag} />
-                <div id="tag-list">
-                    <ul id="list-of-blogposts">
-                        {
-                            posts.map((post) => (
-                                <li class="shadow border-radius">
-                                    <a
-                                        href={`/blog/${post.slug}/`}
-                                        class="link-to-blogpost"
-                                    >
-                                        <span class="date-for-blogpost">
-                                            <FormattedDate
-                                                date={post.data.pubDate}
-                                            />
-                                        </span>
-                                        <span class="title-for-blogpost">
-                                            {post.data.title}
-                                        </span>
-                                    </a>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </div>
-            </div>
+  <head>
+    <Meta
+      title={"Tag " + tag}
+      description={"Hier stehen die Blogeinträge zum Tag " + tag}
+      ogType={OgTypes.website}
+    />
+    <meta name="robots" content="noindex" />
+  </head>
+  <body data-pagefind-ignore>
+    <NavigationBar />
+    <style></style>
+    <div>
+      <div id="tag-container">
+        <CenteredTitle title={"#" + tag} />
+        <div id="tag-list">
+          <ul id="list-of-blogposts">
+            {
+              posts.map((post) => (
+                <li class="shadow border-radius">
+                  <a href={`/blog/${post.slug}/`} class="link-to-blogpost">
+                    <span class="date-for-blogpost">
+                      <FormattedDate date={post.data.pubDate} />
+                    </span>
+                    <span class="title-for-blogpost">{post.data.title}</span>
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
         </div>
-        <Footer />
-        <style>
-            #tag-container {
-                margin: 0 auto;
-                max-width: 960px;
-                /* padding-top: 10rem; */
-                /* height: calc(100vh - 16rem); */
-                /* height: 100vh; */
-                /* text-align: center; */
-            }
-            ul {
-                padding: 0; /* Remove padding */
-                margin: 0; /* Remove margins */
-            }
-            #tag-list {
-                margin-left: 6px;
-            }
-            ul {
-                /* display: flex; */
-                /* flex-flow: row wrap; */
-                /* align-items: stretch; */
-                /* justify-content: stretch; */
-                /* align-items: center; */
-                list-style-type: none;
-                cursor: pointer;
-                /* line-height: 2rem; */
-            }
-            .link-to-blogpost {
-                text-decoration: none;
+      </div>
+    </div>
+    <Footer />
+    <style>
+      #tag-container {
+        margin: 0 auto;
+        max-width: 960px;
+        /* padding-top: 10rem; */
+        /* height: calc(100vh - 16rem); */
+        /* height: 100vh; */
+        /* text-align: center; */
+      }
+      ul {
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margins */
+      }
+      #tag-list {
+        margin-left: 6px;
+      }
+      ul {
+        /* display: flex; */
+        /* flex-flow: row wrap; */
+        /* align-items: stretch; */
+        /* justify-content: stretch; */
+        /* align-items: center; */
+        list-style-type: none;
+        cursor: pointer;
+        /* line-height: 2rem; */
+      }
+      .link-to-blogpost {
+        text-decoration: none;
 
-                display: flex;
-                justify-content: center;
-                padding: 1rem;
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
 
-                & .date-for-blogpost {
-                    margin: 0 1rem 0 0;
-                }
-            }
-            .link-to-blogpost:hover {
-                border: 1px solid var(--accent);
-            }
-            li {
-                /* width: 200px; */
-                /* height: 35px; */
-                /* height: 6rem; */
-                padding: 0.5rem;
-                margin: 0.5rem;
-                /* flex-grow: 1; */
-                /* display: flex; */
-                /* flex-direction: column; */
-                /* background: grey; */
-            }
-        </style>
-    </body>
+        & .date-for-blogpost {
+          margin: 0 1rem 0 0;
+        }
+      }
+      .link-to-blogpost:hover {
+        border: 1px solid var(--accent);
+      }
+      li {
+        /* width: 200px; */
+        /* height: 35px; */
+        /* height: 6rem; */
+        padding: 0.5rem;
+        margin: 0.5rem;
+        /* flex-grow: 1; */
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* background: grey; */
+      }
+    </style>
+  </body>
 </html>

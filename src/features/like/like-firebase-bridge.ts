@@ -1,18 +1,22 @@
-import {type FirebaseApp} from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
-import {doc, getFirestore, setDoc,} from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore-lite.js";
-import {getBlogpostById} from "../blogpost/blogpost-firebase-bridge";
+import { type FirebaseApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+import {
+  doc,
+  getFirestore,
+  setDoc,
+} from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore-lite.js";
+import { getBlogpostById } from "../blogpost/blogpost-firebase-bridge";
 
 const like = async (app: FirebaseApp, postID: string) => {
-    const db = getFirestore(app);
-    const post = await getBlogpostById(app, postID);
+  const db = getFirestore(app);
+  const post = await getBlogpostById(app, postID);
 
-    if (post) {
-        post.likes++;
-        const likes = post.likes;
-        await setDoc(doc(db, "posts", postID), post);
-        return likes;
-    }
-    return 0;
+  if (post) {
+    post.likes++;
+    const likes = post.likes;
+    await setDoc(doc(db, "posts", postID), post);
+    return likes;
+  }
+  return 0;
 };
 
-export {like};
+export { like };

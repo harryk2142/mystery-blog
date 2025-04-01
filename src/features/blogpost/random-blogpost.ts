@@ -51,8 +51,8 @@ const setRandomBlogpostUmbrella = async (parentId: string) => {
             u("<img>").addClass("latest-post-list-item-img").attr({
               src: blogPost.img,
               alt: blogPost.alt,
-            })
-          )
+            }),
+          ),
         )
         .append(
           u("<div>").append(
@@ -65,12 +65,12 @@ const setRandomBlogpostUmbrella = async (parentId: string) => {
                     u("<time>")
                       .addClass("latest-post-list-item-date")
                       .attr("dateTime", pubDateIso)
-                      .html(pubDateHtml)
-                  )
+                      .html(pubDateHtml),
+                  ),
               )
-              .append(u("<span>").text(blogPost.headline + "###"))
-          )
-        )
+              .append(u("<span>").text(blogPost.headline + "###")),
+          ),
+        ),
     );
   u("#" + parentId).append(result);
 };
@@ -104,8 +104,8 @@ const setRandomBlogpost = async (parentId: string) => {
               class: "card-image",
               src: blogPost.img,
               alt: blogPost.alt,
-            })
-          )
+            }),
+          ),
         ),
         el(
           "div",
@@ -118,14 +118,14 @@ const setRandomBlogpost = async (parentId: string) => {
               el(
                 "time",
                 { class: "latest-post-list-item-date", dateTime: pubDateIso },
-                pubDateHtml
-              )
+                pubDateHtml,
+              ),
             ),
             el("p", blogPost.title),
-          ]
+          ],
         ),
-      ])
-    )
+      ]),
+    ),
   );
 
   const parent = document.querySelector("#" + parentId);

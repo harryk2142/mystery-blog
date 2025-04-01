@@ -8,12 +8,24 @@
     "dist"
   ],
   "compilerOptions": {
+    "baseUrl": ".",
     "noUnusedParameters": false,
     "strictNullChecks": true,
     "allowJs": true,
     "noImplicitAny": false,
     "target": "ESNext",
     "jsx": "react-jsx",
-    "jsxImportSource": "preact"
+    "jsxImportSource": "preact",
+    "paths": {
+      "@layouts/*": [
+        "./src/layouts/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@styles/*": [
+        "./src/styles/*"
+      ]
+    }
   }
 }

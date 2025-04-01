@@ -1,59 +1,56 @@
 ---
+import CenteredTitle from "@components/CenteredTitle.astro";
+import Pagination from "@components/Pagination.astro";
+import Default from "@layouts/Default.astro";
 import { type CollectionEntry, getCollection } from "astro:content";
-import NavigationBar from "./../../components/navigation/NavigationBar.astro";
-import { SITE_TITLE } from "./../../consts";
-import Footer from "../../components/Footer.astro";
-import Meta from "../../components/Meta.astro";
-import "./../../styles/root.css";
-import "./../../styles/global.css";
 import BlogPostCard from "../../components/BlogPostCard.astro";
+import { SITE_TITLE } from "./../../consts";
+import "./../../styles/style.css";
 interface Page<T = CollectionEntry<"blog">> {
-  /** result */
-  data: T[];
-  /** metadata */
-  /** the count of the first item on the page, starting from 0 */
-  start: number;
-  /** the count of the last item on the page, starting from 0 */
-  end: number;
-  /** total number of results */
-  total: number;
-  /** the current page number, starting from 1 */
-  currentPage: number;
-  /** number of items per page (default: 25) */
-  size: number;
-  /** number of last page */
-  lastPage: number;
-  url: {
-    /** url of the current page */
-    current: string;
-    /** url of the previous page (if there is one) */
-    prev: string | undefined;
-    /** url of the next page (if there is one) */
-    next: string | undefined;
-  };
+	/** result */
+	data: T[];
+	/** metadata */
+	/** the count of the first item on the page, starting from 0 */
+	start: number;
+	/** the count of the last item on the page, starting from 0 */
+	end: number;
+	/** total number of results */
+	total: number;
+	/** the current page number, starting from 1 */
+	currentPage: number;
+	/** number of items per page (default: 25) */
+	size: number;
+	/** number of last page */
+	lastPage: number;
+	url: {
+		/** url of the current page */
+		current: string;
+		/** url of the previous page (if there is one) */
+		prev: string | undefined;
+		/** url of the next page (if there is one) */
+		next: string | undefined;
+	};
 }
 const { page } = Astro.props;
 type Props = {
-  page: Page;
+	page: Page;
 };
 
 export async function getStaticPaths({ paginate }: any) {
-  const posts = (await getCollection("blog"))
-    .filter((e) => !e.data.draft)
-    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+	const posts = (await getCollection("blog")).filter((e) => !e.data.draft).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-  return paginate(posts, { pageSize: 6 });
+	return paginate(posts, { pageSize: 6 });
 }
 
 const { data, currentPage, lastPage, url } = page;
 const prefix =
-  "/" +
-  url.current
-    .split("/")
-    .filter((e) => e.length > 0)
-    .slice(0, -1)
-    .join("/") +
-  "/";
+	"/" +
+	url.current
+		.split("/")
+		.filter((e) => e.length > 0)
+		.slice(0, -1)
+		.join("/") +
+	"/";
 const urlToFirst = prefix + 1;
 const urlToLast = prefix + lastPage;
 
@@ -61,259 +58,80 @@ const title = SITE_TITLE + " - Seite " + currentPage;
 const description = "Seite " + currentPage + " von " + lastPage;
 const showFirst = currentPage > 2;
 const showLast = currentPage + 2 <= lastPage;
+const paginationProps = {
+	currentPage,
+	url,
+	lastPage,
+	showFirst,
+	showLast,
+	urlToFirst,
+	urlToLast,
+};
 ---
 
-<html lang="de">
-  <head>
-    <Meta title={title} description={description} />
-  </head>
-  <body data-pagefind-ignore>
-    <NavigationBar isStartPage={false} />
-    <main class="wrapper">
-      <section class="container">
-        <div class="flex center-x">
-          <h1>
-            Seite {currentPage} von {lastPage}
-          </h1>
-        </div>
-        <!-- <div class="pagination">
-          <ul>
-            <li><a href="#" class="preprev">&lt;&lt;</a></li>
-            <li><a href="#" class="prev">&lt;</a></li>
-            <li><a href="#" class="active">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#" class="next">&gt;</a></li>
-            <li><a href="#" class="nenext">&gt;&gt;</a></li>
-          </ul>
-        </div> -->
-        <div
-          id="top-pagination-container"
-          class="flex center-x pagination-container"
-        >
-          <div class="pagination">
-            {
-              showFirst ? (
-                <a href={urlToFirst}>
-                  <span class="ascii">&#60;&#60;</span>
-                </a>
-              ) : null
-            }
-            {showFirst ? <div class="dots">&bull;&bull;&bull;</div> : null}
-            {
-              url.prev ? (
-                <a href={url.prev} class="previous">
-                  <span class="ascii">&#60;</span>
-                </a>
-              ) : null
-            }
-            {
-              currentPage - 1 > 0 ? (
-                <a href={url.prev}>{currentPage - 1}</a>
-              ) : null
-            }
-            <a href={url.current} class="active">{currentPage}</a>
-            {
-              currentPage < lastPage ? (
-                <a href={url.next}>{currentPage + 1}</a>
-              ) : null
-            }
-            {
-              url.next ? (
-                <a href={url.next}>
-                  <span class="ascii">&#62;</span>
-                </a>
-              ) : null
-            }
-            {showLast ? <div class="dots">&bull;&bull;&bull;</div> : null}
-            {
-              showLast ? (
-                <a href={urlToLast}>
-                  <span class="ascii">&#62;&#62;</span>
-                </a>
-              ) : null
-            }
-          </div>
-        </div>
+<Default title={title} description={description}>
+	<section class="container">
+		<CenteredTitle id="" title={"Seite " + currentPage + " von " + lastPage} />
+		<div id="top-pagination-container" class="flex center-x pagination-container">
+			<Pagination {...paginationProps} />
+		</div>
 
-        <div id="blogposts-group-container">
-          <div class="blogposts-group">
-            {
-              data.map((data) => {
-                return (
-                  <div class="blogposts-group-item">
-                    <BlogPostCard blogpost={data} classlist="h100" />
-                  </div>
-                );
-              })
-            }
-          </div>
-        </div>
-        <div
-          id="bottom-pagination-container"
-          class="flex center-x pagination-container"
-        >
-          <div class="pagination">
-            {
-              showFirst ? (
-                <a href={urlToFirst}>
-                  <span class="ascii">&#60;&#60;</span>
-                </a>
-              ) : null
-            }
-            {showFirst ? <div class="dots">&bull;&bull;</div> : null}
-            <!-- {
-              url.prev ? (
-                <a href={url.prev} class="prev-or-next">
-                  <span class="ascii">&#60;</span>
-                </a>
-              ) : null
-            } -->
-            {
-              currentPage - 1 > 0 ? (
-                <a href={url.prev}>{currentPage - 1}</a>
-              ) : null
-            }
-            <a href={url.current} class="active">{currentPage}</a>
-            {
-              currentPage < lastPage ? (
-                <a href={url.next}>{currentPage + 1}</a>
-              ) : null
-            }
-            <!-- {
-              url.next ? (
-                <a href={url.next} class="prev-or-next">
-                  <span class="ascii">&#62;</span>
-                </a>
-              ) : null
-            } -->
-            {showLast ? <div class="dots">&bull;&bull;&bull;</div> : null}
-            {
-              showLast ? (
-                <a href={urlToLast}>
-                  <span class="ascii">&#62;&#62;</span>
-                </a>
-              ) : null
-            }
-          </div>
-        </div>
-      </section>
-    </main>
-    <style>
-      .pagination ul {
-        list-style: none; /* Entfernt die Standard-Listenpunkte */
-        padding: 0;
-        margin: 20px 0;
-        display: flex; /* Richtet die Elemente horizontal aus */
-        justify-content: center; /* Zentriert die Elemente */
-      }
+		<div id="blogposts-group-container">
+			<div class="blogposts-group">
+				{
+					data.map((data) => {
+						return (
+							<div class="blogposts-group-item">
+								<BlogPostCard blogpost={data} />
+							</div>
+						);
+					})
+				}
+			</div>
+		</div>
+		<div id="bottom-pagination-container" class="flex center-x pagination-container">
+			<Pagination {...paginationProps} />
+		</div>
+	</section>
 
-      .pagination li {
-        margin: 0 5px; /* Abstand zwischen den Seitenzahlen */
-      }
+	<style>
+		#blogposts-group-container {
+			container-name: blogposts-group-container;
+			container-type: inline-size;
+		}
+		.blogposts-group {
+			margin-top: 2rem;
+		}
+		.blogposts-group-item {
+			margin: 0 1rem 3rem 1rem;
+		}
 
-      .pagination a {
-        display: block;
-        padding: 8px 12px;
-        background-color: #f2f2f2; /* Hintergrundfarbe */
-        color: #333; /* Textfarbe */
-        border: 1px solid #ddd; /* Rahmen */
-        text-decoration: none; /* Entfernt die Unterstreichung */
-      }
-
-      .pagination a:hover {
-        background-color: #ddd; /* Hintergrundfarbe beim Hover */
-      }
-
-      .pagination .active {
-        background-color: #333; /* Hintergrundfarbe der aktiven Seite */
-        color: #fff; /* Textfarbe der aktiven Seite */
-      }
-
-      #blogposts-group-container {
-        container-name: blogposts-group-container;
-        container-type: inline-size;
-      }
-      .blogposts-group {
-        margin-top: 2rem;
-      }
-      .blogposts-group-item {
-        margin: 0 1rem 3rem 1rem;
-      }
-
-      @container blogposts-group-container (width >= 650px) {
-        .blogposts-group {
-          display: grid;
-          grid-template-columns: repeat(3, 33%);
-          grid-auto-rows: 1fr;
-        }
-      }
-      @container blogposts-group-container (width < 650px) and (width >= 500px) {
-        .blogposts-group {
-          display: grid;
-          grid-template-columns: repeat(2, 50%);
-          grid-auto-rows: 1fr;
-        }
-      }
-      @container blogposts-group-container (width < 500px) {
-        .blogposts-group {
-        }
-      }
-      /* .prev-or-next {
-        display: none !important;
-        background-color: cadetblue;
-      } */
-      .pagination-container {
-        margin-bottom: 1rem;
-      }
-      .pagination {
-        margin-top: 1rem;
-        display: flex;
-        flex-direction: row;
-        /* height: 64px; */
-      }
-      .dots {
-        font-size: 2rem;
-        font-weight: bold;
-      }
-      .dots::before,
-      .dots::after {
-        content: " ";
-        white-space: pre;
-      }
-
-      .pagination a {
-        /* aspect-ratio: 2 3; */
-        /* margin: 10px 0.75rem; */
-        height: 4rem;
-        font-size: 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        color: var(--accent);
-        float: left;
-        text-decoration: none;
-        border-radius: 5px;
-        border: 1px solid black;
-        aspect-ratio: 1;
-        .ascii {
-          /* font-size: 40px; */
-        }
-      }
-      .pagination a:hover {
-        background-color: #d4d5d2;
-        color: var(--accent);
-      }
-
-      .pagination a.active {
-        color: var(--secondary-color);
-        background-color: var(--accent);
-      }
-      #bottom-pagination-container {
-        padding-bottom: 6rem;
-      }
-    </style>
-    <Footer />
-  </body>
-</html>
+		@container blogposts-group-container (width >= 800px) {
+			.blogposts-group {
+				display: grid;
+				grid-template-columns: repeat(3, 33%);
+				grid-auto-rows: 1fr;
+			}
+		}
+		@container blogposts-group-container (width < 800px) and (width >= 600px) {
+			.blogposts-group {
+				display: grid;
+				grid-template-columns: repeat(2, 50%);
+				grid-auto-rows: 1fr;
+			}
+		}
+		/* @container blogposts-group-container (width < 600px) {
+			.blogposts-group {
+			}
+		} */
+		#bottom-pagination-container {
+			padding-bottom: 6rem;
+		}
+		.pagination-container {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
+</Default>

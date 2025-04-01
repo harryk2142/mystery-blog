@@ -28,4 +28,8 @@ firestore-debug.log*
 # generated images + content
 public/images/blog/sharing
 public/images/blog/small
+public/_pagefind
+
+# debug
+*debug*
 

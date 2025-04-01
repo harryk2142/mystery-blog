@@ -51,7 +51,7 @@ const clickAbsenden = async (event: MouseEvent) => {
         blogpostId,
         parentCommentId,
         inputTextValue,
-        inputUsernameValue
+        inputUsernameValue,
       );
     } else {
       await submitComment(blogpostId, inputTextValue, inputUsernameValue);
@@ -75,7 +75,7 @@ const clickAbbrechen = (event: MouseEvent) => {
 const createCommentForm = (
   htmlParent: Element,
   blogPostId: string,
-  parentCommentId: string = ""
+  parentCommentId: string = "",
 ) => {
   const parentId = parentCommentId ? parentCommentId : blogPostId;
 
@@ -102,19 +102,19 @@ const createCommentForm = (
       value: blogPostId,
     }),
     parentCommentId &&
-    el("input", {
-      type: "hidden",
-      id: idParentComment,
-      name: "parent-comment",
-      value: parentCommentId,
-    }),
+      el("input", {
+        type: "hidden",
+        id: idParentComment,
+        name: "parent-comment",
+        value: parentCommentId,
+      }),
     el(
       "label",
       {
         id: "lbl-input-username",
         for: idUsernameInput,
       },
-      "Username (optional):"
+      "Username (optional):",
     ),
     el("input", {
       type: "text",
@@ -136,17 +136,17 @@ const createCommentForm = (
     }),
     el("div", { class: "comment-form-btn-block" }, [
       parentCommentId &&
-      el(
-        "button",
-        {
-          id: idAbbrechenButton,
-          name: idAbbrechenButton,
-          type: "button",
-          class: "abbrechen-btn",
-          onclick: clickAbbrechen,
-        },
-        "Abbrechen"
-      ),
+        el(
+          "button",
+          {
+            id: idAbbrechenButton,
+            name: idAbbrechenButton,
+            type: "button",
+            class: "abbrechen-btn",
+            onclick: clickAbbrechen,
+          },
+          "Abbrechen",
+        ),
       el(
         "button",
         {
@@ -156,7 +156,7 @@ const createCommentForm = (
           class: "absenden-btn",
           onclick: clickAbsenden,
         },
-        "Absenden"
+        "Absenden",
       ),
     ]),
   ]);

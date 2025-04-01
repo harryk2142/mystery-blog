@@ -10,20 +10,20 @@ import CenteredTitle from "../../components/CenteredTitle.astro";
 
 <!doctype html>
 <html lang="de">
-    <head>
-        <Meta
-            title="Seite mit allen Tags"
-            description="Hier siehst du alle Tags"
-            ogType={OgTypes.website}
-        />
-        <meta name="robots" content="noindex" />
-    </head>
-    <body data-pagefind-ignore>
-        <NavigationBar />
-        <main>
-            <CenteredTitle title="Tags" />
-            <TagCloud />
-            <Footer />
-        </main>
-    </body>
+  <head>
+    <Meta
+      title="Seite mit allen Tags"
+      description="Hier siehst du alle Tags"
+      ogType={OgTypes.website}
+    />
+    <meta name="robots" content="noindex" />
+  </head>
+  <body data-pagefind-ignore>
+    <NavigationBar />
+    <main>
+      <CenteredTitle title="Tags" />
+      <TagCloud />
+      <Footer />
+    </main>
+  </body>
 </html>

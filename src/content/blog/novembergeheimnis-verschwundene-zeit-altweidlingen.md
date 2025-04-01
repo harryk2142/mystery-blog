@@ -5,17 +5,17 @@ updateDate: 2024-11-10T11:46:33.733Z
 headline: "Das Novembergeheimnis der verschwundenen Zeit: Wer oder was steckt dahinter?"
 description: Im November verschwinden in Altweidlingen geheimnisvoll Stunden. Erfahre die unheimliche Legende hinter dem Novembergeheimnis und was die Dorfbewohner über die verlorene Zeit berichten.
 heroImage:
-    alt: Nebelverhangenes Dorf mit altem Kirchturm und stehengebliebener Uhr auf einem leeren Platz, umgeben von Herbstlaub und schummrigem Licht.
-    url: /images/blog/novembergeheimnis-altweidlingen-verschwundene-zeit.webp
+  alt: Nebelverhangenes Dorf mit altem Kirchturm und stehengebliebener Uhr auf einem leeren Platz, umgeben von Herbstlaub und schummrigem Licht.
+  url: /images/blog/novembergeheimnis-altweidlingen-verschwundene-zeit.webp
 tags:
-    - altweidlingen
-    - dorflegenden
-    - gustav-ehrsam
-    - niedersachsen
-    - novembergeheimnis
-    - rita-gernblick
-    - unheimlichegeschichte
-    - verschwundenezeit
+  - altweidlingen
+  - dorflegenden
+  - gustav-ehrsam
+  - niedersachsen
+  - novembergeheimnis
+  - rita-gernblick
+  - unheimlichegeschichte
+  - verschwundenezeit
 place: Altweidlingen - Niedersachsen - Deutschland
 ---
 

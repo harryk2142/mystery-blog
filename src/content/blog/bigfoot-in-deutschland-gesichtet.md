@@ -3,27 +3,27 @@ title: Bigfoot in Deutschland gesichtet - Mit Foto - Mysteriöse Begegnung in Du
 pubDate: 2025-01-15T13:35:30.000Z
 updateDate: 2025-02-15T13:35:32.000Z
 heroImage:
-    alt: Bigfoot von Hinten in einer Gasse einer deutschen Altstadt
-    url: /images/blog/bigfoot-von-hinten-in-einer-gasse-einer-deutschen-altstadt.webp
+  alt: Bigfoot von Hinten in einer Gasse einer deutschen Altstadt
+  url: /images/blog/bigfoot-von-hinten-in-einer-gasse-einer-deutschen-altstadt.webp
 headline: "Bigfoot in Deutschland: Mysteriöse Begegnung in der malerischer Altstadt von Dunkelheim"
 description: "Mysteriöse Sichtung in einer deutschen Altstadt: Eine imposante, haarige Gestalt wandelt durch enge Gassen - ist es Bigfoot oder eine clevere Inszenierung?"
 place: Dunkelheim - Nordrhein-Westfalen - Deutschland
 tags:
-    - bigfoot
-    - brigitte-kruemmel
-    - brigitte-krümmel
-    - deutschland
-    - dr-otto-yeti
-    - dunkelheim
-    - kryptozoologie
-    - mysterioesesichtung
-    - mysteriösesichtung
-    - mystery
-    - nordrheinwestfalen
-    - otto-yeti
-    - unerklaerlich
-    - unerklärlich
-    - johannes-blickfeld
+  - bigfoot
+  - brigitte-kruemmel
+  - brigitte-krümmel
+  - deutschland
+  - dr-otto-yeti
+  - dunkelheim
+  - kryptozoologie
+  - mysterioesesichtung
+  - mysteriösesichtung
+  - mystery
+  - nordrheinwestfalen
+  - otto-yeti
+  - unerklaerlich
+  - unerklärlich
+  - johannes-blickfeld
 ---
 
 Es klingt wie eine Geschichte aus den tiefsten Wäldern Nordamerikas, doch sie spielt sich mitten in Deutschland ab: Bigfoot wurde gesichtet - am helllichten Tag! In der Stadt Dunkelheim in Nordrhein-Westfalen behaupten mehrere Zeugen, eine riesige, haarige Gestalt gesehen zu haben. Und diesmal gibt es sogar ein Foto.

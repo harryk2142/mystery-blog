@@ -5,25 +5,25 @@ updateDate: 2024-10-12T15:30:22.539Z
 headline: "Nebelfiguren über dem Moor: Wer wandelt in der Dämmerung?"
 description: Entdecke das unheimliche Teufelsmoor in Niedersachsen, wo geisterhafte Nebelfiguren im dichten Nebel erscheinen.
 heroImage:
-    alt: Ein nebliges Moor bei Dämmerung mit kargen Bäumen und geheimnisvollen Schattenfiguren, die im dichten Nebel auftauchen. Die unheimliche Atmosphäre wird durch das schwache Licht und die langen Schatten verstärkt.
-    url: /images/blog/nebliges-geheimnisvolles-moor.webp
+  alt: Ein nebliges Moor bei Dämmerung mit kargen Bäumen und geheimnisvollen Schattenfiguren, die im dichten Nebel auftauchen. Die unheimliche Atmosphäre wird durch das schwache Licht und die langen Schatten verstärkt.
+  url: /images/blog/nebliges-geheimnisvolles-moor.webp
 place: Nebelgrund - Niedersachsen - Deutschland
 tags:
-    - dr-iva-nix
-    - dämmerung
-    - geheimnis
-    - geister
-    - herbst
-    - inga-schwind
-    - klaus-treter
-    - moorlegenden
-    - nebel
-    - nebelgrund
-    - niedersachsen
-    - rätsel
-    - teufelsmoor
-    - unerklärlich
-    - iva-nix
+  - dr-iva-nix
+  - dämmerung
+  - geheimnis
+  - geister
+  - herbst
+  - inga-schwind
+  - klaus-treter
+  - moorlegenden
+  - nebel
+  - nebelgrund
+  - niedersachsen
+  - rätsel
+  - teufelsmoor
+  - unerklärlich
+  - iva-nix
 ---
 
 Im Herzen des Teufelsmoors, tief in Niedersachsen, liegt das abgelegene Nebelgrund. Ein Ort, der seit Jahrhunderten von Geheimnissen und unheimlichen Geschichten umwoben ist. Die Bewohner der umliegenden Dörfer betreten das Moor nur selten - und niemals bei Einbruch der Dämmerung.

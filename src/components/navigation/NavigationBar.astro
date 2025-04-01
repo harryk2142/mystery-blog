@@ -4,252 +4,224 @@ import { SITE_TITLE, SUB_TITLE } from "./../../consts";
 import { Image } from "astro:assets";
 import icon from "./../../assets/icons/icon.png";
 interface Props {
-  isStartPage?: boolean;
+	isStartPage?: boolean;
+	hasOwnH1?: boolean;
 }
 
-const { isStartPage = false } = Astro.props;
+// const { isStartPage = false, hasOwnH1 = false } = Astro.props;
 ---
 
 <div id="navigation-bar" data-pagefind-ignore>
-  <div class="wrapper">
-    <div id="nav-container">
-      <div id="nav-bar">
-        <div id="brand">
-          <div id="logo">
-            <a href="/">
-              <Image src={icon} alt="Icon vom Blog" />
-            </a>
-          </div>
-          <div id="title">
-            {
-              isStartPage ? (
-                <>
-                  <h1>
-                    <a class="primary" href="/">
-                      {SITE_TITLE}
-                    </a>
-                  </h1>
-                  <div class="block" id="subtitle">
-                    {SUB_TITLE}
-                  </div>
-                </>
-              ) : (
-                <>
-                  <h2>
-                    <a class="primary" href="/">
-                      {SITE_TITLE}
-                    </a>
-                  </h2>
-                  <div class="block" id="subtitle">
-                    {SUB_TITLE}
-                  </div>
-                </>
-              )
-            }
-          </div>
-          <div id="placeholder"></div>
-          <div id="burger-menu">
-            <span id="menu-icon-open" class="menu-icon">&equiv;</span>
-            <span id="menu-icon-close" class="menu-icon">x</span>
-          </div>
-        </div>
+	<div class="wrapper">
+		<div id="nav-container">
+			<div id="nav-bar">
+				<div id="brand">
+					<div id="logo">
+						<a href="/">
+							<Image src={icon} alt="Icon vom Blog" />
+						</a>
+					</div>
+					<div id="title">
+						<div class="t">
+							<a class="primary" href="/">
+								{SITE_TITLE}
+							</a>
+						</div>
+						<div class="block" id="subtitle">
+							{SUB_TITLE}
+						</div>
+					</div>
+					<div id="placeholder"></div>
+					<div id="burger-menu">
+						<span id="menu-icon-open" class="menu-icon">&equiv;</span>
+						<span id="menu-icon-close" class="menu-icon">x</span>
+					</div>
+				</div>
 
-        <div id="nav-links">
-          <div class="nav-item"><HeaderLink href="/">Home</HeaderLink></div>
-          <div class="nav-item">
-            <HeaderLink href="/blog/1">Blog</HeaderLink>
-          </div>
-          <div class="nav-item"><HeaderLink href="/tags">Tags</HeaderLink></div>
-          <div class="nav-item">
-            <HeaderLink href="/datenschutz">Datenschutz</HeaderLink>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+				<div id="nav-links">
+					<div class="nav-item"><HeaderLink href="/">Home</HeaderLink></div>
+					<div class="nav-item">
+						<HeaderLink href="/blog/1">Blog</HeaderLink>
+					</div>
+					<div class="nav-item"><HeaderLink href="/tags">Tags</HeaderLink></div>
+					<div class="nav-item">
+						<HeaderLink href="/datenschutz">Datenschutz</HeaderLink>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <style>
-  a {
-    text-decoration: none;
-  }
-  #navigation-bar {
-    background: var(--accent);
-    color: var(--secondary-color);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  #nav-container {
-    container-name: nav-container;
-    container-type: inline-size;
-    #nav-bar {
-      background: var(--accent);
-      height: 5rem;
-      #brand {
-        height: 100%;
-        aspect-ratio: 1;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        width: 100%;
-        #logo {
-          a {
-            width: 100%;
-            height: 100%;
-            display: block;
-            img {
-              display: block;
-              height: 100%;
-              width: auto;
-            }
-          }
-        }
-        #title {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          h1 {
-            margin: 0;
-            font-size: clamp(1.5rem, 4vw, 2.25rem);
-          }
+	a {
+		text-decoration: none;
+	}
+	#navigation-bar {
+		background: var(--accent);
+		color: var(--secondary-color);
+		position: sticky;
+		top: 0;
+		z-index: 1000;
+	}
+	#nav-container {
+		container-name: nav-container;
+		container-type: inline-size;
+		#nav-bar {
+			background: var(--accent);
+			height: 5rem;
+			#brand {
+				height: 100%;
+				aspect-ratio: 1;
+				display: flex;
+				justify-content: space-between;
+				flex-direction: row;
+				width: 100%;
+				#logo {
+					a {
+						width: 100%;
+						height: 100%;
+						display: block;
+						img {
+							display: block;
+							height: 100%;
+							width: auto;
+						}
+					}
+				}
+				#title {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
 
-          h2 {
-            margin: 0;
-            font-size: clamp(1.5rem, 4vw, 2.25rem);
-            /* font-size: clamp(1.2rem, 3vw, 2rem); */
-          }
-          #maintitle {
-            /* font-size: clamp(2rem, 2.5vw, 2.5rem); */
-            color: var(--secondary-color);
-          }
-          #subtitle {
-            font-size: clamp(1rem, 1.5vw, 1.3rem);
-            margin: 0;
-          }
-        }
-        #burger-menu {
-          margin: 0 1rem;
-          width: 2rem;
-          #menu-icon-open,
-          #menu-icon-close {
-            cursor: pointer;
-            font-size: 3rem;
-          }
-          #menu-icon-close {
-            display: none;
-          }
-        }
-      }
+					.t {
+						margin: 0;
+						font-weight: bold;
+						font-size: clamp(1.2rem, 2.6vw, 1.5rem);
+					}
+					#maintitle {
+						/* font-size: clamp(2rem, 2.5vw, 2.5rem); */
+						color: var(--secondary-color);
+					}
+					#subtitle {
+						font-size: clamp(1rem, 1.5vw, 1.3rem);
+						margin: 0;
+					}
+				}
+				#burger-menu {
+					margin: 0 1rem;
+					width: 2rem;
+					#menu-icon-open,
+					#menu-icon-close {
+						cursor: pointer;
+						font-size: 3rem;
+					}
+					#menu-icon-close {
+						display: none;
+					}
+				}
+			}
 
-      #nav-links {
-        background: var(--accent);
-        .nav-item {
-          a {
-            display: inline-block;
-            border: 6px solid transparent;
-            /* text-decoration: none; */
-            color: var(--secondary-color);
-          }
-          a:hover {
-            color: var(--secondary-color);
-            border: 6px solid var(--secondary-color);
-          }
-          a.active {
-            font-weight: bolder;
-            border-bottom-color: var(--secondary-color);
-          }
-        }
-      }
-    }
-    @container nav-container (width >= 800px) {
-      #nav-bar {
-        display: flex;
-        flex-direction: row;
-        /* height: 4rem; */
-      }
-      #burger-menu {
-        display: none;
-      }
-      #placeholder {
-        display: block;
-      }
-      #nav-links {
-        list-style: none;
-        display: flex;
-        margin: 0;
-        padding: 0;
-        .nav-item {
-          display: flex;
-          justify-items: center;
-          align-items: center;
-          a {
-            padding: 1rem;
-          }
-          a.active {
-            margin-bottom: -0.75rem;
-          }
-        }
-      }
-    }
-    @container nav-container (width < 800px) {
-      #nav-bar {
-        flex-direction: row;
-        display: block;
-      }
-      #title {
-        margin: 0 2rem;
-      }
-      #nav-links {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        a {
-          margin: 1rem 0 2rem 0;
-          font-size: 1.5rem;
-        }
-      }
-      #burger-menu {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      #placeholder {
-        display: none;
-      }
-      #nav-links:not(.opened) {
-        display: none;
-      }
-    }
-  }
+			#nav-links {
+				background: var(--accent);
+				.nav-item {
+					a {
+						display: inline-block;
+						border: 6px solid transparent;
+						/* text-decoration: none; */
+						color: var(--secondary-color);
+					}
+					a:hover {
+						color: var(--secondary-color);
+						border: 6px solid var(--secondary-color);
+					}
+					a.active {
+						font-weight: bolder;
+						border-bottom-color: var(--secondary-color);
+					}
+				}
+			}
+		}
+		@container nav-container (width >= 800px) {
+			#nav-bar {
+				display: flex;
+				flex-direction: row;
+				/* height: 4rem; */
+			}
+			#burger-menu {
+				display: none;
+			}
+			#placeholder {
+				display: block;
+			}
+			#nav-links {
+				list-style: none;
+				display: flex;
+				margin: 0;
+				padding: 0;
+				.nav-item {
+					display: flex;
+					justify-items: center;
+					align-items: center;
+					a {
+						padding: 1rem;
+					}
+					a.active {
+						margin-bottom: -0.75rem;
+					}
+				}
+			}
+		}
+		@container nav-container (width < 800px) {
+			#nav-bar {
+				flex-direction: row;
+				display: block;
+			}
+			#title {
+				margin: 0 2rem;
+			}
+			#nav-links {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				width: 100%;
+				a {
+					margin: 1rem 0 2rem 0;
+					font-size: 1.5rem;
+				}
+			}
+			#burger-menu {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			#placeholder {
+				display: none;
+			}
+			#nav-links:not(.opened) {
+				display: none;
+			}
+		}
+	}
 </style>
 <script>
-  function openMenu() {
-    const navigationLinksSmall = document.querySelector(
-      "#nav-links"
-    ) as HTMLElement;
-    navigationLinksSmall.classList.add("opened");
-    const iconOpen = document.querySelector("#menu-icon-open") as HTMLElement;
-    iconOpen.style.display = "none";
-    const iconClose = document.querySelector("#menu-icon-close") as HTMLElement;
-    iconClose.style.display = "block";
-  }
-  function closeMenu() {
-    const navigationLinksSmall = document.querySelector(
-      "#nav-links"
-    ) as HTMLElement;
-    navigationLinksSmall.classList.remove("opened");
-    const iconClose = document.querySelector("#menu-icon-close") as HTMLElement;
-    iconClose.style.display = "none";
-    const iconOpen = document.querySelector("#menu-icon-open") as HTMLElement;
-    iconOpen.style.display = "block";
-  }
+	function openMenu() {
+		const navigationLinksSmall = document.querySelector("#nav-links") as HTMLElement;
+		navigationLinksSmall.classList.add("opened");
+		const iconOpen = document.querySelector("#menu-icon-open") as HTMLElement;
+		iconOpen.style.display = "none";
+		const iconClose = document.querySelector("#menu-icon-close") as HTMLElement;
+		iconClose.style.display = "block";
+	}
+	function closeMenu() {
+		const navigationLinksSmall = document.querySelector("#nav-links") as HTMLElement;
+		navigationLinksSmall.classList.remove("opened");
+		const iconClose = document.querySelector("#menu-icon-close") as HTMLElement;
+		iconClose.style.display = "none";
+		const iconOpen = document.querySelector("#menu-icon-open") as HTMLElement;
+		iconOpen.style.display = "block";
+	}
 
-  document
-    .querySelector("#menu-icon-open")
-    ?.addEventListener("click", () => openMenu());
-  document
-    .querySelector("#menu-icon-close")
-    ?.addEventListener("click", () => closeMenu());
+	document.querySelector("#menu-icon-open")?.addEventListener("click", () => openMenu());
+	document.querySelector("#menu-icon-close")?.addEventListener("click", () => closeMenu());
 </script>

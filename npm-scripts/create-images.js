@@ -30,7 +30,6 @@ fs.readdir(pathToImages, (err, files) => {
     const fileExtension = path.extname(file);
 
     if (/\.(jpg|jpeg|png|webp)$/i.test(file)) {
-
       if (fileExtension === ".webp") {
         // fs.copyFile(inputFilePath, `${outputDirs.blog}/${file}`, (err) => {
         //   if (err) {

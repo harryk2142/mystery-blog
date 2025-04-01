@@ -1,410 +1,333 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 // import FrontmatterImage from "../components/FrontmatterImage.astro";
-import NavigationBar from "../components/navigation/NavigationBar.astro";
-import Meta from "../components/Meta.astro";
-import "./../styles/root.css";
+import { Image } from "astro:assets";
+// import "./../styles/global.css";
+// import "./../styles/style.css";
+// import "./../styles/root.css";
 // type Props = CollectionEntry<"blog">["data"];
 type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
-const { title, headline, tags, description, pubDate, heroImage, place } =
-  post.data;
-import "./../styles/root.css";
-import "./../styles/global.css";
-import "./../styles/mystyle.css";
-import { Image } from "astro:assets";
+const { title, headline, tags, description, pubDate, heroImage, place } = post.data;
+import "@styles/style.css";
+import "@styles/blogpost.css";
+// import "@styles/global.css";
 
+import commentIcon from "../assets/icons/comment.png";
 import shareIcon from "../assets/icons/share.png";
 import likeIcon from "../assets/icons/thumb_up.png";
-import commentIcon from "../assets/icons/comment.png";
 import Comments from "../components/Blogpost/Comments.astro";
-import CenteredTitle from "../components/CenteredTitle.astro";
+import Default from "./Default.astro";
 const pathSegments = Astro.request.url.split("/").filter((e) => e.length > 0);
 const blogPostIdentifier = pathSegments[pathSegments.length - 1] as string;
 ---
 
-<html lang="de">
-  <head>
-    <Meta
-      title={title}
-      description={description}
-      image={heroImage.url}
-      alt={heroImage.alt}
-    />
-  </head>
+<Default title={title} description={description}>
+	<span hidden id="blog-post-identifier" data-pagefind-ignore>{blogPostIdentifier}</span>
+	<span hidden id="blog-post-id" data-pagefind-ignore></span>
+	<article class="blog-post">
+		<div class="post-image">
+			<img src={heroImage.url} alt={heroImage.alt} />
+			<img
+				hidden
+				data-pagefind-index-attrs="alt"
+				data-pagefind-meta="image[src], image_alt[alt]"
+				src={heroImage.url.replace("/blog/", "/blog/small/")}
+				alt={heroImage.alt}
+				style="display: none;"
+			/>
+		</div>
+		<header class="post-header mt-1">
+			<h1>
+				{headline ? headline : title}
+			</h1>
+			<div class="post-meta">
+				<FormattedDate date={pubDate} />
+				{
+					place && (
+						<>
+							<span> - </span>
+							<span class="location">{place}</span>
+						</>
+					)
+				}
+			</div>
+		</header>
 
-  <body>
-    <NavigationBar isStartPage={false} />
-    <main>
-      <span hidden id="blog-post-identifier" data-pagefind-ignore
-        >{blogPostIdentifier}</span
-      >
-      <span hidden id="blog-post-id" data-pagefind-ignore></span>
-      <article class="blog-post">
-        <div class="post-image">
-          <img src={heroImage.url} alt={heroImage.alt} />
-          <img
-            hidden
-            data-pagefind-index-attrs="alt"
-            data-pagefind-meta="image[src], image_alt[alt]"
-            src={heroImage.url.replace("/blog/", "/blog/small/")}
-            alt={heroImage.alt}
-            style="display: none;"
-          />
-        </div>
-        <header class="post-header">
-          {
-            headline ? (
-              <CenteredTitle title={headline} />
-            ) : (
-              <CenteredTitle title={title} />
-            )
-          }
-          <div class="post-meta">
-            <FormattedDate date={pubDate} />
-            {
-              place && (
-                <>
-                  <span> - </span>
-                  <span class="location">{place}</span>
-                </>
-              )
-            }
-          </div>
-        </header>
+		{
+			tags && (
+				<section id="tags">
+					{tags.map((tag) => (
+						<a href={`/tags/${tag}`} class="link-tag">
+							#{tag}
+						</a>
+					))}
+				</section>
+			)
+		}
+		<hr />
+		<section class="post-content">
+			<slot />
+		</section>
+		<div class="post-actions">
+			<div class="post-action">
+				<button id="like-btn" class="icon-button">
+					<Image src={likeIcon} alt="Like Icon" />
+				</button>
+				<span id="like-counter" class="post-action-text">0</span>
+			</div>
+			<div class="post-action">
+				<button id="comment-btn" class="icon-button">
+					<Image src={commentIcon} alt="Kommentar Icon" />
+				</button>
+				<span id="comments-counter" class="post-action-text">0</span>
+			</div>
+			<div class="post-action">
+				<button id="share-btn" class="icon-button">
+					<Image src={shareIcon} alt="Share Icon" />
+				</button>
+			</div>
+		</div>
+		<section id="comments-section" class="mycard">
+			<Comments />
+		</section>
+	</article>
+</Default>
+<style>
+	.blog-post {
+		/* margin: 20px auto;
+border: 1px solid #ccc;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+overflow: hidden; */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		/* row-gap: 0.5rem; */
+	}
+	.post-header {
+		text-align: center;
+		line-height: 1;
+		.post-meta {
+			margin-top: 2rem;
+		}
+	}
+	.post-image {
+		overflow: hidden;
+		border-radius: 1rem;
 
-        {
-          tags && (
-            <section id="tags">
-              {tags.map((tag) => (
-                <a href={`/tags/${tag}`} class="link-tag">
-                  #{tag}
-                </a>
-              ))}
-            </section>
-          )
-        }
-        <hr />
-        <section class="post-content">
-          <slot />
-        </section>
-        <!-- <div class="hero-image">
-          {
-            heroImage && (
-				<FrontmatterImage blogpost={post}
-              <img
-                width={1020}
-                height={510}
-                src={heroImage.url}
-                alt={heroImage.alt}
-              />
-            )
-          }
-        </div> -->
-        <!-- <div class="prose">
-          <div class="title">
-            <div class="date">
-              <FormattedDate date={pubDate} />
-              {
-                updatedDate && (
-                  <div class="last-updated-on">
-                    Last updated on <FormattedDate date={updatedDate} />
-                  </div>
-                )
-              }
-            </div>
-            <h1>{title}</h1>
-            <hr />
-          </div>
-          
-        </div> -->
-        <div class="post-actions">
-          <div class="post-action">
-            <button id="like-btn" class="icon-button">
-              <Image src={likeIcon} alt="Like Icon" />
-            </button>
-            <span id="like-counter" class="post-action-text">0</span>
-          </div>
-          <div class="post-action">
-            <button id="comment-btn" class="icon-button">
-              <Image src={commentIcon} alt="Kommentar Icon" />
-            </button>
-            <span id="comments-counter" class="post-action-text">0</span>
-          </div>
-          <div class="post-action">
-            <button id="share-btn" class="icon-button">
-              <Image src={shareIcon} alt="Share Icon" />
-            </button>
-          </div>
-        </div>
-        <section id="comments-section" class="mycard">
-          <Comments />
-        </section>
-      </article>
-    </main>
-    <script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker
-            .register("/service-worker.js")
-            .then((reg) =>
-              console.log("Service Worker registriert:", reg.scope)
-            )
-            .catch((err) =>
-              console.error("SW Registrierung fehlgeschlagen:", err)
-            );
-        });
-      }
-    </script>
-    <style>
-      .blog-post {
-        /* margin: 20px auto;
-        border: 1px solid #ccc;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        overflow: hidden; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        /* row-gap: 0.5rem; */
-      }
-      .post-header {
-        text-align: center;
-        line-height: 1;
-        .post-meta {
-          margin-top: 2rem;
-        }
-      }
-      .post-image {
-        overflow: hidden;
-        border-radius: 1rem;
+		/* border: 1px solid #ccc; */
+		margin: 2rem 0 0 0;
+		box-shadow: 0 4px 8px black;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		/* max-width: calc(100% - 2rem); */
+		img {
+			display: block;
+			/* max-height: 30rem; */
+			/* height: auto; */
+			/* height: 24rem; */
+			height: clamp(20rem, 50vw, 30rem);
 
-        border: 1px solid #ccc;
-        margin: 2rem 0 0 0;
-        box-shadow: 0 4px 8px black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* max-width: calc(100% - 2rem); */
-        img {
-          display: block;
-          max-height: 30rem;
-          height: 26rem;
-          width: auto;
-          object-fit: cover;
-        }
-      }
-      #tags {
-        margin: 1rem;
-        /* margin-bottom: 0.5rem; */
-        text-align: center;
-        font-size: smaller;
-        word-spacing: 1rem;
-        & .link-tag {
-          color: var(--accent);
-          text-decoration: none;
-        }
+			max-width: 100%;
+			width: auto;
+			object-fit: cover;
+		}
+	}
+	#tags {
+		margin: 1rem;
+		/* margin-bottom: 0.5rem; */
+		text-align: center;
+		font-size: smaller;
+		word-spacing: 1rem;
+		& .link-tag {
+			color: var(--accent);
+			text-decoration: none;
+		}
 
-        & .link-tag:hover {
-          color: var(--element-water-dark);
-        }
-      }
-      hr {
-        border: 2px solid black;
-        width: 100%;
-        margin: 1rem 0;
-      }
-      .post-content {
-        text-align: justify;
-      }
+		& .link-tag:hover {
+			color: teal;
+		}
+	}
+	hr {
+		border: 2px solid black;
+		width: 100%;
+		margin: 1rem 0;
+	}
+	.post-content {
+		text-align: justify;
+	}
 
-      .post-actions {
-        background: rgba(255, 255, 255, 0.25);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.18);
+	.post-actions {
+		background: rgba(255, 255, 255, 0.25);
+		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+		backdrop-filter: blur(4px);
+		-webkit-backdrop-filter: blur(4px);
+		border-radius: 10px;
+		border: 1px solid rgba(255, 255, 255, 0.18);
 
-        /* max-width: 1280px; */
-        position: sticky;
-        bottom: 3rem;
-        /* background-color: #f8f8f8; */
-        /* padding: 10px; */
-        margin-top: 10rem;
-        text-align: center;
-        display: flex;
-        justify-content: start;
-        /* justify-content: center; */
-        /* Zentriert die Buttons */
-        flex-direction: row;
-        row-gap: 1rem;
+		/* max-width: 1280px; */
+		position: sticky;
+		bottom: 3rem;
+		/* background-color: #f8f8f8; */
+		/* padding: 10px; */
+		margin-top: 10rem;
+		text-align: center;
+		display: flex;
+		justify-content: start;
+		/* justify-content: center; */
+		/* Zentriert die Buttons */
+		flex-direction: row;
+		row-gap: 1rem;
 
-        .icon-button {
-          aspect-ratio: 1;
-          width: 3rem;
-          /* margin-top: 1rem;
-          margin-left: 1rem; */
-          border: 1px solid black;
-          /* font-size: 1.5rem; */
-          /* font-size: clamp(1.25rem, 6vw, 1.5rem); */
-          /* padding: 1rem 2rem; */
-          border-radius: 4px;
-          /* background-color: #007bff; */
-          border-color: var(--accent);
-          /* color: white; */
-          cursor: pointer;
-          /* margin-left: 1rem; */
-          img {
-            width: 1.75rem;
-          }
-        }
-      }
+		.icon-button {
+			aspect-ratio: 1;
+			width: 3rem;
+			/* margin-top: 1rem;
+  margin-left: 1rem; */
+			border: 1px solid black;
+			/* font-size: 1.5rem; */
+			/* font-size: clamp(1.25rem, 6vw, 1.5rem); */
+			/* padding: 1rem 2rem; */
+			border-radius: 4px;
+			/* background-color: #007bff; */
+			border-color: var(--accent);
+			/* color: white; */
+			cursor: pointer;
+			/* margin-left: 1rem; */
+			img {
+				width: 1.75rem;
+			}
+		}
+	}
 
-      .post-action {
-        display: flex;
-        flex-direction: column;
-      }
-      .post-action-text {
-        font-size: clamp(1.25rem, 6vw, 1.5rem);
-      }
+	.post-action {
+		display: flex;
+		flex-direction: column;
+	}
+	.post-action-text {
+		font-size: clamp(1.25rem, 6vw, 1.5rem);
+	}
 
-      /* Media Query für größere Bildschirme */
-      @media (min-width: 940px) {
-        .post-content {
-          max-width: 940px;
-          width: calc(100% - 4rem);
+	/* Media Query für größere Bildschirme */
+	@media (min-width: 940px) {
+		.post-content {
+			max-width: 940px;
+			width: calc(100% - 4rem);
 
-          padding: 0 5.5rem;
-        }
-        .post-actions {
-          padding: 1rem;
-          flex-direction: column;
-          position: fixed; /* Fixiert die Buttons auf der Seite */
-          right: 1.5rem;
-          top: 0px; /* Abstand vom oberen Rand */
-          height: min-content;
-          /* height: auto; */
-          /* bottom: 0rem; */
-        }
-        .post-action {
-          display: flex;
-          flex-direction: column;
-        }
-      }
-      @media (max-width: 939px) {
-        .post-content {
-          padding: 0 1.5rem;
-        }
-        .post-actions {
-          justify-content: space-around;
-          width: 100%;
-          padding: 1rem 0 0 0;
-          max-width: 300px;
-        }
-      }
-      .like-button,
-      .share-button {
-        /* margin: 1rem 0; */
-        font-size: 1.5rem;
-        font-size: clamp(1.25rem, 6vw, 1.5rem);
-        /* padding: 1rem 2rem; */
-        border: none;
-        border-radius: 4px;
-        /* background-color: #007bff; */
-        background-color: var(--accent);
-        color: white;
-        cursor: pointer;
-        margin-left: 1rem;
-      }
+			padding: 0 5.5rem;
+		}
+		.post-actions {
+			padding: 1rem;
+			flex-direction: column;
+			position: fixed; /* Fixiert die Buttons auf der Seite */
+			right: 1.5rem;
+			top: 0px; /* Abstand vom oberen Rand */
+			height: min-content;
+			/* height: auto; */
+			/* bottom: 0rem; */
+		}
+		.post-action {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	@media (max-width: 939px) {
+		.post-content {
+			padding: 0 1.5rem;
+		}
+		.post-actions {
+			justify-content: space-around;
+			width: 100%;
+			padding: 1rem 0 0 0;
+			max-width: 300px;
+		}
+	}
+	.like-button,
+	.share-button {
+		/* margin: 1rem 0; */
+		font-size: 1.5rem;
+		font-size: clamp(1.25rem, 6vw, 1.5rem);
+		/* padding: 1rem 2rem; */
+		border: none;
+		border-radius: 4px;
+		/* background-color: #007bff; */
+		background-color: var(--accent);
+		color: white;
+		cursor: pointer;
+		margin-left: 1rem;
+	}
 
-      .like-button:hover,
-      .share-button:hover {
-        background-color: #0056b3;
-      }
-      #comments-section {
-        margin-top: 2rem;
-        padding: 1rem;
-        width: 100%;
+	.like-button:hover,
+	.share-button:hover {
+		background-color: #0056b3;
+	}
+	#comments-section {
+		margin-top: 2rem;
+		padding: 1rem;
+		width: 100%;
 
-        h3 {
-          margin-top: 0;
-        }
+		h3 {
+			margin-top: 0;
+		}
 
-        #comments-container {
-          margin-top: 2rem;
-        }
-      }
-    </style>
-    <script is:inline define:vars={{ title, headline, heroImage }}>
-      document
-        .querySelector("#share-btn")
-        ?.addEventListener("click", async () => {
-          if (navigator) {
-            await navigator
-              .share({
-                title: title,
-                text: headline,
-                url: window.location.href,
-              })
-              .then(() => console.log("Successful share! 🎉"))
-              .catch((err) => console.error(err));
-          }
-        });
-    </script>
-    <script>
-      import {
-        loadBlogpost,
-        createBlogpost,
-      } from "../features/blogpost/blogpost-service";
+		#comments-container {
+			margin-top: 2rem;
+		}
+	}
+</style>
+<script is:inline define:vars={{ title, headline, heroImage }}>
+	document.querySelector("#share-btn")?.addEventListener("click", async () => {
+		if (navigator) {
+			await navigator
+				.share({
+					title: title,
+					text: headline,
+					url: window.location.href,
+				})
+				.then(() => console.log("Successful share! 🎉"))
+				.catch((err) => console.error(err));
+		}
+	});
+</script>
+<script>
+	import { createBlogpost, loadBlogpost } from "../features/blogpost/blogpost-service";
 
-      import { createCommentForm } from "../features/comments/commentForm";
-      import { createCommentsBox } from "../features/comments/commentsBlock";
+	import { createCommentForm } from "../features/comments/commentForm";
+	import { createCommentsBox } from "../features/comments/commentsBlock";
 
-      import { loadLikes, submitLike } from "../features/like/like-service";
+	import { loadLikes, submitLike } from "../features/like/like-service";
 
-      document.querySelector("#comment-btn")?.addEventListener("click", () => {
-        const element = document.querySelector("#comments-section");
-        element?.scrollIntoView();
-      });
+	document.querySelector("#comment-btn")?.addEventListener("click", () => {
+		const element = document.querySelector("#comments-section");
+		element?.scrollIntoView();
+	});
 
-      setTimeout(async () => {
-        const blogPostIdentifier = (
-          document.querySelector("#blog-post-identifier") as HTMLElement
-        ).innerText;
-        loadBlogpost(blogPostIdentifier).then(async (blogPost) => {
-          if (blogPost) {
-            (document.querySelector("#blog-post-id") as HTMLElement).innerText =
-              blogPost.id;
-          } else {
-            const newId = await createBlogpost(blogPostIdentifier);
-            (document.querySelector("#blog-post-id") as HTMLElement).innerText =
-              newId;
-          }
-          let blogPostId = (
-            document.querySelector("#blog-post-id") as HTMLElement
-          ).innerText;
-          loadLikes(blogPostId);
-          (
-            document.querySelector("#like-btn") as HTMLButtonElement
-          ).addEventListener("click", async () => {
-            const newLikeCount = await submitLike(blogPostId);
-            (document.querySelector("#like-counter") as HTMLElement).innerText =
-              newLikeCount.toString();
-          });
+	setTimeout(async () => {
+		const blogPostIdentifier = (document.querySelector("#blog-post-identifier") as HTMLElement).innerText;
+		loadBlogpost(blogPostIdentifier).then(async (blogPost) => {
+			if (blogPost) {
+				(document.querySelector("#blog-post-id") as HTMLElement).innerText = blogPost.id;
+			} else {
+				const newId = await createBlogpost(blogPostIdentifier);
+				(document.querySelector("#blog-post-id") as HTMLElement).innerText = newId;
+			}
+			let blogPostId = (document.querySelector("#blog-post-id") as HTMLElement).innerText;
+			loadLikes(blogPostId);
+			(document.querySelector("#like-btn") as HTMLButtonElement).addEventListener("click", async () => {
+				const newLikeCount = await submitLike(blogPostId);
+				(document.querySelector("#like-counter") as HTMLElement).innerText = newLikeCount.toString();
+			});
 
-          const parent = document.querySelector("#comment-form-container");
+			const parent = document.querySelector("#comment-form-container");
 
-          parent && createCommentForm(parent, blogPostId);
+			parent && createCommentForm(parent, blogPostId);
 
-          createCommentsBox(blogPostId);
-        });
-      }, 500);
-    </script>
-    <Footer />
-  </body>
-</html>
+			createCommentsBox(blogPostId);
+		});
+	}, 500);
+</script>

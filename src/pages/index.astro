@@ -1,119 +1,130 @@
 ---
+import Card from "@components/Card.astro";
+import CenteredTitle from "@components/CenteredTitle.astro";
+import Default from "@layouts/Default.astro";
 import { getCollection } from "astro:content";
-import BreakingNewsTicker from "../components/BreakingNewsTicker.astro";
-import Main from "../layouts/Main.astro";
 import BlogPostCard from "../components/BlogPostCard.astro";
-import RandomBlogPost from "../components/RandomBlogPost.astro";
+import BreakingNewsTicker from "../components/BreakingNewsTicker.astro";
 import Pagefind from "../components/Pagefind.astro";
+import RandomBlogPost from "../components/RandomBlogPost.astro";
 import Ufo, { Sizes } from "../components/Ufo.astro";
 
-const posts = (await getCollection("blog"))
-  .filter((e) => !e.data.draft)
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const posts = (await getCollection("blog")).filter((e) => !e.data.draft).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const latestPost = posts[0];
 const latestPosts = posts.slice(1, 5);
 ---
 
-<Main>
-  <section
-    id="breaking-news-section"
-    class="container shadow-black p-1 mt-1 ml-1 mr-1 round-xlarge"
-  >
-    <BreakingNewsTicker />
-  </section>
-  <section class="container shadow-black p-1 mt-1 ml-1 mr-1 round-xlarge">
-    <Pagefind />
-  </section>
+<Default>
+	<section id="page-title-section">
+		<CenteredTitle id="page-title" title="Dein Nachrichtenblog für mysteriöse Ereignisse" />
+	</section>
+	<section id="breaking-news-section">
+		<Card>
+			<BreakingNewsTicker />
+		</Card>
+	</section>
+	<section id="search-section">
+		<Card>
+			<Pagefind />
+		</Card>
+	</section>
 
-  <div id="blogposts-container" class="m-1">
-    <section id="special-blogposts-section">
-      <section id="latest-blogpost-section">
-        <BlogPostCard blogpost={latestPost} infotext="NEW" />
-      </section>
-      <section id="random-blogpost-section">
-        <RandomBlogPost />
-      </section>
-    </section>
-    <section id="latest-blogposts-section">
-      <div class="">
-        <h2>Latest 4 Blogposts</h2>
-        <div id="latest-blogposts-block" class="">
-          {
-            latestPosts.map((a) => (
-              <div class="latest-blogpost-container mt-1">
-                <BlogPostCard blogpost={a} />
-              </div>
-            ))
-          }
-          <div class="flex column mt-1">
-            <a class="a-button" href="/blog/1">
-              <span style="font-size: 1.5rem;">Mehr</span>
-              <Ufo size={Sizes.M} />
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-</Main>
+	<div id="blogposts-container">
+		<section id="special-blogposts-section">
+			<div id="latest-blogpost-section">
+				<BlogPostCard blogpost={latestPost} infotext="NEW" />
+			</div>
+			<div id="random-blogpost-section">
+				<RandomBlogPost />
+			</div>
+		</section>
+		<section id="latest-blogposts-section">
+			<div id="latest-blogposts-block" class="">
+				<h2>Latest 4 Blogposts</h2>
+				{
+					latestPosts.map((a) => (
+						<div class="latest-blogpost-container">
+							<BlogPostCard blogpost={a} />
+						</div>
+					))
+				}
+				<div class="flex column">
+					<a id="link-to-blog-button" class="button" href="/blog/1">
+						<span style="font-size: 1.5rem;">Mehr</span>
+						<Ufo size={Sizes.M} />
+					</a>
+				</div>
+			</div>
+		</section>
+	</div>
+</Default>
 
 <style>
-  h2 {
-    padding: 0 1rem;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
+	section,
+	.latest-blogpost-container,
+	#link-to-blog-button {
+		margin-top: 1rem;
+	}
+	#page-title-section {
+		font-size: 24px; /* Fallback für ältere Browser */
+		font-size: clamp(2rem, 4vw, 4rem);
+	}
+	h2 {
+		/* padding: 0 1rem; */
+		text-align: center;
+		/* margin-bottom: 1rem; */
+	}
 
-  #blogposts-container {
-    container-type: inline-size;
-    container-name: blogposts-container;
-    display: flex;
-    flex-wrap: wrap;
-  }
+	#blogposts-container {
+		container-type: inline-size;
+		container-name: blogposts-container;
+		display: flex;
+		flex-wrap: wrap;
+	}
 
-  #special-blogpost-section,
-  #latest-blogpost-section {
-    display: flex;
-    flex-direction: column;
-  }
+	#special-blogpost-section,
+	#latest-blogpost-section {
+		display: flex;
+		flex-direction: column;
+	}
 
-  @container blogposts-container (width >= 800px) {
-    #special-blogposts-section {
-      width: 50%;
-    }
+	@container blogposts-container (width >= 800px) {
+		#special-blogposts-section {
+			width: 50%;
+		}
 
-    #latest-blogposts-section {
-      width: 50%;
-      margin-top: 1rem;
+		#latest-blogposts-section {
+			width: 50%;
+			/* margin-top: 1rem; */
 
-      #latest-blogposts-block {
-        margin-left: 1rem;
-      }
-    }
-  }
+			#latest-blogposts-block {
+				margin-left: 1rem;
+			}
+		}
+	}
 
-  @container blogposts-container (width < 800px) and (width >= 600px) {
-    #special-blogposts-section {
-      width: 70%;
-    }
+	@container blogposts-container (width < 800px) and (width >= 600px) {
+		#special-blogposts-section {
+			width: 70%;
+		}
 
-    #latest-blogposts-section {
-      width: 30%;
+		#latest-blogposts-section {
+			width: 30%;
 
-      #latest-blogposts-block {
-        margin-left: 1rem;
-      }
-    }
-  }
+			#latest-blogposts-block {
+				margin-left: 1rem;
+			}
+		}
+	}
 
-  @container blogposts-container (width < 600px) {
-    #special-blogposts-section {
-      width: 100%;
-    }
+	@container blogposts-container (width < 600px) {
+		#special-blogposts-section {
+			width: 100%;
+		}
 
-    #latest-blogposts-section {
-      margin-top: 3rem;
-      width: 100%;
-    }
-  }
+		#latest-blogposts-section {
+			margin-top: 3rem;
+			width: 100%;
+		}
+	}
 </style>

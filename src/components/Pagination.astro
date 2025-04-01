@@ -1,0 +1,120 @@
+---
+type Props = {
+	url: {
+		/** url of the current page */
+		current: string;
+		/** url of the previous page (if there is one) */
+		prev: string | undefined;
+		/** url of the next page (if there is one) */
+		next: string | undefined;
+	};
+	urlToFirst: string;
+	urlToLast: string;
+	currentPage: number;
+	lastPage: number;
+};
+const { urlToFirst, urlToLast, currentPage, lastPage, url } = Astro.props;
+
+const showFirst = currentPage > 2;
+const showLast = currentPage + 2 <= lastPage;
+---
+
+<div class="pagination">
+	{
+		showFirst ? (
+			<a href={urlToFirst}>
+				<span class="ascii">&#60;&#60;</span>
+			</a>
+		) : null
+	}
+	{showFirst ? <div class="dots">&bull;&bull;&bull;</div> : null}
+	{
+		url.prev ? (
+			<a href={url.prev} class="previous">
+				<span class="ascii">&#60;</span>
+			</a>
+		) : null
+	}
+	{currentPage - 1 > 0 ? <a href={url.prev}>{currentPage - 1}</a> : null}
+	<a href={url.current} class="active">{currentPage}</a>
+	{currentPage < lastPage ? <a href={url.next}>{currentPage + 1}</a> : null}
+	{
+		url.next ? (
+			<a href={url.next}>
+				<span class="ascii">&#62;</span>
+			</a>
+		) : null
+	}
+	{showLast ? <div class="dots">&bull;&bull;&bull;</div> : null}
+	{
+		showLast ? (
+			<a href={urlToLast}>
+				<span class="ascii">&#62;&#62;</span>
+			</a>
+		) : null
+	}
+</div>
+
+<style>
+	.pagination a {
+		display: block;
+		padding: 8px 12px;
+		background-color: #f2f2f2; /* Hintergrundfarbe */
+		color: #333; /* Textfarbe */
+		border: 1px solid #ddd; /* Rahmen */
+		text-decoration: none; /* Entfernt die Unterstreichung */
+	}
+
+	.pagination a:hover {
+		background-color: #ddd; /* Hintergrundfarbe beim Hover */
+	}
+
+	.pagination .active {
+		background-color: #333; /* Hintergrundfarbe der aktiven Seite */
+		color: #fff; /* Textfarbe der aktiven Seite */
+	}
+
+	.pagination {
+		/* margin-top: 1rem; */
+		display: flex;
+	}
+	.dots {
+		font-size: 2rem;
+		font-size: clamp(1.5rem, 3vw, 2rem);
+		font-weight: bold;
+	}
+	.dots::before,
+	.dots::after {
+		content: " ";
+		white-space: pre;
+	}
+
+	.pagination a {
+		height: 4rem;
+		height: clamp(3rem, 6vw, 4rem);
+		font-size: 2rem;
+		font-size: clamp(1.5rem, 3vw, 2rem);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: bold;
+		color: var(--accent);
+		float: left;
+		text-decoration: none;
+		border-radius: 6px;
+		border: 1px solid black;
+		aspect-ratio: 1;
+		.ascii {
+			/* font-size: 40px; */
+		}
+	}
+	.pagination a:hover {
+		background-color: #d4d5d2;
+		color: var(--accent);
+	}
+
+	.pagination a.active {
+		color: var(--secondary-color);
+		background-color: var(--accent);
+	}
+</style>

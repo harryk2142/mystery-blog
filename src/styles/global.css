@@ -14,9 +14,10 @@
   font-style: normal;
   font-weight: 400;
   src: url("/fonts/roboto.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 /* latin */
@@ -25,9 +26,10 @@
   font-style: normal;
   font-weight: 400;
   src: url("/fonts/atkinson-hyperlegible.woff2") format("woff");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 /* latin */
@@ -36,9 +38,10 @@
   font-style: normal;
   font-weight: 400;
   src: url("/fonts/lato.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 /* latin */
@@ -48,9 +51,10 @@
   font-weight: 400;
   font-stretch: 100%;
   src: url("/fonts/open-sans.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 /* RESET */
@@ -111,6 +115,7 @@ a:hover {
 main {
   width: 1280px;
   max-width: calc(100% - 1rem);
+  padding: 0 1rem;
   margin: 0 auto;
 }
 
@@ -120,15 +125,18 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 1rem;
+  margin-top: 0rem;
   color: var(--accent);
   line-height: 1.2;
   margin-bottom: 0.25rem;
 }
 
 h1 {
-  font-size: clamp(2.5rem, 14vw, 3rem);
-  /* 3.052em; */
+  /* font-size: clamp(2.25rem, 14vw, 4rem); */
+  /* https://www.sitepoint.com/fluid-typography-css-clamp-function/ */
+  /* font-size: clamp(2.25rem, 8vw, 4rem); */
+  font-size: clamp(2.25rem, calc(2.2rem + 1.5vw), 4rem)
+    /* 3.052em; */
 }
 
 h2 {
@@ -160,23 +168,26 @@ h6 {
   height: 100%;
 }
 
+
+/* 
 .primary {
   background: var(--accent);
   color: var(--secondary-color);
-}
+} */
 
-.wrapper {
+/* .wrapper {
   width: 1280px;
   max-width: 100%;
   margin: 0 auto;
-}
+} */
 
 /* FEATURES */
-.scale-on-hover:hover {
+/* .scale-on-hover:hover {
   scale: 1.1;
   z-index: 20;
-}
+} */
 
+/* 
 .m-1 {
   margin: 1rem;
 }
@@ -215,11 +226,12 @@ h6 {
 
 .ml-2 {
   margin-left: 2rem;
-}
+} */
 
 /* ... und so weiter für weitere Größen */
 
 /* Padding (Innenabstand) */
+/* 
 .p-1 {
   padding: 1rem;
 }
@@ -258,9 +270,10 @@ h6 {
 
 .pl-2 {
   padding-left: 2rem;
-}
+} */
 
 /* ROUND */
+/* 
 .round-small {
   border-radius: 2px;
 }
@@ -280,7 +293,7 @@ h6 {
 
 .round-xxlarge {
   border-radius: 32px;
-}
+} */
 
 /* Colors */
 .white,
@@ -308,10 +321,11 @@ h6 {
   border-color: black;
 }
 
+/* 
 .shadow-black,
 .shadow-black-hover:hover {
   box-shadow: 0 4px 8px #000000;
-}
+} */
 
 .earth,
 .hover-earth:hover {
@@ -578,5 +592,4 @@ hr {
   background-color: var(--accent);
   color: white;
   cursor: pointer;
-
 }

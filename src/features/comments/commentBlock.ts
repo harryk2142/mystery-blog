@@ -4,7 +4,7 @@ import { createCommentForm } from "./commentForm";
 
 const addRepliesToContainer = (
   createdBox: HTMLDivElement,
-  comments: Comment[]
+  comments: Comment[],
 ) => {
   const repliesContainer = el("div.comment-replies");
   comments.forEach((element) => {
@@ -30,8 +30,8 @@ const createCommentBox = (comment: Comment) => {
         {
           onclick: clickAntworten,
         },
-        "Antworten"
-      )
+        "Antworten",
+      ),
     ),
   ]);
   if (comment.replies && comment.replies.length > 0) {

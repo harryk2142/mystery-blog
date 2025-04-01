@@ -1,8 +1,8 @@
 {
   "folders": [
     {
-      "path": "."
-    }
+      "path": ".",
+    },
     // {
     // 	"name": "mystery-blog",
     // 	"path": "mystery-blog"
@@ -11,6 +11,12 @@
   "settings": {
     "markdown.suggest.paths.enabled": true,
     "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
+    "prettier.configPath": "prettier.config.js",
+    "prettier.printWidth": 100,
+    "prettier.requireConfig": true,
     "[markdown]": {
       "editor.fontSize": 14,
       "editor.lineHeight": 26,
@@ -20,30 +26,47 @@
       "editor.quickSuggestions": {
         "comments": "on",
         "strings": "on",
-        "other": "on"
+        "other": "on",
       },
-      "editor.minimap.enabled": false
+      "editor.minimap.enabled": false,
     },
-    "workbench.colorTheme": "Absent Contrast (rainglow)",
+    "[typescript]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "source.organizeImports": "explicit",
+        "source.fixAll": "explicit"
+      }
+    },
+    "[astro]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "source.organizeImports": "explicit",
+      },
+    },
+    "workbench.colorTheme": "Astronaut",
     "workbench.colorCustomizations": {
-      "activityBar.activeBackground": "#0574d9",
-      "activityBar.background": "#0574d9",
+      "activityBar.activeBackground": "#1a1a1a",
+      "activityBar.background": "#1a1a1a",
       "activityBar.foreground": "#e7e7e7",
       "activityBar.inactiveForeground": "#e7e7e799",
-      "activityBarBadge.background": "#fc82c2",
-      "activityBarBadge.foreground": "#15202b",
+      "activityBarBadge.background": "#606020",
+      "activityBarBadge.foreground": "#e7e7e7",
       "commandCenter.border": "#e7e7e799",
-      "sash.hoverBorder": "#0574d9",
-      "statusBar.background": "#0459a7",
+      "sash.hoverBorder": "#1a1a1a",
+      "statusBar.background": "#000000",
       "statusBar.foreground": "#e7e7e7",
-      "statusBarItem.hoverBackground": "#0574d9",
-      "statusBarItem.remoteBackground": "#0459a7",
+      "statusBarItem.hoverBackground": "#1a1a1a",
+      "statusBarItem.remoteBackground": "#000000",
       "statusBarItem.remoteForeground": "#e7e7e7",
-      "titleBar.activeBackground": "#0459a7",
+      "titleBar.activeBackground": "#000000",
       "titleBar.activeForeground": "#e7e7e7",
-      "titleBar.inactiveBackground": "#0459a799",
+      "titleBar.inactiveBackground": "#00000099",
       "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "peacock.color": "#0459a7"
-  }
+    "peacock.color": "black",
+  },
 }
