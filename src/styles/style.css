@@ -1,143 +1,132 @@
 :root {
-    --accent: #0f0f0f;
-    --primary-color: #0f0f0f;
-    --secondary-color: #fff;
+	--accent: #0f0f0f;
+	--primary-color: #0f0f0f;
+	--secondary-color: #fff;
 
-    --gold: #ffd700;
-    --black: #000000;
-    --gray: 96, 115, 159;
-    --gray-light: 229, 233, 240;
-    --gray-dark: 34, 41, 57;
-    --element-earth: #00ff00;
-    --element-air: #ffff00;
-    --element-fire: #ff0000;
-    --element-water: #00bfff;
-    --gray-gradient: rgba(var(--gray-light), 50%), #fff;
-    --box-shadow:
-        0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-        0 16px 32px rgba(var(--gray), 33%);
-    /* --pagefind-ui-border: #000000;
-    --pagefind-ui-border-radius: 16px;
-    --pagefind-ui-image-box-ratio: 1 / 1;
-    --pagefind-ui-scale: 1; */
+	--gold: #ffd700;
+	--black: #000000;
+	--gray: 96, 115, 159;
+	--gray-light: 229, 233, 240;
+	--gray-dark: 34, 41, 57;
+	--element-earth: #00ff00;
+	--element-air: #ffff00;
+	--element-fire: #ff0000;
+	--element-water: #00bfff;
+	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
+	--box-shadow:
+		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
+		0 16px 32px rgba(var(--gray), 33%);
 }
 
 /* https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css */
 
 @font-face {
-    font-family: "Atkinson";
-    src: url("/fonts/atkinson-regular.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+	font-family: "Atkinson";
+	src: url("/fonts/atkinson-regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
 }
 
 /* latin */
 @font-face {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 400;
-    src: url("/fonts/roboto.woff2") format("woff2");
-    unicode-range:
-        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
-        U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
-        U+2212, U+2215, U+FEFF, U+FFFD;
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 400;
+	src: url("/fonts/roboto.woff2") format("woff2");
+	unicode-range:
+		U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
+		U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+		U+2215, U+FEFF, U+FFFD;
 }
 
 /* latin */
 @font-face {
-    font-family: "Atkinson Hyperlegible";
-    font-style: normal;
-    font-weight: 400;
-    src: url("/fonts/atkinson-hyperlegible.woff2") format("woff");
-    unicode-range:
-        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
-        U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
-        U+2212, U+2215, U+FEFF, U+FFFD;
+	font-family: "Atkinson Hyperlegible";
+	font-style: normal;
+	font-weight: 400;
+	src: url("/fonts/atkinson-hyperlegible.woff2") format("woff");
+	unicode-range:
+		U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
+		U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+		U+2215, U+FEFF, U+FFFD;
 }
 
 /* latin */
 @font-face {
-    font-family: "Lato";
-    font-style: normal;
-    font-weight: 400;
-    src: url("/fonts/lato.woff2") format("woff2");
-    unicode-range:
-        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
-        U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
-        U+2212, U+2215, U+FEFF, U+FFFD;
+	font-family: "Lato";
+	font-style: normal;
+	font-weight: 400;
+	src: url("/fonts/lato.woff2") format("woff2");
+	unicode-range:
+		U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
+		U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+		U+2215, U+FEFF, U+FFFD;
 }
 
 /* latin */
 @font-face {
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 400;
-    font-stretch: 100%;
-    src: url("/fonts/open-sans.woff2") format("woff2");
-    unicode-range:
-        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
-        U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
-        U+2212, U+2215, U+FEFF, U+FFFD;
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 400;
+	font-stretch: 100%;
+	src: url("/fonts/open-sans.woff2") format("woff2");
+	unicode-range:
+		U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
+		U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+		U+2215, U+FEFF, U+FFFD;
 }
 
 /* RESET */
 * {
-    /* margin: 0;
-    padding: 0; */
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html {
-    height: 100%;
-    word-wrap: break-word;
-    margin: 0 auto;
-    accent-color: var(--accent);
+	height: 100%;
+	word-wrap: break-word;
+	margin: 0 auto;
+	accent-color: var(--accent);
 }
 
 /* Global Style */
 body {
-    /* font-family: "Atkinson", sans-serif; */
-    /* font-family: "Atkinson Hyperlegible", sans-serif; */
-    /* font-family: "Lato", sans-serif; */
-    font-family: "Open Sans", sans-serif;
-    /* font-family: "Roboto", sans-serif; */
-    /* font-family: Verdana, sans-serif; */
-    margin: 0;
-    padding: 0;
-    text-align: left;
-    background: linear-gradient(var(--gray-gradient)) no-repeat;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    font-size: 16px;
-    line-height: 2;
-    /* letter-spacing: 4px; */
+	/* font-family: "Atkinson", sans-serif; */
+	/* font-family: "Atkinson Hyperlegible", sans-serif; */
+	/* font-family: "Lato", sans-serif; */
+	font-family: "Open Sans", sans-serif;
+	/* font-family: "Roboto", sans-serif; */
+	/* font-family: "Verdana", sans-serif; */
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	background: linear-gradient(var(--gray-gradient)) no-repeat;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	font-size: 16px;
+	line-height: 2;
+	/* letter-spacing: 4px; */
 
-    min-height: 100vh;
-    width: 100%;
-    color: var(--accent);
+	min-height: 100vh;
+	width: 100%;
+	color: var(--accent);
 }
 
 @media (max-width: 720px) {
-    body {
-        font-size: 18px;
-    }
+	body {
+		font-size: 18px;
+	}
 }
 
-main {
-    width: 1280px;
-    max-width: calc(100% - 1rem);
-    padding: 0 1rem;
-    margin: 0 auto;
-}
-
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -146,81 +135,127 @@ h6 {
     margin-top: 0rem;
     color: var(--accent);
     line-height: 1.2;
-    /* margin-bottom: 0.25rem; */
-}
-
-button,
-.button {
-    border: 2px solid var(--accent);
-    /* font-family: inherit; */
-    /* font-size: inherit; */
-    /* line-height: inherit; */
-    /* background-color: var(--accent); */
-    background: transparent;
-    /* border: none; */
-    /* padding: 0.5rem 1rem; */
-    /* cursor: pointer; */
-    /* text-align: center; */
-    /* text-decoration: none; */
-    /* display: inline-block; */
-    /* transition: all 0.2s ease-in-out; */
-    /* width: 100%; */
-    /* border-color: var(--accent); */
-    /* border-width: 2px; */
-
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    text-decoration: none;
-    font-size: clamp(1.25rem, 6vw, 1.5rem);
-    border-radius: 1.5rem;
-    /* background-color: var(--secondary-color); */
-    cursor: pointer;
-    color: var(--accent);
-}
-
-button:hover,
-.button:hover {
-    background-color: var(--secondary-color);
-
-    filter: invert(100%);
-}
+    margin-bottom: 0.25rem;
+} */
 
 .primary {
-    background: var(--accent);
-    color: var(--secondary-color);
+	background: var(--accent);
+	color: var(--secondary-color);
 }
 
 .wrapper {
-    width: 1280px;
-    max-width: 100%;
-    margin: 0 auto;
+	width: 1280px;
+	max-width: 100%;
+	margin: 0 auto;
 }
 
 .shadow-black,
 .shadow-black-hover:hover {
-    box-shadow: 0 4px 8px #000000;
+	box-shadow: 0 4px 8px #000000;
 }
-
 
 /* ROUND */
 .round-small {
-    border-radius: 2px;
+	border-radius: 2px;
 }
 
 .round,
 .round-medium {
-    border-radius: 4px;
+	border-radius: 4px;
 }
 
 .round-large {
-    border-radius: 8px;
+	border-radius: 8px;
 }
 
 .round-xlarge {
-    border-radius: 16px;
+	border-radius: 16px;
 }
 
 .round-xxlarge {
-    border-radius: 32px;
+	border-radius: 32px;
+}
+
+.m-1 {
+	margin: 1rem;
+}
+
+.mt-1 {
+	margin-top: 1rem;
+}
+
+.mr-1 {
+	margin-right: 1rem;
+}
+
+.mb-1 {
+	margin-bottom: 1rem;
+}
+
+.ml-1 {
+	margin-left: 1rem;
+}
+
+.m-2 {
+	margin: 2rem;
+}
+
+.mt-2 {
+	margin-top: 2rem;
+}
+
+.mr-2 {
+	margin-right: 2rem;
+}
+
+.mb-2 {
+	margin-bottom: 2rem;
+}
+
+.ml-2 {
+	margin-left: 2rem;
+}
+
+/* ... und so weiter für weitere Größen */
+
+/* Padding (Innenabstand) */
+
+.p-1 {
+	padding: 1rem;
+}
+
+.pt-1 {
+	padding-top: 1rem;
+}
+
+.pr-1 {
+	padding-right: 1rem;
+}
+
+.pb-1 {
+	padding-bottom: 1rem;
+}
+
+.pl-1 {
+	padding-left: 1rem;
+}
+
+.p-2 {
+	padding: 2rem;
+}
+
+.pt-2 {
+	padding-top: 2rem;
+}
+
+.pr-2 {
+	padding-right: 2rem;
+}
+
+.pb-2 {
+	padding-bottom: 2rem;
+}
+
+.pl-2 {
+	padding-left: 2rem;
 }

@@ -1,7 +1,7 @@
 .mycard {
-  width: 300px; /* oder eine andere Breite */
-  border: 1px solid #ccc; /* grauer Rand */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* leichter Schatten für 3D-Effekt */
-  border-radius: 8px; /* abgerundete Ecken */
-  overflow: hidden; /* stellt sicher, dass der Inhalt die abgerundeten Ecken respektiert */
+	width: 300px; /* oder eine andere Breite */
+	border: 1px solid #ccc; /* grauer Rand */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* leichter Schatten für 3D-Effekt */
+	border-radius: 8px; /* abgerundete Ecken */
+	overflow: hidden; /* stellt sicher, dass der Inhalt die abgerundeten Ecken respektiert */
 }

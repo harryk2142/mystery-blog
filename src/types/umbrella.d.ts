@@ -11,12 +11,26 @@ declare module "umbrellajs" {
 		nodes: Array<Element>;
 		length: number;
 
-		addClass(...classes: Array<string | string[] | ((node: Element, i: number) => string)>): this;
+		addClass(
+			...classes: Array<string | string[] | ((node: Element, i: number) => string)>
+		): this;
 
 		after(item: this | string | Element | ArrayLike<Element>): this;
-		after(callback: (placeholderItem: {}, placeholderIndex: 0, node: Element, nodeIndex: number) => this | string | Element | ArrayLike<Element>): this;
+		after(
+			callback: (
+				placeholderItem: {},
+				placeholderIndex: 0,
+				node: Element,
+				nodeIndex: number,
+			) => this | string | Element | ArrayLike<Element>,
+		): this;
 		after<T>(
-			callback: (dataItem: T, dataIndex: number, node: Element, nodeIndex: number) => this | string | Element | ArrayLike<Element>,
+			callback: (
+				dataItem: T,
+				dataIndex: number,
+				node: Element,
+				nodeIndex: number,
+			) => this | string | Element | ArrayLike<Element>,
 			data: ArrayLike<T>,
 		): this;
 		after<T>(
@@ -73,9 +87,18 @@ declare module "umbrellajs" {
 		array<T>(callback: (node: Element, i: number) => T): Array<any>;
 
 		attr(name: string): string | null;
-		attr(name: string, callback: (node: Element, i: number) => string | number | null | undefined): this;
+		attr(
+			name: string,
+			callback: (node: Element, i: number) => string | number | null | undefined,
+		): this;
 		attr(name: string, value: string | number | null | undefined): this;
-		attr(pairs: { [key: string]: ((node: Element, i: number) => string | number | null | undefined) | string | null | undefined }): this;
+		attr(pairs: {
+			[key: string]:
+				| ((node: Element, i: number) => string | number | null | undefined)
+				| string
+				| null
+				| undefined;
+		}): this;
 
 		before: typeof u.after;
 
@@ -126,8 +149,15 @@ declare module "umbrellajs" {
 		off(events: string | string[], callback: () => void): this;
 		off(events: string | string[], selector: string, callback: () => void): this;
 
-		on(events: string | string[], callback: (this: this, e: Event, ...data: any[]) => void): this;
-		on(events: string | string[], selector: string, callback: (this: this, e: Event, ...data: any[]) => void): this;
+		on(
+			events: string | string[],
+			callback: (this: this, e: Event, ...data: any[]) => void,
+		): this;
+		on(
+			events: string | string[],
+			selector: string,
+			callback: (this: this, e: Event, ...data: any[]) => void,
+		): this;
 
 		parent(): this;
 		parent(selector: string): this;

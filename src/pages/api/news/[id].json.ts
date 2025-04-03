@@ -104,25 +104,25 @@ import { headlines } from "./headlines";
 // ];
 
 interface Parameter {
-  params: { id: number };
+	params: { id: number };
 }
 export const GET: APIRoute = ({ params }) => {
-  const id = params.id as string;
-  return new Response(JSON.stringify({ headline: headlines[Number(id)] }), {
-    status: 200,
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+	const id = params.id as string;
+	return new Response(JSON.stringify({ headline: headlines[Number(id)] }), {
+		status: 200,
+		headers: {
+			"Content-Type": "application/json",
+		},
+	});
 };
 export function getStaticPaths() {
-  const ids: Parameter[] = [];
-  for (let index = 0; index < headlines.length; index++) {
-    ids.push({
-      params: {
-        id: index,
-      },
-    });
-  }
-  return ids;
+	const ids: Parameter[] = [];
+	for (let index = 0; index < headlines.length; index++) {
+		ids.push({
+			params: {
+				id: index,
+			},
+		});
+	}
+	return ids;
 }
