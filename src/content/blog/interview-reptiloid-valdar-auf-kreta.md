@@ -4,16 +4,16 @@ description: "Exklusives Interview mit Valdar, einem Reptiloiden, auf der geheim
 headline: "Valdar der Reptiloid: Ein ungewöhnlicher Urlaub am legendären Strand von Kreta"
 pubDate: 2023-05-18
 heroImage:
-  alt: Ein Reptiloide mit einem Strohut am Strand
-  url: /images/blog/reptiloide-mit-strohhut.webp
+    alt: Ein Reptiloide mit einem Strohut am Strand
+    url: /images/blog/reptiloide-mit-strohhut.webp
 place: Kreta - Griechenland
 tags:
-  - griechenland
-  - kreta
-  - reptiloid
-  - strand
-  - urlaub
-  - valdar
+    - griechenland
+    - kreta
+    - reptiloid
+    - strand
+    - urlaub
+    - valdar
 oldUrl: 2023-05-18-reptiloide-valdar-auf-kreta
 ---
 

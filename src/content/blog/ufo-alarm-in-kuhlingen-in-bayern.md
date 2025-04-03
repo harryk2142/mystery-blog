@@ -4,21 +4,21 @@ description: "Unerklärliche Lichter und Geräusche: Kuhlingen erlebt einen UFO-
 headline: "UFO-Alarm in Kuhlingen: Außerirdische entdecken ihre Leidenschaft für bayerische Kühe!"
 pubDate: 2023-07-13
 heroImage:
-  alt: UFOs mit Kühen auf einem Feld
-  url: /images/blog/ufos-mit-kuehen-auf-dem-feld-01.webp
+    alt: UFOs mit Kühen auf einem Feld
+    url: /images/blog/ufos-mit-kuehen-auf-dem-feld-01.webp
 place: Kuhlingen - Bayern - Deutschland
 tags:
-  - außerirdische
-  - bayern
-  - deutschland
-  - komödie
-  - kühe
-  - kuhlingen
-  - lustigerblogeintrag
-  - milchhofmüller
-  - paranormal
-  - ufos
-  - verschwörungstheorien
+    - außerirdische
+    - bayern
+    - deutschland
+    - komödie
+    - kühe
+    - kuhlingen
+    - lustigerblogeintrag
+    - milchhofmüller
+    - paranormal
+    - ufos
+    - verschwörungstheorien
 oldUrl: 2023-07-13-ufos-und-kuehe
 ---
 

@@ -5,15 +5,15 @@ description: In diesem Blogeintrag erfährst du die unglaubliche Geschichte, wie
 pubDate: 2023-01-01
 place: Planet Erde, Überall
 tags:
-  - apokalypse
-  - clowns
-  - silvester2022
-  - silvester
-  - lustigerblogeintrag
-  - weltuntergang
+    - apokalypse
+    - clowns
+    - silvester2022
+    - silvester
+    - lustigerblogeintrag
+    - weltuntergang
 heroImage:
-  alt: Zwei Clowns stehen um die Erdkugel herum
-  url: /images/blog/clowns-retten-die-welt.webp
+    alt: Zwei Clowns stehen um die Erdkugel herum
+    url: /images/blog/clowns-retten-die-welt.webp
 oldUrl: /2023-01-01-weltuntergang-verhindert-durch-clowns
 ---
 

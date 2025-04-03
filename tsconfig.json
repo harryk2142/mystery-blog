@@ -1,31 +1,21 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "include": [
-    ".astro/types.d.ts",
-    "**/*"
-  ],
-  "exclude": [
-    "dist"
-  ],
-  "compilerOptions": {
-    "baseUrl": ".",
-    "noUnusedParameters": false,
-    "strictNullChecks": true,
-    "allowJs": true,
-    "noImplicitAny": false,
-    "target": "ESNext",
-    "jsx": "react-jsx",
-    "jsxImportSource": "preact",
-    "paths": {
-      "@layouts/*": [
-        "./src/layouts/*"
-      ],
-      "@components/*": [
-        "./src/components/*"
-      ],
-      "@styles/*": [
-        "./src/styles/*"
-      ]
-    }
-  }
+	"extends": "astro/tsconfigs/strict",
+	"include": [".astro/types.d.ts", "**/*"],
+	"exclude": ["dist"],
+	"compilerOptions": {
+		"baseUrl": ".",
+		"noUnusedParameters": false,
+		"strictNullChecks": true,
+		"allowJs": true,
+		"noImplicitAny": false,
+		"target": "ESNext",
+		"jsx": "react-jsx",
+		"jsxImportSource": "preact",
+		"paths": {
+			"@layouts/*": ["./src/layouts/*"],
+			"@components/*": ["./src/components/*"],
+			"@design/*": ["./src/components/design/astro/*"],
+			"@styles/*": ["./src/styles/*"]
+		}
+	}
 }

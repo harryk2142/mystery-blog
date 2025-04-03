@@ -1,0 +1,27 @@
+---
+type Props = {
+	href: string;
+	id: String;
+};
+
+const { href } = Astro.props;
+---
+
+<a href={href}><slot /></a>
+<style>
+	a {
+		border: 2px solid var(--accent);
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		text-decoration: none;
+		font-size: clamp(1.25rem, 6vw, 1.5rem);
+		border-radius: 1.5rem;
+		background-color: var(--secondary-color);
+		cursor: pointer;
+		color: var(--accent);
+	}
+	a:hover {
+		background-color: silver;
+	}
+</style>

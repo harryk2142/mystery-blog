@@ -4,17 +4,17 @@ description: "Anna Lüse und ihr Team haben es geschafft: Ein riesiges Gehirn wi
 headline: Die NASA schickt ein riesiges Gehirn ins Weltall
 pubDate: 2023-06-26
 heroImage:
-  alt: Ein großes Gehirn auf dem Rücken einer Rakte im Weltall
-  url: /images/blog/gehirn-auf-einer-rakete-im-weltall.webp
+    alt: Ein großes Gehirn auf dem Rücken einer Rakte im Weltall
+    url: /images/blog/gehirn-auf-einer-rakete-im-weltall.webp
 place: NASA Headquarters - Washington, D.C. (300 E Street SW)
 tags:
-  - anna-luese
-  - anna-lüse
-  - gehirn
-  - nasa
-  - technologie
-  - weltall
-  - wissenschaft
+    - anna-luese
+    - anna-lüse
+    - gehirn
+    - nasa
+    - technologie
+    - weltall
+    - wissenschaft
 oldUrl: 2023-06-26-gehirn-auf-einer-rakete-im-weltall
 ---
 

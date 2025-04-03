@@ -4,16 +4,16 @@ description: "Ein ungewöhnlicher Anblick: Tausende Ameisen versammeln sich am B
 headline: "Großes Ameisenaufgebot vor dem Brandenburger Tor: Die Insektenrevolution für den Klimaschutz"
 pubDate: 2023-06-16
 heroImage:
-  alt: Viele große Ameisen protestieren in Berlin vor dem Brandenburger Tor
-  url: /images/blog/ameisen-protestieren-in-berlin-vor-dem-brandenburger-tor.webp
+    alt: Viele große Ameisen protestieren in Berlin vor dem Brandenburger Tor
+    url: /images/blog/ameisen-protestieren-in-berlin-vor-dem-brandenburger-tor.webp
 place: Brandenburger Tor - Berlin - Deutschland
 tags:
-  - ameisen
-  - brandenburgertor
-  - deutschland
-  - insektenrevolution
-  - klimaschutz
-  - protest
+    - ameisen
+    - brandenburgertor
+    - deutschland
+    - insektenrevolution
+    - klimaschutz
+    - protest
 oldUrl: 2023-06-16-ameisen-protestieren-in-berlin-vor-dem-brandenburger-tor
 ---
 

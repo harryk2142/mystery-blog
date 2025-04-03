@@ -6,19 +6,19 @@ type: default
 description: In diesem Blogpost enthüllen wir die geheimnisvolle Präsentation von Microsoft und OpenAI, die das bahnbrechende Projekt Cassandra vorstellt.
 headline: "Die neue Ära der KI: Microsoft und OpenAI's mysteriöse Enthüllung"
 heroImage:
-  url: /images/blog/microsoft-openai-project-cassandra-presentation.webp
-  alt: Das Bild zeigt eine hochmoderne Präsentation im Microsoft Campus in Redmond, Washington, bei der Satya Nadella und Sam Altman das Projekt Cassandra vorstellen. Auf der Leinwand sind die Logos von Microsoft und OpenAI zu sehen, während die Zuschauer gespannt den futuristischen holografischen Displays folgen.
+    url: /images/blog/microsoft-openai-project-cassandra-presentation.webp
+    alt: Das Bild zeigt eine hochmoderne Präsentation im Microsoft Campus in Redmond, Washington, bei der Satya Nadella und Sam Altman das Projekt Cassandra vorstellen. Auf der Leinwand sind die Logos von Microsoft und OpenAI zu sehen, während die Zuschauer gespannt den futuristischen holografischen Displays folgen.
 place: Microsoft Campus in Redmond, Washington - USA
 tags:
-  - cassandra
-  - ki
-  - künstlicheintelllgenz
-  - microsoft
-  - openai
-  - projectcassandra
-  - quantenberechnung
-  - zukunftsvision
-  - technologiederzukunft
+    - cassandra
+    - ki
+    - künstlicheintelllgenz
+    - microsoft
+    - openai
+    - projectcassandra
+    - quantenberechnung
+    - zukunftsvision
+    - technologiederzukunft
 ---
 
 In einer Welt, in der künstliche Intelligenz bereits tief in unser tägliches Leben eingedrungen ist, haben Microsoft und OpenAI kürzlich eine Entdeckung gemacht, die alles bisher Dagewesene in den Schatten stellt. Diese Enthüllung verspricht nicht nur die Art und Weise, wie wir Technologie verstehen und nutzen, zu revolutionieren, sondern wirft auch Fragen über die Natur der Realität selbst auf.

@@ -1,0 +1,19 @@
+---
+type Props = {
+	id: string;
+};
+
+const { id } = Astro.props;
+---
+
+<h1 id={id} data-pagefind-meta="title">
+	<slot />
+</h1>
+<style>
+	h1 {
+		margin-top: 0rem;
+		color: var(--accent);
+		line-height: 1.2;
+		margin-bottom: 0.25rem;
+	}
+</style>

@@ -4,17 +4,17 @@ description: "Entdecken Sie die Blaupause einer rätselhaften Maschine, die eine
 headline: "Enthüllt: Die geheimnisvolle Blaupause"
 pubDate: 2023-07-02
 heroImage:
-  alt: Eine Blaupause einer großen mysteriösen Maschine mit einem Menschen in der Mitte
-  url: /images/blog/geheimnisvolle-blaupause-mit-mensch-in-der-mitte.webp
+    alt: Eine Blaupause einer großen mysteriösen Maschine mit einem Menschen in der Mitte
+    url: /images/blog/geheimnisvolle-blaupause-mit-mensch-in-der-mitte.webp
 tags:
-  - artie-fact
-  - mysteriöseblaupause
-  - geheimnisvollemaschine
-  - abenteuerlust
-  - spannung
-  - spannendeenthüllungen
-  - rätselhaftewahrheit
-  - thriller
+    - artie-fact
+    - mysteriöseblaupause
+    - geheimnisvollemaschine
+    - abenteuerlust
+    - spannung
+    - spannendeenthüllungen
+    - rätselhaftewahrheit
+    - thriller
 oldUrl: 2023-07-02-mysterioese-blaupause-einer-maschine
 ---
 

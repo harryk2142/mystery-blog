@@ -4,18 +4,18 @@ description: Unglaublich - Elektroautos beliebt bei Aliens. Lese hier weiter was
 headline: Unglaublich - Elektroautos beliebt bei Aliens
 pubDate: 2023-06-05
 heroImage:
-  alt: Ein rotes Elektroauto wird gerade von einem UFO entführt
-  url: /images/blog/elektroauto-wird-von-ufo-entfuehrt.webp
+    alt: Ein rotes Elektroauto wird gerade von einem UFO entführt
+    url: /images/blog/elektroauto-wird-von-ufo-entfuehrt.webp
 tags:
-  - aliens
-  - außerirdische
-  - elektroautos
-  - entführungen
-  - eva-green
-  - mystery
-  - otto-von-braun
-  - ufos
-  - xeno-zoidberg
+    - aliens
+    - außerirdische
+    - elektroautos
+    - entführungen
+    - eva-green
+    - mystery
+    - otto-von-braun
+    - ufos
+    - xeno-zoidberg
 oldUrl: 2023-06-05-elektroautos-beliebt-bei-aliens
 ---
 

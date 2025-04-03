@@ -4,16 +4,16 @@ description: "Ein faszinierendes Kristallwesen wurde in Wunderlichhausen, Bayern
 headline: Alien, Roboter oder Kristallwesen? Was wurde in Bayern gesichtet?
 pubDate: 2023-08-09
 heroImage:
-  alt: Ein mysteriöses Ding, das wie eine Mischung aus einem Alien, einem Roboter und einem Kristall aussieht. Schwebend über dem Boden.
-  url: /images/blog/mysterioeses-ding-mischung-aus-alien-roboter-und-kristall.webp
+    alt: Ein mysteriöses Ding, das wie eine Mischung aus einem Alien, einem Roboter und einem Kristall aussieht. Schwebend über dem Boden.
+    url: /images/blog/mysterioeses-ding-mischung-aus-alien-roboter-und-kristall.webp
 place: Wunderlichhausen - Bayern - Deutschland
 tags:
-  - augenzeugenbericht
-  - deutschland
-  - deutschlandmysteries
-  - gerhard-glotzauge
-  - mystery
-  - wasstecktdahinter
+    - augenzeugenbericht
+    - deutschland
+    - deutschlandmysteries
+    - gerhard-glotzauge
+    - mystery
+    - wasstecktdahinter
 oldUrl: 2023-08-09-kristallwesen-in-bayern-gesichtet
 ---
 

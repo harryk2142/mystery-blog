@@ -4,20 +4,20 @@ description: "Sensationelle Entdeckung: Forscher finden antikes Sternentor in de
 headline: "Sensationelle Entdeckung: Forscher finden antikes Sternentor in der Nähe der Stadt Speyer in Deutschland"
 pubDate: 2023-02-17
 heroImage:
-  alt: Ein großes steinernes rundes Sternentor mit zwei Archäologen
-  url: /images/blog/sternentor-in-deutschland-entdeckt.webp
+    alt: Ein großes steinernes rundes Sternentor mit zwei Archäologen
+    url: /images/blog/sternentor-in-deutschland-entdeckt.webp
 place: Speyer - Rheinland-Pfalz - Deutschland
 tags:
-  - anna-luese
-  - anna-lüse
-  - antike
-  - entdeckung
-  - markus-mueller
-  - peter-schmidt
-  - rheinlandpfalz
-  - sciencefiction
-  - speyer
-  - sternentor
+    - anna-luese
+    - anna-lüse
+    - antike
+    - entdeckung
+    - markus-mueller
+    - peter-schmidt
+    - rheinlandpfalz
+    - sciencefiction
+    - speyer
+    - sternentor
 oldUrl: 2023-02-17-sternentor-in-deutschland-entdeckt
 ---
 

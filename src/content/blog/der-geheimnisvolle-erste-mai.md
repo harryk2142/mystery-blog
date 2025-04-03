@@ -7,14 +7,14 @@ headline: "Der Geheimnisvolle Erste Mai: Traditionen, Mythen und Mysterien in De
 description: Erfahren Sie mehr über die alten Bräuche, mysteriösen Legenden und die unerklärlichen Phänomene
 place: Deutschland
 tags:
-  - deutschetraditionen
-  - erstermai
-  - mysterien
-  - volksmythen
-  - deutschland
+    - deutschetraditionen
+    - erstermai
+    - mysterien
+    - volksmythen
+    - deutschland
 heroImage:
-  url: /images/blog/festliche-szene-im-deutschen-dorf-am-ersten-mai.webp
-  alt: Festliche Szene in einem deutschen Dorf am ersten Mai. In der Mitte steht ein Maibaum
+    url: /images/blog/festliche-szene-im-deutschen-dorf-am-ersten-mai.webp
+    alt: Festliche Szene in einem deutschen Dorf am ersten Mai. In der Mitte steht ein Maibaum
 ---
 
 In den verwinkelten Gassen des alten Berlins und den verwunschenen Wäldern Bayerns, verbergen sich Geschichten und Traditionen, die weit über das hinausgehen, was die meisten von uns über den Ersten Mai in Deutschland kennen. Dieser Tag, oft gefeiert als ein Fest der Arbeit und des Frühlings, birgt Geheimnisse, die nur darauf warten, enthüllt zu werden.

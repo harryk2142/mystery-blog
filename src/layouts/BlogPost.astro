@@ -9,6 +9,7 @@ import { Image } from "astro:assets";
 // type Props = CollectionEntry<"blog">["data"];
 type Props = CollectionEntry<"blog">;
 
+import { OgTypes } from "@components/Meta.astro";
 const post = Astro.props;
 const { title, headline, tags, description, pubDate, heroImage, place } = post.data;
 import "@styles/style.css";
@@ -24,77 +25,77 @@ const pathSegments = Astro.request.url.split("/").filter((e) => e.length > 0);
 const blogPostIdentifier = pathSegments[pathSegments.length - 1] as string;
 ---
 
-<Default title={title} description={description}>
-	<span hidden id="blog-post-identifier" data-pagefind-ignore>{blogPostIdentifier}</span>
-	<span hidden id="blog-post-id" data-pagefind-ignore></span>
-	<article class="blog-post">
-		<div class="post-image">
-			<img src={heroImage.url} alt={heroImage.alt} />
-			<img
-				hidden
-				data-pagefind-index-attrs="alt"
-				data-pagefind-meta="image[src], image_alt[alt]"
-				src={heroImage.url.replace("/blog/", "/blog/small/")}
-				alt={heroImage.alt}
-				style="display: none;"
-			/>
+<Default title={title} description={description} ogType={OgTypes.article} />;
+<span hidden id="blog-post-identifier" data-pagefind-ignore>{blogPostIdentifier}</span>
+<span hidden id="blog-post-id" data-pagefind-ignore></span>
+<article class="blog-post">
+	<div class="post-image">
+		<img src={heroImage.url} alt={heroImage.alt} />
+		<img
+			hidden
+			data-pagefind-index-attrs="alt"
+			data-pagefind-meta="image[src], image_alt[alt]"
+			src={heroImage.url.replace("/blog/", "/blog/small/")}
+			alt={heroImage.alt}
+			style="display: none;"
+		/>
+	</div>
+	<header class="post-header mt-1">
+		<h1>
+			{headline ? headline : title}
+		</h1>
+		<div class="post-meta">
+			<FormattedDate date={pubDate} />
+			{
+				place && (
+					<>
+						<span> - </span>
+						<span class="location">{place}</span>
+					</>
+				)
+			}
 		</div>
-		<header class="post-header mt-1">
-			<h1>
-				{headline ? headline : title}
-			</h1>
-			<div class="post-meta">
-				<FormattedDate date={pubDate} />
-				{
-					place && (
-						<>
-							<span> - </span>
-							<span class="location">{place}</span>
-						</>
-					)
-				}
-			</div>
-		</header>
+	</header>
 
-		{
-			tags && (
-				<section id="tags">
-					{tags.map((tag) => (
-						<a href={`/tags/${tag}`} class="link-tag">
-							#{tag}
-						</a>
-					))}
-				</section>
-			)
-		}
-		<hr />
-		<section class="post-content">
-			<slot />
-		</section>
-		<div class="post-actions">
-			<div class="post-action">
-				<button id="like-btn" class="icon-button">
-					<Image src={likeIcon} alt="Like Icon" />
-				</button>
-				<span id="like-counter" class="post-action-text">0</span>
-			</div>
-			<div class="post-action">
-				<button id="comment-btn" class="icon-button">
-					<Image src={commentIcon} alt="Kommentar Icon" />
-				</button>
-				<span id="comments-counter" class="post-action-text">0</span>
-			</div>
-			<div class="post-action">
-				<button id="share-btn" class="icon-button">
-					<Image src={shareIcon} alt="Share Icon" />
-				</button>
-			</div>
+	{
+		tags && (
+			<section id="tags">
+				{tags.map((tag) => (
+					<a href={`/tags/${tag}`} class="link-tag">
+						#{tag}
+					</a>
+				))}
+			</section>
+		)
+	}
+	<hr />
+	<section class="post-content">
+		<slot />
+	</section>
+	<div class="post-actions">
+		<div class="post-action">
+			<button id="like-btn" class="icon-button">
+				<Image src={likeIcon} alt="Like Icon" />
+			</button>
+			<span id="like-counter" class="post-action-text">0</span>
 		</div>
-		<section id="comments-section" class="mycard">
-			<Comments />
-		</section>
-	</article>
-</Default>
+		<div class="post-action">
+			<button id="comment-btn" class="icon-button">
+				<Image src={commentIcon} alt="Kommentar Icon" />
+			</button>
+			<span id="comments-counter" class="post-action-text">0</span>
+		</div>
+		<div class="post-action">
+			<button id="share-btn" class="icon-button">
+				<Image src={shareIcon} alt="Share Icon" />
+			</button>
+		</div>
+	</div>
+	<section id="comments-section" class="mycard">
+		<Comments />
+	</section>
+</article>
+
 <style>
 	.blog-post {
 		/* margin: 20px auto;
@@ -294,6 +295,7 @@ overflow: hidden; */
 		}
 	});
 </script>
+
 <script>
 	import { createBlogpost, loadBlogpost } from "../features/blogpost/blogpost-service";
 
@@ -308,20 +310,29 @@ overflow: hidden; */
 	});
 
 	setTimeout(async () => {
-		const blogPostIdentifier = (document.querySelector("#blog-post-identifier") as HTMLElement).innerText;
+		const blogPostIdentifier = (
+			document.querySelector("#blog-post-identifier") as HTMLElement
+		).innerText;
 		loadBlogpost(blogPostIdentifier).then(async (blogPost) => {
 			if (blogPost) {
-				(document.querySelector("#blog-post-id") as HTMLElement).innerText = blogPost.id;
+				(document.querySelector("#blog-post-id") as HTMLElement).innerText =
+					blogPost.id;
 			} else {
 				const newId = await createBlogpost(blogPostIdentifier);
-				(document.querySelector("#blog-post-id") as HTMLElement).innerText = newId;
+				(document.querySelector("#blog-post-id") as HTMLElement).innerText =
+					newId;
 			}
-			let blogPostId = (document.querySelector("#blog-post-id") as HTMLElement).innerText;
+			let blogPostId = (document.querySelector("#blog-post-id") as HTMLElement)
+				.innerText;
 			loadLikes(blogPostId);
-			(document.querySelector("#like-btn") as HTMLButtonElement).addEventListener("click", async () => {
-				const newLikeCount = await submitLike(blogPostId);
-				(document.querySelector("#like-counter") as HTMLElement).innerText = newLikeCount.toString();
-			});
+			(document.querySelector("#like-btn") as HTMLButtonElement).addEventListener(
+				"click",
+				async () => {
+					const newLikeCount = await submitLike(blogPostId);
+					(document.querySelector("#like-counter") as HTMLElement).innerText =
+						newLikeCount.toString();
+				},
+			);
 
 			const parent = document.querySelector("#comment-form-container");
 

@@ -4,17 +4,17 @@ description: "Entdecken Sie den bahnbrechenden Fusionsreaktor auf dem Mars, der 
 headline: Durchbruch im Bereich Fusion - Marsianer und Terraner gelingt Durchbruch.
 pubDate: 2023-01-27
 heroImage:
-  alt: Ein modernes Funsionskraftwerk auf dem Mars
-  url: /images/blog/fusionskraftwerk-auf-dem-mars.webp
+    alt: Ein modernes Funsionskraftwerk auf dem Mars
+    url: /images/blog/fusionskraftwerk-auf-dem-mars.webp
 place: "Mars, Elysium Planitia-Region, Koordinaten: 4.5°N, 135°E"
 tags:
-  - fusion
-  - jessica-taylor
-  - mars
-  - marsianer
-  - sciencefiction
-  - technologie
-  - terraner
+    - fusion
+    - jessica-taylor
+    - mars
+    - marsianer
+    - sciencefiction
+    - technologie
+    - terraner
 oldUrl: 2023-01-27-fusionsreaktor
 ---
 

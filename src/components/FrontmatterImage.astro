@@ -3,7 +3,7 @@ import type { JSX } from "astro/jsx-runtime";
 import type { CollectionEntry } from "astro:content";
 type ImgAttributes = JSX.ImgHTMLAttributes;
 type Props = {
-  blogpost: CollectionEntry<"blog">;
+	blogpost: CollectionEntry<"blog">;
 } & ImgAttributes;
 const { blogpost, ...imgAttrs } = Astro.props;
 const src = blogpost.data.heroImage.url;

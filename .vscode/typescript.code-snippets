@@ -1,0 +1,44 @@
+{
+	"Functional Component": {
+		"prefix": "fc",
+		"body": [
+			"export const ${1:ComponentName} = (${2:props}) => {\n",
+			"\treturn ($0);\n",
+			"};\n",
+		],
+		"description": "Functional Component",
+	},
+	"Named Functional Component": {
+		"prefix": "nfc",
+		"body": [
+			"type Props = {\n",
+			"\t${1:// Props definition}\n",
+			"}\n",
+			"export const ${2:ComponentName} = ({${3:props}}: Props) => {\n",
+			"\treturn (\n",
+			"\t\t<div>\n",
+			"\t\t\t$0\n",
+			"\t\t</div>\n",
+			"\t);\n",
+			"}",
+		],
+		"description": "Named Functional Component",
+	},
+	"Named Functional Component With Children": {
+		"prefix": "nfcc",
+		"body": [
+			"type Props = {\n",
+			"\t${1:// Props definition};",
+			"children: ReactNode;",
+			"}\n",
+			"export const ${2:ComponentName} = ({${3:props}, children}: Props) => {\n",
+			"\treturn (\n",
+			"\t\t<div>\n",
+			"\t\t\t{children}\n",
+			"\t\t</div>\n",
+			"\t);\n",
+			"}",
+		],
+		"description": "Named Functional Component With Children",
+	},
+}

@@ -5,18 +5,18 @@ updateDate: 2024-09-06T18:24:53.634Z
 description: Wir hatten die einmalige Gelegenheit, Dr. Anna Lüse und ihr Team im Geheimlabor Sektor 7 zu besuchen. Hier wird das sagenumwobene Sternentor untersucht.
 headline: "Geheimlabor Sektor 7: Exklusive Einblicke in das Labor, dass das Sternentor aktiviert hat"
 heroImage:
-  alt: Großes Sternentor inmitten eines Raums mit vielen Wissenschaftlern
-  url: /images/blog/ein-hochdetailiertes-und-realistisches-bild-eines-stargates-das-sich-in-einem-high-tech-labor-befindet.webp
+    alt: Großes Sternentor inmitten eines Raums mit vielen Wissenschaftlern
+    url: /images/blog/ein-hochdetailiertes-und-realistisches-bild-eines-stargates-das-sich-in-einem-high-tech-labor-befindet.webp
 place: Sektor 7 - Deutschland
 tags:
-  - anna-luese
-  - anna-lüse
-  - dr-anna-luese
-  - dr-anna-lüse
-  - sektor7
-  - sternentor
-  - wissenschaft
-  - wissenschaftimunbekannten
+    - anna-luese
+    - anna-lüse
+    - dr-anna-luese
+    - dr-anna-lüse
+    - sektor7
+    - sternentor
+    - wissenschaft
+    - wissenschaftimunbekannten
 ---
 
 Endlich geht es weiter mit der Geschichte zum Sternentor. Wir berichteten letztes Jahr schon über die Entdeckung:

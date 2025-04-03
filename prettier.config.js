@@ -1,6 +1,8 @@
+// @ts-check
 const config = {
 	singleQuote: false,
-	printWidth: 160,
+	trailingComma: "all",
+	printWidth: 90,
 	tabWidth: 4,
 	useTabs: true,
 	plugins: ["prettier-plugin-astro", "prettier-plugin-organize-imports"],

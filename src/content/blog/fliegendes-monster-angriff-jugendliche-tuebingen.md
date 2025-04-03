@@ -3,32 +3,32 @@ title: Mysteriöser Angriff in der Nähe von Tübingen
 description: "Schockierender Vorfall nahe Tübingen: Ein mysteriöses fliegendes Monster attackiert Jugendliche. Zwei Verletzte, viele Fragen. Die erschreckenden Details."
 headline: "Unerklärlicher Angriff in Tübingen: Mysteriöse Flugmonster attackieren junge Leute - Was steckt dahinter?"
 heroImage:
-  alt: "Eine künstlerische Darstellung der Kreatur, basierend auf den Beschreibungen der Gruppe. Hintergrund: Eine nächtliche Szenerie mit einem Vollmond und Wolken, die den Himmel bedecken. Sterne funkeln durch die Wolkenlücken, und die Silhouette eines Waldes ist am Horizont zu sehen"
-  url: /images/blog/mysterioese-fliegende-kreatur.webp
+    alt: "Eine künstlerische Darstellung der Kreatur, basierend auf den Beschreibungen der Gruppe. Hintergrund: Eine nächtliche Szenerie mit einem Vollmond und Wolken, die den Himmel bedecken. Sterne funkeln durch die Wolkenlücken, und die Silhouette eines Waldes ist am Horizont zu sehen"
+    url: /images/blog/mysterioese-fliegende-kreatur.webp
 pubDate: 2023-09-25
 place: Tübingen - Baden Württemberg - Deutschland
 tags:
-  - deutschland
-  - augenzeugenbericht
-  - badenwürttemberg
-  - badenwürttembergrätsel
-  - deutschlandmysteries
-  - echtegruselgeschichten
-  - flugmonster
-  - gruseligenächte
-  - jungeleuteingefahr
-  - monster
-  - monsterattacke
-  - mysteriöserangriff
-  - mystery
-  - nächtlicheralbtraum
-  - polizeiratlos
-  - schlaflosintübingen
-  - schlafmangelfolgen
-  - unerklärlicheereignisse
-  - unheimlichebegegnung
-  - waldabenteuer
-  - wasstecktdahinter
+    - deutschland
+    - augenzeugenbericht
+    - badenwürttemberg
+    - badenwürttembergrätsel
+    - deutschlandmysteries
+    - echtegruselgeschichten
+    - flugmonster
+    - gruseligenächte
+    - jungeleuteingefahr
+    - monster
+    - monsterattacke
+    - mysteriöserangriff
+    - mystery
+    - nächtlicheralbtraum
+    - polizeiratlos
+    - schlaflosintübingen
+    - schlafmangelfolgen
+    - unerklärlicheereignisse
+    - unheimlichebegegnung
+    - waldabenteuer
+    - wasstecktdahinter
 oldUrl: 2023-09-25-mysterioeser-angriff-in-der-naehe-von-tuebingen
 ---
 

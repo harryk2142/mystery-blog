@@ -4,20 +4,20 @@ description: "Ein grünes Rind, das Gitarre spielt? Entdecken Sie dieses einziga
 headline: "Ein ungewöhnliches Rind mit Rockstar-Ambitionen: Das grüne Rind, das Gitarre spielt"
 pubDate: 2023-07-09
 heroImage:
-  alt: Ein grünes Rind spielt auf der Weide auf einer Gitarre
-  url: /images/blog/gruenes-rind-mit-gitarre.webp
+    alt: Ein grünes Rind spielt auf der Weide auf einer Gitarre
+    url: /images/blog/gruenes-rind-mit-gitarre.webp
 place: Kuhlingen - Bayern - Deutschland
 tags:
-  - grünakord
-  - rind
-  - ungewöhnlichetalente
-  - muskalischesrind
-  - rockendesrind
-  - lustigetiere
-  - tierischemusik
-  - musikalischeswunder
-  - lustigerblogeintrag
-  - kuhlingen
+    - grünakord
+    - rind
+    - ungewöhnlichetalente
+    - muskalischesrind
+    - rockendesrind
+    - lustigetiere
+    - tierischemusik
+    - musikalischeswunder
+    - lustigerblogeintrag
+    - kuhlingen
 oldUrl: 2023-07-09-gruenes-rind-spielt-auf-gitarre
 ---
 

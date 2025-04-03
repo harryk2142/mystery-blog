@@ -6,20 +6,20 @@ type: default
 description: Ein anonym zugeschicktes Foto aus den sechziger Jahren zeigt Wissenschaftler, die ein Alien in einem großen Glastank untersuchen. Was steckt hinter diesem Bild?
 headline: "Das Geheimnis des außerirdischen Wesens im Glastank: Ein Fund aus den sechziger Jahren"
 heroImage:
-  alt: Ein Foto mit einer Gruppe von drei Wissenschaftlern in weißen Laborkitteln, die um einen großen Glastank stehen. Im Tank befindet sich ein außerirdisch aussehendes Wesen mit humanoiden Zügen. Das Wesen hat einen großen Kopf, dünne Gliedmaßen und eine schlanke, strukturierte Körperform.
-  url: /images/blog/foto-wissenschaftler-stehen-neben-alien.webp
+    alt: Ein Foto mit einer Gruppe von drei Wissenschaftlern in weißen Laborkitteln, die um einen großen Glastank stehen. Im Tank befindet sich ein außerirdisch aussehendes Wesen mit humanoiden Zügen. Das Wesen hat einen großen Kopf, dünne Gliedmaßen und eine schlanke, strukturierte Körperform.
+    url: /images/blog/foto-wissenschaftler-stehen-neben-alien.webp
 place: Forschungslabor aus den 1960ern - Irgendwo in den USA
 tags:
-  - außerirdisch
-  - dr-ernst-wahrhaft
-  - ernst-wahrhaft
-  - geheimnissedervergangenheit
-  - geheimprojekt
-  - mysterium
-  - sechzigerjahre
-  - ungeklärtephänomene
-  - wissenschaft
-  - alien
+    - außerirdisch
+    - dr-ernst-wahrhaft
+    - ernst-wahrhaft
+    - geheimnissedervergangenheit
+    - geheimprojekt
+    - mysterium
+    - sechzigerjahre
+    - ungeklärtephänomene
+    - wissenschaft
+    - alien
 ---
 
 Unsere Redaktion hat vor kurzem ein Foto erhalten, das mehr Fragen aufwirft, als es Antworten gibt. Das Bild, das offenbar aus den sechziger Jahren stammt, zeigt eine Gruppe von Wissenschaftlern in weißen Laborkitteln, die um einen großen Glastank versammelt sind. In diesem Tank befindet sich ein fremdartiges Wesen, das auf den ersten Blick wie ein außerirdisches Lebewesen wirkt.

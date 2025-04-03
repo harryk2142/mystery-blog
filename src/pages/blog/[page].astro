@@ -37,7 +37,9 @@ type Props = {
 };
 
 export async function getStaticPaths({ paginate }: any) {
-	const posts = (await getCollection("blog")).filter((e) => !e.data.draft).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+	const posts = (await getCollection("blog"))
+		.filter((e) => !e.data.draft)
+		.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 	return paginate(posts, { pageSize: 6 });
 }
@@ -70,8 +72,10 @@ const paginationProps = {
 ---
 
 <Default title={title} description={description}>
-	<section class="container">
-		<CenteredTitle id="" title={"Seite " + currentPage + " von " + lastPage} />
+	<section id="page-title-section" class="mt-1">
+		<CenteredTitle id="" text={"Seite " + currentPage + " von " + lastPage} />
+	</section>
+	<section>
 		<div id="top-pagination-container" class="flex center-x pagination-container">
 			<Pagination {...paginationProps} />
 		</div>

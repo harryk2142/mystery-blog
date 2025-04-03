@@ -5,16 +5,16 @@ description: Geheimnisvolle UFO-Sichtung in Kuhlingen! Entdecke den unglaubliche
 pubDate: 2022-11-19
 place: Kuhlingen - Bayern - Deutschland
 tags:
-  - außerirdische
-  - komödie
-  - kühe
-  - kuhlingen
-  - lustigerblogeintrag
-  - paranormal
-  - ufos
+    - außerirdische
+    - komödie
+    - kühe
+    - kuhlingen
+    - lustigerblogeintrag
+    - paranormal
+    - ufos
 heroImage:
-  alt: Eine Kuh schaut lustig in die Kamera. Im Hintergrund sind UFOs zu sehen.
-  url: /images/blog/ufos-mit-kuehen-auf-dem-feld.webp
+    alt: Eine Kuh schaut lustig in die Kamera. Im Hintergrund sind UFOs zu sehen.
+    url: /images/blog/ufos-mit-kuehen-auf-dem-feld.webp
 oldUrl: /2022-12-31-ufos-auf-dem-feld
 ---
 

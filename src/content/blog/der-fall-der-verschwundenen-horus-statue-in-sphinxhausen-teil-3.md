@@ -6,24 +6,24 @@ description: Erleben Sie die magische Rückkehr der Horus-Statue in Sphinxhausen
 headline: "Das weihnachtliche Wunder von Sphinxhausen: Die Rückkehr des Horus"
 place: Sphinxhausen - Bayern - Deutschland
 tags:
-  - dezembermysterium
-  - dr-helena-hieroglyph
-  - helena-hieroglyph
-  - horus
-  - horusgeheimnis
-  - horuszurückgekehrt
-  - horuszurueckgekehrt
-  - myra-mysteria
-  - mysterioeseerscheinung
-  - mysteriöseerscheinung
-  - mysteriösergeburtstag
-  - sphinxhausen
-  - sphinxhausenlegenden
-  - unerklärlichephänomene
-  - weihnachtswunder
+    - dezembermysterium
+    - dr-helena-hieroglyph
+    - helena-hieroglyph
+    - horus
+    - horusgeheimnis
+    - horuszurückgekehrt
+    - horuszurueckgekehrt
+    - myra-mysteria
+    - mysterioeseerscheinung
+    - mysteriöseerscheinung
+    - mysteriösergeburtstag
+    - sphinxhausen
+    - sphinxhausenlegenden
+    - unerklärlichephänomene
+    - weihnachtswunder
 heroImage:
-  alt: Magische nächtliche Szene in einem bayerischen Dorf mit der illuminierten Horus-Statue im Zentrum des Platzes, umgeben von staunenden Dorfbewohnern, vor dem Hintergrund traditioneller bayerischer Architektur unter einem Sternenhimmel.
-  url: /images/blog/mystische-erscheinung-horus-sphinxhausen.webp
+    alt: Magische nächtliche Szene in einem bayerischen Dorf mit der illuminierten Horus-Statue im Zentrum des Platzes, umgeben von staunenden Dorfbewohnern, vor dem Hintergrund traditioneller bayerischer Architektur unter einem Sternenhimmel.
+    url: /images/blog/mystische-erscheinung-horus-sphinxhausen.webp
 ---
 
 [Link zu Teil 1](./der-fall-der-verschwundenen-horus-statue-in-sphinxhausen.md)

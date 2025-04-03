@@ -4,20 +4,20 @@ pubDate: 2024-05-13T15:09:43.990Z
 updateDate: 2024-05-13T15:09:43.990Z
 type: default
 heroImage:
-  url: /images/blog/nachtszene-auf-einem-spargelfeld-mit-geisterhaften-erscheinungen-und-unerklaerlichen-lichtern.webp
-  alt: Hier ist das Bild, das zu deinem Artikel über das mysteriöse Geschehen in den Spargelfeldern von Beelitz passt. Es zeigt die nächtliche Szene mit den geisterhaften Erscheinungen und den unerklärlichen Lichtern, genau wie beschrieben.
+    url: /images/blog/nachtszene-auf-einem-spargelfeld-mit-geisterhaften-erscheinungen-und-unerklaerlichen-lichtern.webp
+    alt: Hier ist das Bild, das zu deinem Artikel über das mysteriöse Geschehen in den Spargelfeldern von Beelitz passt. Es zeigt die nächtliche Szene mit den geisterhaften Erscheinungen und den unerklärlichen Lichtern, genau wie beschrieben.
 description: Geister stören die Spargelernte in Beelitz. Clara Feldweg vor Ort. Kann sie das Rätsel der Spargelfelder lösen, bevor die Geister wieder verschwinden?
 headline: "Der Spuk im Spargelfeld: Ein phantastisches Mai-Rätsel in Beelitz"
 place: Beelitz - Brandenburg - Deutschland
 tags:
-  - beelitz
-  - brandenburg
-  - clara-feldweg
-  - deutschland
-  - mystery
-  - paranormalephänomene
-  - spukimspargelfeld
-  - geister
+    - beelitz
+    - brandenburg
+    - clara-feldweg
+    - deutschland
+    - mystery
+    - paranormalephänomene
+    - spukimspargelfeld
+    - geister
 ---
 
 Die Spargelsaison in Beelitz ist eine Zeit der Freude und des Genusses, berühmt für ihre erlesenen weißen Stangen, die Feinschmecker aus ganz Deutschland anziehen. Doch dieses Jahr liegt ein Schatten über den sonnenbeschienenen Feldern. Unheimliche Sichtungen und rätselhafte Ereignisse stören die sonst so friedliche Ernte. Clara Feldweg, eine Lokalreporterin mit einer Vorliebe für das Paranormale, hat es sich zur Aufgabe gemacht, dieses Mysterium zu ergründen.

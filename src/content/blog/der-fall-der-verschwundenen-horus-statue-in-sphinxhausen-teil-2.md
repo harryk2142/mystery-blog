@@ -6,23 +6,23 @@ description: "Spannung in Sphinxhausen: Anzeichen deuten auf die baldige Rückke
 headline: "Das bevorstehende Wunder von Sphinxhausen - Die Rückkehr von Horus"
 place: Sphinxhausen - Bayern - Deutschland
 heroImage:
-  alt: Fröhliche kleine Gruppe in traditioneller bayerischer und winterlicher Kleidung, die bei sanfter Beleuchtung in Sphinxhausen zusammensteht, lachend und warme Getränke haltend, in Erwartung der Rückkehr der Horus-Statue.
-  url: /images/blog/fröhliche-menschen-sphinxhausen-vorfreude-horus.webp
+    alt: Fröhliche kleine Gruppe in traditioneller bayerischer und winterlicher Kleidung, die bei sanfter Beleuchtung in Sphinxhausen zusammensteht, lachend und warme Getränke haltend, in Erwartung der Rückkehr der Horus-Statue.
+    url: /images/blog/fröhliche-menschen-sphinxhausen-vorfreude-horus.webp
 tags:
-  - ägyptischemythen
-  - antikegöttermodernerätsel
-  - bayern
-  - dezembermysterium
-  - dr-helena-hieroglyph
-  - helena-hieroglyph
-  - horus
-  - horusgeheimnis
-  - myra-mysteria
-  - mysteriösergeburtstag
-  - sphinxhausen
-  - sphinxhausenlegenden
-  - sphinxhausenprophezeiung
-  - unerklärlichephänomene
+    - ägyptischemythen
+    - antikegöttermodernerätsel
+    - bayern
+    - dezembermysterium
+    - dr-helena-hieroglyph
+    - helena-hieroglyph
+    - horus
+    - horusgeheimnis
+    - myra-mysteria
+    - mysteriösergeburtstag
+    - sphinxhausen
+    - sphinxhausenlegenden
+    - sphinxhausenprophezeiung
+    - unerklärlichephänomene
 ---
 
 [Zu Teil 1 der Geschichte](./der-fall-der-verschwundenen-horus-statue-in-sphinxhausen.md)

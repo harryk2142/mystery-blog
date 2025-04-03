@@ -1,14 +1,12 @@
 ---
 import Matomo from "./Matomo.astro";
 const yyyymmdd = function (date: Date) {
-  var mm = date.getMonth() + 1; // getMonth() is zero-based
-  var dd = date.getDate();
+	var mm = date.getMonth() + 1; // getMonth() is zero-based
+	var dd = date.getDate();
 
-  return [
-    date.getFullYear(),
-    (mm > 9 ? "" : "0") + mm,
-    (dd > 9 ? "" : "0") + dd,
-  ].join("");
+	return [date.getFullYear(), (mm > 9 ? "" : "0") + mm, (dd > 9 ? "" : "0") + dd].join(
+		"",
+	);
 };
 const today = new Date();
 const version = yyyymmdd(today);
@@ -16,31 +14,30 @@ const isDev = import.meta.env.DEV;
 ---
 
 <footer>
-  <div>
-    <span>
-      &copy; {today.getFullYear()} Kramer. V {version}
-      {isDev && <span>DEV</span>}
-    </span>
-  </div>
+	<div>
+		<span>
+			&copy; {today.getFullYear()} Kramer. V {version}
+			{isDev && <span>DEV</span>}
+		</span>
+	</div>
 </footer>
 <Matomo />
 
 <style>
-  footer {
-    background: linear-gradient(var(--gray-gradient)) no-repeat;
-    color: rgb(var(--accent));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    position: sticky;
-    bottom: 0;
-    width: 100%;
-    font-size: 1rem;
-  }
+	footer {
+		background: linear-gradient(var(--gray-gradient)) no-repeat;
+		color: rgb(var(--accent));
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		font-size: 1rem;
+	}
 </style>
 <style is:inline>
-  *:has(+ footer) {
-    margin-bottom: 1rem;
-  }
+	*:has(+ footer) {
+		margin-bottom: 1rem;
+	}
 </style>

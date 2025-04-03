@@ -4,20 +4,20 @@ description: "Ein Wunder der Natur: Es wurden Gitarre spielende Fische im Lake T
 headline: Wow - Gitarre spielende Fische im Lake Tahoe entdeckt
 pubDate: 2023-02-11
 heroImage:
-  alt: Zwei Fische spielen Gitarre
-  url: /images/blog/fische-spielen-gitarre.webp
+    alt: Zwei Fische spielen Gitarre
+    url: /images/blog/fische-spielen-gitarre.webp
 place: Lake Tahoe - Kalifornien, Nevada, USA
 tags:
-  - entdeckung
-  - fische
-  - laketahoe
-  - lustigerblogeintrag
-  - lustigetiere
-  - musik
-  - musikalischeswunder
-  - tierischemusik
-  - ungewoehnlichetalente
-  - ungewöhnlichetalente
+    - entdeckung
+    - fische
+    - laketahoe
+    - lustigerblogeintrag
+    - lustigetiere
+    - musik
+    - musikalischeswunder
+    - tierischemusik
+    - ungewoehnlichetalente
+    - ungewöhnlichetalente
 oldUrl: 2023-02-11-fische-spielen-gitarre
 ---
 

@@ -2,8 +2,8 @@
 import type { JSX } from "astro/jsx-runtime";
 type ImgAttributes = JSX.ImgHTMLAttributes;
 type Props = {
-  src: string;
-  alt: string;
+	src: string;
+	alt: string;
 } & ImgAttributes;
 
 const { alt, src, ...imgAttrs } = Astro.props;
@@ -14,10 +14,10 @@ const sizes = "auto";
 ---
 
 <img
-  srcset={srcSet}
-  src={smallImage}
-  sizes={sizes}
-  alt={alt}
-  {...imgAttrs}
-  loading="lazy"
+	srcset={srcSet}
+	src={smallImage}
+	sizes={sizes}
+	alt={alt}
+	{...imgAttrs}
+	loading="lazy"
 />

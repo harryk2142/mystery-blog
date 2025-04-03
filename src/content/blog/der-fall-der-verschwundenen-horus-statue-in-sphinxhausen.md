@@ -6,23 +6,23 @@ description: Entdecken Sie das rätselhafte Verschwinden der Horus-Statue in Sph
 headline: Der mysteriöse Fall der verschwundenen Horus-Statue in Sphinxhausen, Bayern
 place: Sphinxhausen - Bayern - Deutschland
 heroImage:
-  alt: Eine Menschengruppe mit Winterklamotten steht auf dem Marktplatz in einem verschneiten bayerischen Dorf
-  url: /images/blog/menschen-in-wintersachen-auf-dem-marktplatz-im-verschneiten-bayerischen-dorf.webp
+    alt: Eine Menschengruppe mit Winterklamotten steht auf dem Marktplatz in einem verschneiten bayerischen Dorf
+    url: /images/blog/menschen-in-wintersachen-auf-dem-marktplatz-im-verschneiten-bayerischen-dorf.webp
 tags:
-  - ägyptischemythen
-  - antikegöttermodernerätsel
-  - bayern
-  - dezembermysterium
-  - dr-helena-hieroglyph
-  - helena-hieroglyph
-  - horus
-  - horusgeheimnis
-  - ikarus-flügelmann
-  - myra-mysteria
-  - mysteriösergeburtstag
-  - sphinxhausen
-  - sphinxhausenlegenden
-  - unerklärlichephänomene
+    - ägyptischemythen
+    - antikegöttermodernerätsel
+    - bayern
+    - dezembermysterium
+    - dr-helena-hieroglyph
+    - helena-hieroglyph
+    - horus
+    - horusgeheimnis
+    - ikarus-flügelmann
+    - myra-mysteria
+    - mysteriösergeburtstag
+    - sphinxhausen
+    - sphinxhausenlegenden
+    - unerklärlichephänomene
 ---
 
 In Sphinxhausen, einem verträumten Städtchen im Herzen Bayerns, herrschte Aufregung. Die bevorstehende Feier zum Geburtstag von Horus, dem ägyptischen Falkengott, stand kurz bevor. Doch eine Woche vor dem großen Tag, am 17. Dezember, geschah etwas Unerwartetes, das die Stadt in ein Mysterium hüllte.

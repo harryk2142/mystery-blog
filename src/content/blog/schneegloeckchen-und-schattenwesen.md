@@ -5,21 +5,21 @@ updateDate: 2025-03-22T13:28:38.294Z
 description: In Blütenfeld erwacht der Frühling – und mit ihm ein uraltes Wesen, das mit den ersten Schneeglöckchen erscheint. Was steckt hinter den seltsamen Sichtungen im Wald? Und warum spricht niemand über das, was im März 1973 geschah?
 headline: Schneeglöckchen und Schattenwesen – Wenn der Frühling etwas Düsteres weckt 🌸
 heroImage:
-  url: /images/blog/geheimnisvoller-fruehlingswald-schneegloeckchen-daemmerung.webp
-  alt: Geheimnisvoller Frühlingswald bei Morgendämmerung mit goldenem Licht, blühenden Schneeglöckchen und einer schemenhaften Gestalt im Hintergrund.
+    url: /images/blog/geheimnisvoller-fruehlingswald-schneegloeckchen-daemmerung.webp
+    alt: Geheimnisvoller Frühlingswald bei Morgendämmerung mit goldenem Licht, blühenden Schneeglöckchen und einer schemenhaften Gestalt im Hintergrund.
 place: Blütenfeld bei Nebelgau - Baden Württemberg - Deutschland
 tags:
-  - bluetenfeld
-  - bluetenfeldchroniken
-  - blütenfeld
-  - ernst-haft
-  - frieda-unterholz
-  - interviewmitderhexe
-  - mysterymaerz
-  - schattenwesen
-  - schneeglöckchen
-  - schneegloeckchen
-  - spukimwald
+    - bluetenfeld
+    - bluetenfeldchroniken
+    - blütenfeld
+    - ernst-haft
+    - frieda-unterholz
+    - interviewmitderhexe
+    - mysterymaerz
+    - schattenwesen
+    - schneeglöckchen
+    - schneegloeckchen
+    - spukimwald
 ---
 
 ## In Blütenfeld bei Nebelgau blüht mehr als nur die Natur…

@@ -1,1 +1,21 @@
-{"projekte":{"dark-aurora":{"mystery-blog":{"src":{},"cms":{"images":{}},"public":{"images":{"blog":{"verschneites-mystisches-dorf-mit-verhüllten-gestalten-bei-nacht.webp":{"title":"","caption":"","alt":""}}}}}}}}
+{
+	"projekte": {
+		"dark-aurora": {
+			"mystery-blog": {
+				"src": {},
+				"cms": { "images": {} },
+				"public": {
+					"images": {
+						"blog": {
+							"verschneites-mystisches-dorf-mit-verhüllten-gestalten-bei-nacht.webp": {
+								"title": "",
+								"caption": "",
+								"alt": ""
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

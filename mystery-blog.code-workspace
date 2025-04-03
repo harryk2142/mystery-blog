@@ -1,72 +1,75 @@
 {
-  "folders": [
-    {
-      "path": ".",
-    },
-    // {
-    // 	"name": "mystery-blog",
-    // 	"path": "mystery-blog"
-    // }
-  ],
-  "settings": {
-    "markdown.suggest.paths.enabled": true,
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit"
-    },
-    "prettier.configPath": "prettier.config.js",
-    "prettier.printWidth": 100,
-    "prettier.requireConfig": true,
-    "[markdown]": {
-      "editor.fontSize": 14,
-      "editor.lineHeight": 26,
-      "editor.wordWrap": "wordWrapColumn",
-      "editor.wordWrapColumn": 64,
-      "editor.lineNumbers": "on",
-      "editor.quickSuggestions": {
-        "comments": "on",
-        "strings": "on",
-        "other": "on",
-      },
-      "editor.minimap.enabled": false,
-    },
-    "[typescript]": {
-      "editor.formatOnSave": true,
-      "editor.defaultFormatter": "esbenp.prettier-vscode",
-      "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": "explicit",
-        "source.organizeImports": "explicit",
-        "source.fixAll": "explicit"
-      }
-    },
-    "[astro]": {
-      "editor.formatOnSave": true,
-      "editor.defaultFormatter": "esbenp.prettier-vscode",
-      "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": "explicit",
-        "source.organizeImports": "explicit",
-      },
-    },
-    "workbench.colorTheme": "Astronaut",
-    "workbench.colorCustomizations": {
-      "activityBar.activeBackground": "#1a1a1a",
-      "activityBar.background": "#1a1a1a",
-      "activityBar.foreground": "#e7e7e7",
-      "activityBar.inactiveForeground": "#e7e7e799",
-      "activityBarBadge.background": "#606020",
-      "activityBarBadge.foreground": "#e7e7e7",
-      "commandCenter.border": "#e7e7e799",
-      "sash.hoverBorder": "#1a1a1a",
-      "statusBar.background": "#000000",
-      "statusBar.foreground": "#e7e7e7",
-      "statusBarItem.hoverBackground": "#1a1a1a",
-      "statusBarItem.remoteBackground": "#000000",
-      "statusBarItem.remoteForeground": "#e7e7e7",
-      "titleBar.activeBackground": "#000000",
-      "titleBar.activeForeground": "#e7e7e7",
-      "titleBar.inactiveBackground": "#00000099",
-      "titleBar.inactiveForeground": "#e7e7e799"
-    },
-    "peacock.color": "black",
-  },
+	"folders": [
+		{
+			"path": ".",
+		},
+		// {
+		// 	"name": "mystery-blog",
+		// 	"path": "mystery-blog"
+		// }
+	],
+	"settings": {
+		"markdown.suggest.paths.enabled": true,
+		"editor.formatOnSave": true,
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": "explicit",
+		},
+		"prettier.configPath": "prettier.config.js",
+		"prettier.printWidth": 80,
+		"prettier.requireConfig": true,
+		"[markdown]": {
+			"editor.fontSize": 14,
+			"editor.lineHeight": 26,
+			"editor.wordWrap": "wordWrapColumn",
+			"editor.wordWrapColumn": 64,
+			"editor.lineNumbers": "on",
+			"editor.quickSuggestions": {
+				"comments": "on",
+				"strings": "on",
+				"other": "on",
+			},
+			"editor.minimap.enabled": false,
+		},
+		"[typescript]": {
+			"editor.formatOnSave": true,
+			"editor.defaultFormatter": "esbenp.prettier-vscode",
+			"editor.codeActionsOnSave": {
+				"source.fixAll.eslint": "explicit",
+				"source.organizeImports": "explicit",
+				"source.fixAll": "explicit",
+			},
+		},
+		"[astro]": {
+			"editor.formatOnSave": true,
+			"editor.defaultFormatter": "astro-build.astro-vscode",
+			"editor.codeActionsOnSave": {
+				"source.fixAll.eslint": "explicit",
+				"source.organizeImports": "explicit",
+			},
+		},
+		"workbench.colorTheme": "Astronaut",
+		"workbench.colorCustomizations": {
+			"activityBar.activeBackground": "#1a1a1a",
+			"activityBar.background": "#1a1a1a",
+			"activityBar.foreground": "#e7e7e7",
+			"activityBar.inactiveForeground": "#e7e7e799",
+			"activityBarBadge.background": "#606020",
+			"activityBarBadge.foreground": "#e7e7e7",
+			"commandCenter.border": "#e7e7e799",
+			"sash.hoverBorder": "#1a1a1a",
+			"statusBar.background": "#000000",
+			"statusBar.foreground": "#e7e7e7",
+			"statusBarItem.hoverBackground": "#1a1a1a",
+			"statusBarItem.remoteBackground": "#000000",
+			"statusBarItem.remoteForeground": "#e7e7e7",
+			"titleBar.activeBackground": "#000000",
+			"titleBar.activeForeground": "#e7e7e7",
+			"titleBar.inactiveBackground": "#00000099",
+			"titleBar.inactiveForeground": "#e7e7e799"
+		},
+		"peacock.color": "black",
+	},
+	"extensions": {
+		"recommendations": [],
+	},
 }

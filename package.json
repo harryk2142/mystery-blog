@@ -1,63 +1,63 @@
 {
-  "name": "mystery-blog",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "concurrently \"astro dev\" \"firebase emulators:start\"",
-    "build": "astro check && astro build && npm run postbuild",
-    "postbuild": "pagefind --site dist/ --output-subdir _pagefind",
-    "preview": "concurrently \"astro preview\" \"firebase emulators:start\"",
-    "astro": "astro",
-    "copy-content": "node npm-scripts/copy-content.js",
-    "create-images": "node npm-scripts/create-images.js",
-    "update-cms": "npm run create-images && npm run copy-content",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier --write .",
-    "pagefind:update-public": "npm run build && pagefind --site dist/ --output-subdir ../public/_pagefind"
-  },
-  "dependencies": {
-    "@astrojs/check": "0.9.4",
-    "@astrojs/mdx": "4.2.1",
-    "@astrojs/preact": "4.0.6",
-    "@astrojs/rss": "4.0.11",
-    "astro": "5.5.4",
-    "preact": "10.26.4"
-  },
-  "devDependencies": {
-    "@astrojs/markdown-remark": "6.3.1",
-    "@astrojs/sitemap": "3.3.0",
-    "@frontmatter/extensibility": "0.0.18",
-    "astro-rehype-relative-markdown-links": "0.18.1",
-    "canvas-confetti": "1.9.3",
-    "concurrently": "9.1.2",
-    "dotenv": "16.4.7",
-    "firebase": "11.5.0",
-    "firebase-tools": "13.35.1",
-    "pagefind": "1.3.0",
-    "prettier": "3.5.3",
-    "prettier-plugin-astro": "0.14.1",
-    "prettier-plugin-organize-imports": "4.1.0",
-    "redom": "4.3.0",
-    "rehype": "13.0.2",
-    "sharp": "0.33.5",
-    "typescript": "5.8.2",
-    "umbrellajs": "3.3.3"
-  },
-  "pnpm": {
-    "ignoredBuiltDependencies": [
-      "@firebase/util",
-      "esbuild",
-      "protobufjs",
-      "re2",
-      "sharp"
-    ],
-    "onlyBuiltDependencies": [
-      "@firebase/util",
-      "esbuild",
-      "protobufjs",
-      "re2",
-      "sharp"
-    ]
-  }
+	"name": "mystery-blog",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "concurrently \"astro dev\" \"firebase emulators:start\"",
+		"build": "astro check && astro build && npm run postbuild",
+		"postbuild": "pagefind --site dist/ --output-subdir _pagefind",
+		"preview": "concurrently \"astro preview\" \"firebase emulators:start\"",
+		"astro": "astro",
+		"copy-content": "node npm-scripts/copy-content.js",
+		"create-images": "node npm-scripts/create-images.js",
+		"update-cms": "npm run create-images && npm run copy-content",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"format": "prettier --write .",
+		"pagefind:update-public": "npm run build && pagefind --site dist/ --output-subdir ../public/_pagefind"
+	},
+	"dependencies": {
+		"@astrojs/check": "0.9.4",
+		"@astrojs/mdx": "4.2.1",
+		"@astrojs/preact": "4.0.6",
+		"@astrojs/rss": "4.0.11",
+		"astro": "5.5.4",
+		"preact": "10.26.4"
+	},
+	"devDependencies": {
+		"@astrojs/markdown-remark": "6.3.1",
+		"@astrojs/sitemap": "3.3.0",
+		"@frontmatter/extensibility": "0.0.18",
+		"astro-rehype-relative-markdown-links": "0.18.1",
+		"canvas-confetti": "1.9.3",
+		"concurrently": "9.1.2",
+		"dotenv": "16.4.7",
+		"firebase": "11.5.0",
+		"firebase-tools": "13.35.1",
+		"pagefind": "1.3.0",
+		"prettier": "3.5.3",
+		"prettier-plugin-astro": "0.14.1",
+		"prettier-plugin-organize-imports": "4.1.0",
+		"redom": "4.3.0",
+		"rehype": "13.0.2",
+		"sharp": "0.33.5",
+		"typescript": "5.8.2",
+		"umbrellajs": "3.3.3"
+	},
+	"pnpm": {
+		"ignoredBuiltDependencies": [
+			"@firebase/util",
+			"esbuild",
+			"protobufjs",
+			"re2",
+			"sharp"
+		],
+		"onlyBuiltDependencies": [
+			"@firebase/util",
+			"esbuild",
+			"protobufjs",
+			"re2",
+			"sharp"
+		]
+	}
 }

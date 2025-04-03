@@ -4,17 +4,17 @@ description: Druckerprobleme im Büro? Könnten Geister schuld sein? Entdecken S
 headline: "Geister im Büro: Warum Ihr Drucker wirklich immer klemmt"
 pubDate: 2023-09-24
 heroImage:
-  alt: Ein mysteriöses Ding, das wie eine Mischung aus einem Alien, einem Roboter und einem Kristall aussieht. Schwebend über dem Boden.
-  url: /images/blog/ein-geist-in-einem-office.webp
+    alt: Ein mysteriöses Ding, das wie eine Mischung aus einem Alien, einem Roboter und einem Kristall aussieht. Schwebend über dem Boden.
+    url: /images/blog/ein-geist-in-einem-office.webp
 place: Nebelstein, Schattenburg - Bayern - Deutschland
 tags:
-  - deutschland
-  - geist
-  - geister
-  - geistergeschichten
-  - gerhard-glotzauge
-  - mystery
-  - office schattenburg
+    - deutschland
+    - geist
+    - geister
+    - geistergeschichten
+    - gerhard-glotzauge
+    - mystery
+    - office schattenburg
 oldUrl: 2023-09-24-geist-in-einem-office
 ---
 

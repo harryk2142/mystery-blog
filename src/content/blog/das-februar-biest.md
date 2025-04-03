@@ -5,20 +5,20 @@ updateDate: 2025-02-23T16:47:31.000Z
 headline: "Das Februar-Biest: Wenn der Winter nicht das Einzige ist, das dich jagt"
 description: Entdecke die düstere Legende des Februar-Biestes! Jedes Jahr verschwinden Menschen in Eisfelden - spurlos. Ist es ein Fluch oder ein Wesen aus Schnee und Schatten?
 heroImage:
-  alt: „Düstere, verschneite Waldlandschaft in der Nacht mit einer verlassenen Hütte im Hintergrund. Riesige, krallenartige Fußspuren im Schnee führen ins Dunkel, aus dem rote Augen bedrohlich leuchten.“
-  url: /images/blog/dunkler-winterwald-geheimnisvolle-fussspuren.webp
+    alt: „Düstere, verschneite Waldlandschaft in der Nacht mit einer verlassenen Hütte im Hintergrund. Riesige, krallenartige Fußspuren im Schnee führen ins Dunkel, aus dem rote Augen bedrohlich leuchten.“
+    url: /images/blog/dunkler-winterwald-geheimnisvolle-fussspuren.webp
 tags:
-  - bayern
-  - deutschland
-  - eisfelden
-  - hella-kälte
-  - herr-frost
-  - karl-heinz-zittrig
-  - monsterimschnee
-  - mystery
-  - unheimlichelegenden
-  - verschwundenimnichts
-  - winteralbtraum
+    - bayern
+    - deutschland
+    - eisfelden
+    - hella-kälte
+    - herr-frost
+    - karl-heinz-zittrig
+    - monsterimschnee
+    - mystery
+    - unheimlichelegenden
+    - verschwundenimnichts
+    - winteralbtraum
 place: Eisfelden - Bayern - Deutschland
 ---
 

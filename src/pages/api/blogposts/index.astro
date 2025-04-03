@@ -3,27 +3,25 @@ import { getCollection } from "astro:content";
 import Meta from "../../../components/Meta.astro";
 
 const posts = (await getCollection("blog"))
-  .filter((e) => !e.data.draft)
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .flatMap((post) => {
-    return {
-      title: post.data.title,
-      headline: post.data.headline,
-      img: post.data.heroImage.url.replace("/./../../images", "/images"),
-      alt: post.data.heroImage.alt,
-      pubDate: post.data.pubDate,
-      url: post.slug,
-    };
-  });
+	.filter((e) => !e.data.draft)
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+	.flatMap((post) => {
+		return {
+			title: post.data.title,
+			headline: post.data.headline,
+			img: post.data.heroImage.url.replace("/./../../images", "/images"),
+			alt: post.data.heroImage.alt,
+			pubDate: post.data.pubDate,
+			url: post.slug,
+		};
+	});
 ---
 
 <!doctype html>
 <html lang="de">
-  <head>
-    <Meta
-      title={"json of all blogposts"}
-      description={"json of all blogposts"}
-    />
-  </head>
-  <body data-pagefind-ignore> {JSON.stringify(posts)} </body>
+	<head>
+		<title>JSON of all blogposts</title>
+		<Meta title={"json of all blogposts"} description={"json of all blogposts"} />
+	</head>
+	<body data-pagefind-ignore> {JSON.stringify(posts)} </body>
 </html>

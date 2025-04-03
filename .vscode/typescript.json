@@ -1,0 +1,263 @@
+{
+	"Import Preact": {
+		"scope": "TypeScript",
+		"prefix": "imp",
+		"body": ["import { h } from 'preact';\n"],
+		"description": "Import Preact h function"
+	},
+	"Import Preact Component": {
+		"prefix": "impc",
+		"body": ["import { h, Component } from 'preact';\n"],
+		"description": "Import Preact, { Component }"
+	},
+	"Import Preact Hooks": {
+		"prefix": "imph",
+		"body": [
+			"import { h } from 'preact';\n",
+			"import { useState, useEffect } from 'preact/hooks';\n"
+		],
+		"description": "Import Preact with hooks"
+	},
+	"Import Preact useState": {
+		"prefix": "imps",
+		"body": [
+			"import { h } from 'preact';\n",
+			"import { useState } from 'preact/hooks';\n"
+		],
+		"description": "Import Preact with useState hook"
+	},
+	"Import Preact useState, useEffect": {
+		"prefix": "impse",
+		"body": [
+			"import { h } from 'preact';\n",
+			"import { useState, useEffect } from 'preact/hooks';\n"
+		],
+		"description": "Import Preact with useState and useEffect hooks"
+	},
+	"Import Preact/compat": {
+		"prefix": "impr",
+		"body": ["import { createElement } from 'preact/compat';\n"],
+		"description": "Import Preact/compat for React compatibility"
+	},
+	"Class Component": {
+		"prefix": "cc",
+		"body": [
+			"interface ${1:ComponentName}Props {\n",
+			"\t${2:// Props definition}\n",
+			"}\n",
+			"interface ${1:ComponentName}State {\n",
+			"\t${3:count: number;}\n",
+			"}\n",
+			"class ${1:ComponentName} extends Component<${1:ComponentName}Props, ${1:ComponentName}State> {\n",
+			"\tstate = { ${4:count}: ${5:0} }\n",
+			"\trender() {\n",
+			"\t\treturn ($0);\n",
+			"\t}\n",
+			"}\n",
+			"export default ${1:ComponentName};"
+		],
+		"description": "Class Component"
+	},
+	"Class Component Constructor": {
+		"prefix": "ccc",
+		"body": [
+			"interface ${1:ComponentName}Props {\n",
+			"\t${2:// Props definition}\n",
+			"}\n",
+			"interface ${1:ComponentName}State {\n",
+			"\t${3:count: number;}\n",
+			"}\n",
+			"class ${1:ComponentName} extends Component<${1:ComponentName}Props, ${1:ComponentName}State> {\n",
+			"\tconstructor(props: ${1:ComponentName}Props) {\n",
+			"\t\tsuper(props);\n",
+			"\t\tthis.state = { ${4:count}: ${5:0} };\n",
+			"\t}\n",
+			"\trender() {\n",
+			"\t\treturn ($0);\n",
+			"\t}\n",
+			"}\n",
+			"export default ${1:ComponentName};"
+		],
+		"description": "Class Component with Constructor"
+	},
+	"Function Component": {
+		"prefix": "fc",
+		"body": [
+			"interface ${1:ComponentName}Props {\n",
+			"\t${2:// Props definition}\n",
+			"}\n",
+			"import { FunctionComponent } from 'preact';\n",
+			"const ${1:ComponentName}: FunctionComponent<${1:ComponentName}Props> = (${3:props}) => {\n",
+			"\treturn ($0);\n",
+			"}\n",
+			"export default ${1:ComponentName};"
+		],
+		"description": "Function Component"
+	},
+	"Function Syntax Component": {
+		"prefix": "fsc",
+		"body": [
+			"function ${1:ComponentName}(${2:props}) {\n",
+			"\treturn ($0);\n",
+			"}\n",
+			"export default ${1:ComponentName};"
+		],
+		"description": "Function Syntax Component"
+	},
+	"Functional Component": {
+		"prefix": "fc",
+		"body": [
+			"const ${1:ComponentName} = (${2:props}) => {\n",
+			"\treturn ($0);\n",
+			"}\n",
+			"export default ${1:ComponentName};"
+		],
+		"description": "Functional Component"
+	},
+	"Named Functional Component": {
+		"prefix": "nfc",
+		"body": [
+			"type Props = {\n",
+			"\t${1:// Props definition}\n",
+			"}\n",
+			"export const ${2:ComponentName} = ({${3:props}}: Props) => {\n",
+			"\treturn (\n",
+			"\t\t<div>\n",
+			"\t\t\t$0\n",
+			"\t\t</div>\n",
+			"\t);\n",
+			"}"
+		],
+		"description": "Named Functional Component"
+	},
+	"componentDidMount": {
+		"prefix": "cdm",
+		"body": ["componentDidMount() {\n", "\t$0\n", "}"],
+		"description": "componentDidMount"
+	},
+	"useEffect": {
+		"prefix": "uef",
+		"body": ["useEffect(() => {\n", "\t${1:// Effect code here}\n", "}, []);"],
+		"description": "useEffect Hook"
+	},
+	"useCallback": {
+		"prefix": "ucb",
+		"body": [
+			"useCallback((${1:value}) => {\n",
+			"\t${2:// Callback code here}\n",
+			"}, []);"
+		],
+		"description": "useCallback Hook"
+	},
+	"shouldComponentUpdate": {
+		"prefix": "scu",
+		"body": [
+			"shouldComponentUpdate(nextProps: $1Props, nextState: $1State) {\n",
+			"\t$0\n",
+			"}"
+		],
+		"description": "shouldComponentUpdate"
+	},
+	"componentDidUpdate": {
+		"prefix": "cdu",
+		"body": [
+			"componentDidUpdate(prevProps: $1Props, prevState: $1State) {\n",
+			"\t$0\n",
+			"}"
+		],
+		"description": "componentDidUpdate"
+	},
+	"componentWillUnmount": {
+		"prefix": "cwun",
+		"body": ["componentWillUnmount() {\n", "\t$0\n", "}"],
+		"description": "componentWillUnmount"
+	},
+	"setState": {
+		"prefix": "ss",
+		"body": ["this.setState({ ${1:property}: ${2:value} });"],
+		"description": "setState"
+	},
+	"Functional setState": {
+		"prefix": "ssf",
+		"body": [
+			"this.setState((prevState: ${1:Component}State) => {\n",
+			"\treturn { ${2:property}: prevState.${2:property} };\n",
+			"});"
+		],
+		"description": "Functional setState"
+	},
+	"Declare a new state variable using State Hook": {
+		"prefix": "usf",
+		"body": ["const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState<$2>($3);"],
+		"description": "Declare a new state Variable using the State Hook with TypeScript"
+	},
+	"Declare a new ref variable using Ref Hook": {
+		"prefix": "usr",
+		"body": ["const ${1:refName} = useRef<${2:HTMLDivElement}>(${3:null});"],
+		"description": "Declare a new ref Variable using the Ref Hook with TypeScript"
+	},
+	"render": {
+		"prefix": "ren",
+		"body": ["render() {\n", "\treturn (\n", "\t\t$0\n", "\t);\n", "}"],
+		"description": "render"
+	},
+	"Context Provider": {
+		"prefix": "cp",
+		"body": [
+			"import { createContext } from 'preact';\n",
+			"import { FunctionComponent } from 'preact';\n",
+			"\n",
+			"interface ${1:App}ContextType {\n",
+			"\tstate: ${1:App}State;\n",
+			"\t${2:updateState}: (${3:payload}: any) => void;\n",
+			"}\n",
+			"\n",
+			"interface ${1:App}State {\n",
+			"\t${4:count}: ${5:number};\n",
+			"}\n",
+			"\n",
+			"export const ${1:App}Context = createContext<${1:App}ContextType | undefined>(undefined);\n",
+			"\n",
+			"interface ${1:App}ProviderProps {\n",
+			"\tchildren: preact.ComponentChildren;\n",
+			"}\n",
+			"\n",
+			"const ${1:App}Provider: FunctionComponent<${1:App}ProviderProps> = ({ children }) => {\n",
+			"\t// Initial Provider State\n",
+			"\tconst [state, setState] = useState<${1:App}State>({ ${4:count}: ${5:0} });\n",
+			"\n",
+			"\t// Action Function\n",
+			"\tconst ${2:updateState} = (${3:payload}: any) => {\n",
+			"\t\t$0\n",
+			"\t};\n",
+			"\n",
+			"\treturn (\n",
+			"\t\t<${1:App}Context.Provider value={{ state, ${2:updateState} }}>\n",
+			"\t\t\t{children}\n",
+			"\t\t</${1:App}Context.Provider>\n",
+			"\t);\n",
+			"};\n",
+			"\n",
+			"export default ${1:App}Provider;"
+		],
+		"description": "Context Provider with TypeScript"
+	},
+	"Class Property Function": {
+		"prefix": "cpf",
+		"body": [
+			"${1:handleEvent} = (${2:e${TM_SELECTED_TEXT}}: ${3:Event}) => {\n",
+			"\t$0\n",
+			"};"
+		],
+		"description": "Class Property Function with TypeScript"
+	},
+	"Function Syntax Component Inline": {
+		"prefix": "efsc",
+		"body": [
+			"export default function ${1:ComponentName}(${2:props}) {\n",
+			"\treturn ($0);\n",
+			"}"
+		],
+		"description": "Function Syntax Component Inline"
+	}
+}

@@ -5,21 +5,21 @@ updateDate: 2024-02-03T10:43:47.822Z
 description: Unweit des kleinen Dorfes Wüstlingen ist über Nacht ein metallischer Monolith erschienen. Was ist sein Zweck, seine Herkunft, seine Botschaft?
 headline: Der Monolith von Wüstlingen - Ein Interview mit dem Entdecker Herrn Sandro Steinblick
 heroImage:
-  url: /images/blog/ein-reflektierender-monolith-steht-im-zentrum-einer-wuestenlandschaft.webp
-  alt: Ein hoch aufragender, reflektierender Monolith steht im Zentrum einer weiten Wüstenlandschaft. Der Himmel zeigt ein Farbgradient von sanftem Rosa zu hellem Blau, was auf die frühe Morgendämmerung hinweist. Der Monolith spiegelt die Farben des Himmels auf all seinen Seiten wider und schafft eine surreale, geheimnisvolle Atmosphäre. Die Wüste ist karg mit rissigem Boden, und es gibt keine Fußabdrücke oder Anzeichen menschlicher Präsenz rund um den Monolithen. Die Szene vermittelt ein Gefühl der Isolation und des Wunders, als ob der Monolith aus dem Nichts erschienen wäre. Das Licht ist weich und die frühe Morgensonne wirft lange Schatten.
+    url: /images/blog/ein-reflektierender-monolith-steht-im-zentrum-einer-wuestenlandschaft.webp
+    alt: Ein hoch aufragender, reflektierender Monolith steht im Zentrum einer weiten Wüstenlandschaft. Der Himmel zeigt ein Farbgradient von sanftem Rosa zu hellem Blau, was auf die frühe Morgendämmerung hinweist. Der Monolith spiegelt die Farben des Himmels auf all seinen Seiten wider und schafft eine surreale, geheimnisvolle Atmosphäre. Die Wüste ist karg mit rissigem Boden, und es gibt keine Fußabdrücke oder Anzeichen menschlicher Präsenz rund um den Monolithen. Die Szene vermittelt ein Gefühl der Isolation und des Wunders, als ob der Monolith aus dem Nichts erschienen wäre. Das Licht ist weich und die frühe Morgensonne wirft lange Schatten.
 place: Wüstlingen - Mojave - USA
 tags:
-  - außerirdisch
-  - außerirdischearchitektur
-  - geheimnisvollemonumente
-  - monolithmystery
-  - mystery
-  - sandro-steinblick
-  - usa
-  - wüstlingen
-  - mojave
-  - sternentore
-  - wüstengeister
+    - außerirdisch
+    - außerirdischearchitektur
+    - geheimnisvollemonumente
+    - monolithmystery
+    - mystery
+    - sandro-steinblick
+    - usa
+    - wüstlingen
+    - mojave
+    - sternentore
+    - wüstengeister
 ---
 
 In der Ödnis der Wüstlinger Sande, wo selbst Schatten verdursten, steht er: ein Monolith, der sich wie ein Spiegel des Himmels erhebt und die Farben des Sonnenaufgangs in sich trägt. Ein Monument, das so plötzlich erschien, wie ein Flüstern in der Stille der Nacht.

@@ -6,18 +6,18 @@ type: default
 description: Maibäume verschwinden in Marburg. Journalist Otto Normalverbraucher deckt alte Legenden und mysteriöse Erscheinungen auf. Kann er das Rätsel lösen?
 headline: "Die Nacht der verschwundenen Maibäume: Ein Mysterium in Marburg - Otto Normalverbraucher untersucht"
 heroImage:
-  url: /images/blog/mysterioes-leuchtender-baum-nachts-in-einer-traditionellen-deutschen-stadt.webp
-  alt: Das Bild zeigt eine nächtliche Szene in Marburg, Deutschland. Im Zentrum steht ein majestätischer Maibaum, der in einem traditionellen deutschen Stadtplatz wieder auftaucht. Der Platz ist von alten Fachwerkhäusern umgeben, die im sanften Mondlicht erstrahlen. Mystische Schatten und geisterhafte Figuren sind im Nebel zu erkennen, während blaue und grüne Lichter über dem Boden schweben und eine unheimliche Atmosphäre schaffen. Die Silhouetten staunender Menschen sind um den Maibaum herum zu sehen, fasziniert von der Rückkehr der Bäume. Die gesamte Szene ist in einem weiten Format gehalten, das die Weite und Magie des Augenblicks einfängt.
+    url: /images/blog/mysterioes-leuchtender-baum-nachts-in-einer-traditionellen-deutschen-stadt.webp
+    alt: Das Bild zeigt eine nächtliche Szene in Marburg, Deutschland. Im Zentrum steht ein majestätischer Maibaum, der in einem traditionellen deutschen Stadtplatz wieder auftaucht. Der Platz ist von alten Fachwerkhäusern umgeben, die im sanften Mondlicht erstrahlen. Mystische Schatten und geisterhafte Figuren sind im Nebel zu erkennen, während blaue und grüne Lichter über dem Boden schweben und eine unheimliche Atmosphäre schaffen. Die Silhouetten staunender Menschen sind um den Maibaum herum zu sehen, fasziniert von der Rückkehr der Bäume. Die gesamte Szene ist in einem weiten Format gehalten, das die Weite und Magie des Augenblicks einfängt.
 place: Marburg - Hessen - Deutschland
 tags:
-  - deutschetradition
-  - maibaum
-  - maimysterium
-  - marburg
-  - mysterium
-  - mysteriummarburg
-  - nacht
-  - otto-normalverbraucher
+    - deutschetradition
+    - maibaum
+    - maimysterium
+    - marburg
+    - mysterium
+    - mysteriummarburg
+    - nacht
+    - otto-normalverbraucher
 ---
 
 In Marburg, einer Stadt, die reich an Tradition und Geschichte ist, begann der Mai mit einem unerwarteten Rätsel, das die Gemeinde tief berührte. Über Nacht verschwanden sämtliche Maibäume aus dem Stadtgebiet, was bei den Einwohnern für Verwunderung und Besorgnis sorgte. Dieses Ereignis zog die Aufmerksamkeit von Otto Normalverbraucher, einem lokalen Journalisten, auf sich, der sich entschloss, dem Mysterium auf den Grund zu gehen.

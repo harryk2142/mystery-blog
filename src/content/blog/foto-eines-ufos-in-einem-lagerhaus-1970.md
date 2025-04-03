@@ -4,20 +4,20 @@ description: "Ein mysteriöses UFO-Foto aus einem Lagerhaus von 1970. Was verbir
 headline: UFO oder fortschrittlicher Satellit? Was ist hier zu sehen?
 pubDate: 2023-07-21
 heroImage:
-  alt: Zwei Wissenschaftler untersuchen Teile eines Ufos. Schwarz Weiß Foto aus dem Jahr 1970
-  url: /images/blog/zwei-wissenschaftler-untersuchen-teile-eines-ufos-auf-einem-schwarz-weiß-bild.webp
+    alt: Zwei Wissenschaftler untersuchen Teile eines Ufos. Schwarz Weiß Foto aus dem Jahr 1970
+    url: /images/blog/zwei-wissenschaftler-untersuchen-teile-eines-ufos-auf-einem-schwarz-weiß-bild.webp
 place: Kaiserslautern - Rheinland-Pfalz - Deutschland
 tags:
-  - "1970"
-  - friedrich-blitz
-  - hans-mysterium
-  - kaiserslautern
-  - mysterium
-  - paranormal
-  - rheinlandpfalz
-  - satellit
-  - ufos
-  - verschwörungstheorien
+    - "1970"
+    - friedrich-blitz
+    - hans-mysterium
+    - kaiserslautern
+    - mysterium
+    - paranormal
+    - rheinlandpfalz
+    - satellit
+    - ufos
+    - verschwörungstheorien
 oldUrl: 2023-07-21-foto-eines-ufos-in-einem-lagerhaus-1970
 ---
 

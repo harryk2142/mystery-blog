@@ -4,24 +4,24 @@ pubDate: 2023-11-23T15:56:53.935Z
 updateDate: 2023-11-23T15:56:53.935Z
 description: "Erkunden Sie das Rätsel des Raunenwaldes: Ein Ort voller Mystik, wo Max Spukhaft das Unfassbare erlebt."
 heroImage:
-  alt: Nächtlicher, nebelverhangener Wald mit beleuchtetem Pfad, umgeben von knorrigen Bäumen und einer schemenhaften Figur im Hintergrund.
-  url: /images/blog/nachts-ein-mann-mit-einer-taschenlampe-im-dichten-wald.webp
+    alt: Nächtlicher, nebelverhangener Wald mit beleuchtetem Pfad, umgeben von knorrigen Bäumen und einer schemenhaften Figur im Hintergrund.
+    url: /images/blog/nachts-ein-mann-mit-einer-taschenlampe-im-dichten-wald.webp
 tags:
-  - anna-luese
-  - anna-lüse
-  - badenwuerttemberg
-  - badenwürttemberg
-  - deutschland
-  - geheimnisse
-  - geist
-  - geister
-  - geistergeschichten
-  - max-spukhaft
-  - mysteriöselegenden
-  - nebelheim
-  - raunenwald
-  - übernatürlich
-  - übernatürlichephänomene
+    - anna-luese
+    - anna-lüse
+    - badenwuerttemberg
+    - badenwürttemberg
+    - deutschland
+    - geheimnisse
+    - geist
+    - geister
+    - geistergeschichten
+    - max-spukhaft
+    - mysteriöselegenden
+    - nebelheim
+    - raunenwald
+    - übernatürlich
+    - übernatürlichephänomene
 place: Nebelheim - Baden-Württemberg - Deutschland
 headline: "Geheimnisse im Mondlicht: Die unerzählte Legende des Raunenwaldes in Nebelheim"
 ---

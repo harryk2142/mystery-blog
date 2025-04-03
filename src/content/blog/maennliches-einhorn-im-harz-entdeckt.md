@@ -4,18 +4,18 @@ description: "Ein märchenhaftes Erlebnis: Entdecken Sie die Geschichte des män
 headline: Exklusiv - Männliches Einhorn in einem magischen Wald im Harz entdeckt
 pubDate: 2023-03-13
 heroImage:
-  alt: Ein goldenes Einhorn mit blauem Haar
-  url: /images/blog/goldenes-einhorn.webp
+    alt: Ein goldenes Einhorn mit blauem Haar
+    url: /images/blog/goldenes-einhorn.webp
 place: Nationalpark Harz - Region Niedersachsen - Deutschland
 tags:
-  - einhorn
-  - entdeckung
-  - fantasy
-  - hans-mueller
-  - harz
-  - magischerwald
-  - niedersachsen
-  - paranormal
+    - einhorn
+    - entdeckung
+    - fantasy
+    - hans-mueller
+    - harz
+    - magischerwald
+    - niedersachsen
+    - paranormal
 oldUrl: 2023-03-13-einhorn-im-harz-entdeckt
 ---
 

@@ -6,21 +6,21 @@ type: default
 description: In dem abgelegenen Dorf Mügelfurt verschwinden über Nacht alle Bewohner spurlos. Die einzige Spur führt zu einem geheimnisvollen Wald.
 headline: "Das Mysterium von Mügelfurt: Ein Dorf verschwindet spurlos"
 heroImage:
-  alt: Ein mysteriöses, verlassenes Dorf in einem dichten Wald. Traditionelle deutsche Häuser stehen mit leicht geöffneten Türen, und dichte Nebelschwaden bedecken das Gebiet, was ihm eine geisterhafte Atmosphäre verleiht. Im Hintergrund erhebt sich ein dunkler, unheimlicher Wald mit Schatten, die an eine geisterhafte Gestalt erinnern. Die gesamte Szenerie wirkt dunkel und geheimnisvoll, passend zu einem übernatürlichen Ereignis.
-  url: /images/blog/mysterioeses-verlassenes-dorf-in-einem-dichten-wald.webp
+    alt: Ein mysteriöses, verlassenes Dorf in einem dichten Wald. Traditionelle deutsche Häuser stehen mit leicht geöffneten Türen, und dichte Nebelschwaden bedecken das Gebiet, was ihm eine geisterhafte Atmosphäre verleiht. Im Hintergrund erhebt sich ein dunkler, unheimlicher Wald mit Schatten, die an eine geisterhafte Gestalt erinnern. Die gesamte Szenerie wirkt dunkel und geheimnisvoll, passend zu einem übernatürlichen Ereignis.
+    url: /images/blog/mysterioeses-verlassenes-dorf-in-einem-dichten-wald.webp
 place: Mügelfurt - Baden Württemberg - Deutschland
 tags:
-  - badenwürttemberg
-  - deutschland
-  - frida-flüsterhexe
-  - geisterdorf
-  - hexe
-  - hugo-hörndich
-  - mystery
-  - mügelfurt
-  - otto-briefträger
-  - ungewöhnlicheereignisse
-  - verschwunden
+    - badenwürttemberg
+    - deutschland
+    - frida-flüsterhexe
+    - geisterdorf
+    - hexe
+    - hugo-hörndich
+    - mystery
+    - mügelfurt
+    - otto-briefträger
+    - ungewöhnlicheereignisse
+    - verschwunden
 ---
 
 Willkommen zurück zu einer weiteren spannenden Erzählung auf unserem Mystery Blog. Heute nehmen wir Sie mit nach Mügelfurt, ein kleines Dorf tief in den Wäldern von Süddeutschland, wo ein ungewöhnliches Ereignis die Bewohner und Forscher gleichermaßen rätseln lässt.

@@ -6,27 +6,27 @@ place: Frosthain - Bayern - Deutschland
 headline: Das Ritual der Zwölf - Wer sind die Fremden in der Neujahrsnacht?
 description: Im verschneiten Dorf Frosthain erscheinen in der Silvesternacht zwölf mysteriöse Gestalten, die ein uraltes Ritual durchführen.
 tags:
-  - altetradition
-  - bayern
-  - dokumentation
-  - dorfbewohner
-  - dunkelheit
-  - frosthain
-  - kapelle
-  - legende
-  - martha-stillberg
-  - mysteriösegestalten
-  - neujahrsnacht
-  - rätsel
-  - ritualderzwölf
-  - runen
-  - schnee
-  - silvestermysterium
-  - unheimlich
-  - zeit
+    - altetradition
+    - bayern
+    - dokumentation
+    - dorfbewohner
+    - dunkelheit
+    - frosthain
+    - kapelle
+    - legende
+    - martha-stillberg
+    - mysteriösegestalten
+    - neujahrsnacht
+    - rätsel
+    - ritualderzwölf
+    - runen
+    - schnee
+    - silvestermysterium
+    - unheimlich
+    - zeit
 heroImage:
-  alt: Ein verschneiter Dorfplatz bei Nacht, umgeben von alten Fachwerkhäusern. Zwölf dunkle, verhüllte Gestalten stehen auf dem Platz, während der Mond durch Wolken ein schwaches Licht auf die Szene wirft. Im Hintergrund führt ein beleuchteter Weg zu einer verlassenen Kapelle am Waldrand, hinter der Nebelschwaden aus einem dunklen Wald aufsteigen.
-  url: /images/blog/verschneites-mystisches-dorf-mit-verhuellten-gestalten-bei-nacht.webp
+    alt: Ein verschneiter Dorfplatz bei Nacht, umgeben von alten Fachwerkhäusern. Zwölf dunkle, verhüllte Gestalten stehen auf dem Platz, während der Mond durch Wolken ein schwaches Licht auf die Szene wirft. Im Hintergrund führt ein beleuchteter Weg zu einer verlassenen Kapelle am Waldrand, hinter der Nebelschwaden aus einem dunklen Wald aufsteigen.
+    url: /images/blog/verschneites-mystisches-dorf-mit-verhuellten-gestalten-bei-nacht.webp
 ---
 
 Im kleinen Ort Frosthain, tief in den schneebedeckten Bergen Bayerns, wird die Silvesternacht seit jeher mit einer Mischung aus Vorfreude und Angst erwartet. Nicht wegen des Feuerwerks oder der Neujahrsfeierlichkeiten, sondern wegen eines uralten Mysteriums, das die Dorfbewohner seit Jahrhunderten heimsucht: **Das Ritual der Zwölf.**

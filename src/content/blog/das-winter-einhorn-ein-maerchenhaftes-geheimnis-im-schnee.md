@@ -5,21 +5,21 @@ updateDate: 2023-12-13T19:10:46.175Z
 description: Entdecken Sie die geheimnisvolle Sichtung eines weißen Einhorns im Herzen des Winters. Eine Geschichte, die die Grenzen zwischen Realität und Märchen verwischt.
 headline: "Ein Wunder im Winterwald: Das Weiße Einhorn"
 heroImage:
-  url: /images/blog/weisses-einhorn-mit-schnee.webp
-  alt: Ein weißes Einhorn mit einer schönen Winterlandschaft. Sonniger Tag.
+    url: /images/blog/weisses-einhorn-mit-schnee.webp
+    alt: Ein weißes Einhorn mit einer schönen Winterlandschaft. Sonniger Tag.
 place: Frostfels - Baden-Württemberg - Deutschland
 tags:
-  - badenwuerttemberg
-  - badenwürttemberg
-  - deutschland
-  - dr-simon-rationalius
-  - einhorn
-  - elsa-eiskristall
-  - frostfels
-  - mysterienimschnee
-  - waldemar-wunderlich
-  - winter
-  - zauberdeswinters
+    - badenwuerttemberg
+    - badenwürttemberg
+    - deutschland
+    - dr-simon-rationalius
+    - einhorn
+    - elsa-eiskristall
+    - frostfels
+    - mysterienimschnee
+    - waldemar-wunderlich
+    - winter
+    - zauberdeswinters
 ---
 
 ## Eine Unvergessliche Begegnung im Winterwald

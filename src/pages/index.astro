@@ -1,28 +1,35 @@
 ---
 import Card from "@components/Card.astro";
 import CenteredTitle from "@components/CenteredTitle.astro";
+import LinkButton from "@components/design/astro/LinkButton.astro";
 import Default from "@layouts/Default.astro";
 import { getCollection } from "astro:content";
 import BlogPostCard from "../components/BlogPostCard.astro";
-import BreakingNewsTicker from "../components/BreakingNewsTicker.astro";
+import BreakingNewsTicker from "@components/BreakingNewsTicker.astro";
 import Pagefind from "../components/Pagefind.astro";
 import RandomBlogPost from "../components/RandomBlogPost.astro";
 import Ufo, { Sizes } from "../components/Ufo.astro";
 
-const posts = (await getCollection("blog")).filter((e) => !e.data.draft).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const posts = (await getCollection("blog"))
+	.filter((e) => !e.data.draft)
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const latestPost = posts[0];
 const latestPosts = posts.slice(1, 5);
 ---
 
 <Default>
-	<section id="page-title-section">
-		<CenteredTitle id="page-title" title="Dein Nachrichtenblog für mysteriöse Ereignisse" />
-	</section>
 	<section id="breaking-news-section">
 		<Card>
 			<BreakingNewsTicker />
 		</Card>
 	</section>
+	<section id="page-title-section" class="mt-1">
+		<CenteredTitle
+			id="page-title"
+			text="Dein Nachrichtenblog für mysteriöse Ereignisse"
+		/>
+	</section>
+
 	<section id="search-section">
 		<Card>
 			<Pagefind />
@@ -48,11 +55,11 @@ const latestPosts = posts.slice(1, 5);
 						</div>
 					))
 				}
-				<div class="flex column">
-					<a id="link-to-blog-button" class="button" href="/blog/1">
+				<div class="flex column mt-1">
+					<LinkButton id="link-to-blog-button" href="/blog/1">
 						<span style="font-size: 1.5rem;">Mehr</span>
 						<Ufo size={Sizes.M} />
-					</a>
+					</LinkButton>
 				</div>
 			</div>
 		</section>
